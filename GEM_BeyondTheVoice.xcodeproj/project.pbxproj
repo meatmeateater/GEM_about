@@ -1,0 +1,352 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {};
+	objectVersion = 60;
+	objects = {
+		D70000000000000000000001 /* FR_GEMTourModels.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMTourModels.swift;
+			sourceTree = "<group>";
+		};
+		D80000000000000000000001 /* BF_GEMTourModels.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = D70000000000000000000001 /* GEMTourModels.swift */;
+		};
+		D70000000000000000000002 /* FR_GEMTourComponents.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMTourComponents.swift;
+			sourceTree = "<group>";
+		};
+		D80000000000000000000002 /* BF_GEMTourComponents.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = D70000000000000000000002 /* GEMTourComponents.swift */;
+		};
+		D70000000000000000000003 /* FR_GEMTourMapSection.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMTourMapSection.swift;
+			sourceTree = "<group>";
+		};
+		D80000000000000000000003 /* BF_GEMTourMapSection.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = D70000000000000000000003 /* GEMTourMapSection.swift */;
+		};
+		6E50808D01EA7EDD4E970F3E /* FR_GEMAboutApp.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMAboutApp.swift;
+			sourceTree = "<group>";
+		};
+		6FCF19B2EC8B8286BE28AED0 /* BF_GEMAboutApp.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = 6E50808D01EA7EDD4E970F3E /* GEMAboutApp.swift */;
+		};
+		B67720E14F092285D830B027 /* FR_GEMAboutView.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMAboutView.swift;
+			sourceTree = "<group>";
+		};
+		0B878B07EFEC4BF38B6CB3A9 /* BF_GEMAboutView.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = B67720E14F092285D830B027 /* GEMAboutView.swift */;
+		};
+		B286866B11052AD796F86532 /* FR_GEMComponents.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMComponents.swift;
+			sourceTree = "<group>";
+		};
+		33B6BBBC8DFAD82ECCB7E53B /* BF_GEMComponents.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = B286866B11052AD796F86532 /* GEMComponents.swift */;
+		};
+		42FB2AFE5EA987AEC4C5B256 /* FR_GEMHeroView.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMHeroView.swift;
+			sourceTree = "<group>";
+		};
+		FAD5E93B43A49FB19736E2B0 /* BF_GEMHeroView.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = 42FB2AFE5EA987AEC4C5B256 /* GEMHeroView.swift */;
+		};
+		E5928767DA157C6AEAD0E268 /* FR_GEMModels.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMModels.swift;
+			sourceTree = "<group>";
+		};
+		1F65A6008A1AABD5357EDA74 /* BF_GEMModels.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = E5928767DA157C6AEAD0E268 /* GEMModels.swift */;
+		};
+		84A9389AA2051DE02EB4EF6D /* FR_GEMSections.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMSections.swift;
+			sourceTree = "<group>";
+		};
+		484A8B668E17332F7971528E /* BF_GEMSections.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = 84A9389AA2051DE02EB4EF6D /* GEMSections.swift */;
+		};
+		AC253A95769BA1C65CF85635 /* FR_GEMStageCutShape.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMStageCutShape.swift;
+			sourceTree = "<group>";
+		};
+		DE72D84823E004C2F223F07B /* BF_GEMStageCutShape.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = AC253A95769BA1C65CF85635 /* GEMStageCutShape.swift */;
+		};
+		5AF62F2CB06A8156ED062418 /* FR_GEMTheme.swift */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = sourcecode.swift;
+			path = GEMTheme.swift;
+			sourceTree = "<group>";
+		};
+		53E6884ADC8552B86F28F164 /* BF_GEMTheme.swift */ = {
+			isa = PBXBuildFile;
+			fileRef = 5AF62F2CB06A8156ED062418 /* GEMTheme.swift */;
+		};
+		196A1AA79B2F6CA186E2C2D0 /* FR_ASSETS */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = folder.assetcatalog;
+			path = Assets.xcassets;
+			sourceTree = "<group>";
+		};
+		F43B67D1A5E171CC5FF54E75 /* BF_ASSETS */ = {
+			isa = PBXBuildFile;
+			fileRef = 196A1AA79B2F6CA186E2C2D0 /* Assets.xcassets */;
+		};
+		6EDEBCE3A94A8852C819FDBE /* FR_PRODUCT */ = {
+			isa = PBXFileReference;
+			explicitFileType = wrapper.application;
+			includeInIndex = 0;
+			path = GEM_BeyondTheVoice.app;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		7C08AAD21C8DCFEC39418F54 /* FR_INFO */ = {
+			isa = PBXFileReference;
+			lastKnownFileType = text.plist.xml;
+			path = Info.plist;
+			sourceTree = "<group>";
+		};
+		89389A01068B7675046DF16D /* GROUP_SWIFTUI */ = {
+			isa = PBXGroup;
+			children = (
+				6E50808D01EA7EDD4E970F3E /* GEMAboutApp.swift */,
+				B67720E14F092285D830B027 /* GEMAboutView.swift */,
+				B286866B11052AD796F86532 /* GEMComponents.swift */,
+				42FB2AFE5EA987AEC4C5B256 /* GEMHeroView.swift */,
+				E5928767DA157C6AEAD0E268 /* GEMModels.swift */,
+				84A9389AA2051DE02EB4EF6D /* GEMSections.swift */,
+				AC253A95769BA1C65CF85635 /* GEMStageCutShape.swift */,
+				5AF62F2CB06A8156ED062418 /* GEMTheme.swift */,
+				D70000000000000000000001 /* GEMTourModels.swift */,
+				D70000000000000000000002 /* GEMTourComponents.swift */,
+				D70000000000000000000003 /* GEMTourMapSection.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		403CAFEA850225D2425F35D4 /* GROUP_CONFIG */ = {
+			isa = PBXGroup;
+			children = (
+				7C08AAD21C8DCFEC39418F54 /* Info.plist */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+		5C3301D8292DBACEA69EE035 /* GROUP_PRODUCTS */ = {
+			isa = PBXGroup;
+			children = (
+				6EDEBCE3A94A8852C819FDBE /* GEM_BeyondTheVoice.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		9A8B43CBE6F2BC30E9B762E7 /* GROUP_ROOT */ = {
+			isa = PBXGroup;
+			children = (
+				89389A01068B7675046DF16D /* SwiftUI */,
+				196A1AA79B2F6CA186E2C2D0 /* Assets.xcassets */,
+				403CAFEA850225D2425F35D4 /* Config */,
+				5C3301D8292DBACEA69EE035 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		8BB8ABC24AB723F99D4DD920 /* PHASE_SOURCES */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6FCF19B2EC8B8286BE28AED0 /* GEMAboutApp.swift */,
+				0B878B07EFEC4BF38B6CB3A9 /* GEMAboutView.swift */,
+				33B6BBBC8DFAD82ECCB7E53B /* GEMComponents.swift */,
+				FAD5E93B43A49FB19736E2B0 /* GEMHeroView.swift */,
+				1F65A6008A1AABD5357EDA74 /* GEMModels.swift */,
+				484A8B668E17332F7971528E /* GEMSections.swift */,
+				DE72D84823E004C2F223F07B /* GEMStageCutShape.swift */,
+				53E6884ADC8552B86F28F164 /* GEMTheme.swift */,
+				D80000000000000000000001 /* GEMTourModels.swift */,
+				D80000000000000000000002 /* GEMTourComponents.swift */,
+				D80000000000000000000003 /* GEMTourMapSection.swift */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		01CC597ABAD15DB9D2376BE0 /* PHASE_RESOURCES */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F43B67D1A5E171CC5FF54E75 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		2E736DC4E22966F765AB4C91 /* PHASE_FRAMEWORKS */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		730950AD798A77AD508AA9E2 /* TARGET */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 1D0AB84F330EDBB6BB433A98 /* Build configuration list for PBXNativeTarget */;
+			buildPhases = (
+				8BB8ABC24AB723F99D4DD920 /* Sources */,
+				2E736DC4E22966F765AB4C91 /* Frameworks */,
+				01CC597ABAD15DB9D2376BE0 /* Resources */,
+			);
+			buildRules = ();
+			dependencies = ();
+			name = GEM_BeyondTheVoice;
+			productName = GEM_BeyondTheVoice;
+			productReference = 6EDEBCE3A94A8852C819FDBE /* GEM_BeyondTheVoice.app */;
+			productType = "com.apple.product-type.application";
+		};
+		1781F676DEDF5767F3243DB0 /* PROJECT */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 1600;
+				TargetAttributes = {
+					730950AD798A77AD508AA9E2 = { CreatedOnToolsVersion = 16.0; };
+				};
+			};
+			buildConfigurationList = 7AC2DA819C2D18D036CE03C3 /* Build configuration list for PBXProject */;
+			compatibilityVersion = "Xcode 15.0";
+			developmentRegion = "zh-Hant";
+			hasScannedForEncodings = 0;
+			knownRegions = (en, Base, "zh-Hant");
+			mainGroup = 9A8B43CBE6F2BC30E9B762E7 /* Main Group */;
+			productRefGroup = 5C3301D8292DBACEA69EE035 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				730950AD798A77AD508AA9E2 /* GEM_BeyondTheVoice */,
+			);
+		};
+		40191F7A9F49E7E4273D29F5 /* CONFIG_PROJECT_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		6F9A34D70CD2AD8BFA13C13C /* CONFIG_PROJECT_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				SDKROOT = iphoneos;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				SWIFT_VERSION = 5.0;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		EDAD4804DE4594AB0AD289CC /* CONFIG_TARGET_Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+			};
+			name = Debug;
+		};
+		77F175DD90BD99E361220334 /* CONFIG_TARGET_Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				INFOPLIST_FILE = Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				SWIFT_COMPILATION_MODE = wholemodule;
+			};
+			name = Release;
+		};
+		7AC2DA819C2D18D036CE03C3 /* CONFIG_PROJECT_LIST */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				40191F7A9F49E7E4273D29F5 /* Debug */,
+				6F9A34D70CD2AD8BFA13C13C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		1D0AB84F330EDBB6BB433A98 /* CONFIG_TARGET_LIST */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				EDAD4804DE4594AB0AD289CC /* Debug */,
+				77F175DD90BD99E361220334 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+	};
+	rootObject = 1781F676DEDF5767F3243DB0 /* Project object */;
+}
