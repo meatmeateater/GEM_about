@@ -1,0 +1,3764 @@
+{
+  "schemaVersion": 1,
+  "updatedAt": "2026-10-15",
+  "entries": [
+    {
+      "id": "release-gem-ep",
+      "kind": "release",
+      "title": "G.E.M.",
+      "subtitle": "最初的五首歌",
+      "date": {
+        "year": 2008
+      },
+      "category": "EP",
+      "summary": "從〈Where Did U Go〉與〈睡公主〉回到出道作品。",
+      "paragraphs": [
+        "2008 年，鄧紫棋以同名 EP《G.E.M.》出道。五首歌從〈等一個他〉開始，接著是〈Where Did U Go〉、〈回憶的沙漏〉與〈愛現在的我〉，最後以〈睡公主〉收尾。",
+        "這五首歌也成為後來作品的線索：〈Where Did U Go〉出現過混音與重生版，〈睡公主〉則在多年後與《摩天動物園》的收尾曲名形成呼應。早期作品因此始終與後來的音樂相連。"
+      ],
+      "editorial": "先聽完這五首，再打開後來的重錄版本。把熟悉的名字放回最初的位置，比只讀「年少成名」更能建立她的起點。",
+      "tags": [
+        "G.E.M.",
+        "出道",
+        "2008",
+        "粵語",
+        "國語"
+      ],
+      "relatedIDs": [
+        "event-debut",
+        "track-where-did-u-go",
+        "track-sleeping-beauty",
+        "release-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-debut",
+        "source-debut-press",
+        "artwork-release-gem-ep"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "等一個他"
+        },
+        {
+          "number": 2,
+          "title": "Where Did U Go",
+          "entryID": "track-where-did-u-go"
+        },
+        {
+          "number": 3,
+          "title": "回憶的沙漏"
+        },
+        {
+          "number": 4,
+          "title": "愛現在的我"
+        },
+        {
+          "number": 5,
+          "title": "睡公主",
+          "entryID": "track-sleeping-beauty"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "版本範圍",
+          "value": "五首 EP 版；以 2008 出道年份標示"
+        }
+      ],
+      "links": [
+        {
+          "label": "前往 Spotify 查看 EP",
+          "url": "https://open.spotify.com/album/3Kz3xJzl7gTIiL7u111dCW"
+        }
+      ],
+      "artworkURL": "https://i.scdn.co/image/ab67616d0000b273f6cf85b3e98d2c48f7bd1bed"
+    },
+    {
+      "id": "release-18",
+      "kind": "release",
+      "title": "18...",
+      "subtitle": "由 EP 走向長篇作品",
+      "date": {
+        "year": 2009,
+        "month": 10,
+        "day": 27
+      },
+      "category": "錄音室專輯",
+      "summary": "〈A.I.N.Y.〉與早期粵語作品並置的數位版。",
+      "paragraphs": [
+        "《18...》在 2009 年推出。Sony 的早期作品回顧，把這張唱片放在她走向台灣與內地聽眾的階段；歌曲包括〈All About U〉、〈Game Over〉與〈A.I.N.Y.〉。",
+        "十三首數位版同時收錄〈Where Did U Go 2.0〉混音、〈煙燻妝〉Glossy Version，以及與林海峰的合作曲。原有歌曲在不同編曲和合作中延伸，也替這張早期唱片留下多種聆聽入口。"
+      ],
+      "editorial": "從〈A.I.N.Y.〉進入，再回頭聽開場與混音曲，可以把一首熟悉的抒情歌放進更寬的早期曲風範圍。",
+      "tags": [
+        "18",
+        "A.I.N.Y.",
+        "愛你",
+        "2009",
+        "早期作品"
+      ],
+      "relatedIDs": [
+        "event-18",
+        "release-gem-ep",
+        "release-my-secret",
+        "track-a-i-n-y"
+      ],
+      "sourceIDs": [
+        "source-18",
+        "source-18-tracks",
+        "source-early-retrospective",
+        "artwork-release-18"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "All About U"
+        },
+        {
+          "number": 2,
+          "title": "Game Over"
+        },
+        {
+          "number": 3,
+          "title": "想講你知"
+        },
+        {
+          "number": 4,
+          "title": "A.I.N.Y.",
+          "entryID": "track-a-i-n-y"
+        },
+        {
+          "number": 5,
+          "title": "Mascara"
+        },
+        {
+          "number": 6,
+          "title": "我不懂愛"
+        },
+        {
+          "number": 7,
+          "title": "塞納河"
+        },
+        {
+          "number": 8,
+          "title": "意式戀愛"
+        },
+        {
+          "number": 9,
+          "title": "G.E.M. (Get Everybody Moving)"
+        },
+        {
+          "number": 10,
+          "title": "18"
+        },
+        {
+          "number": 11,
+          "title": "Where Did U Go 2.0 (Sam Vahdat Remix)"
+        },
+        {
+          "number": 12,
+          "title": "煙燻妝 (Glossy Version)"
+        },
+        {
+          "number": 13,
+          "title": "食煙飲酒講粗口 (feat. 林海峰)"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "版本範圍",
+          "value": "Apple Music／Shazam 十三首數位版"
+        },
+        {
+          "label": "日期依據",
+          "value": "平台版日期；不同地區與實體版另有差異"
+        }
+      ],
+      "links": [
+        {
+          "label": "前往 Apple Music",
+          "url": "https://music.apple.com/us/album/18/6775749474"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/12/32/5e/12325ea3-7db2-2808-de0b-e8fd0807dc29/887158126253.jpg/632x632bb.webp"
+    },
+    {
+      "id": "release-my-secret",
+      "kind": "release",
+      "title": "MySecret",
+      "subtitle": "十首歌裡的早期創作輪廓",
+      "date": {
+        "year": 2010
+      },
+      "category": "錄音室專輯",
+      "summary": "從〈我的秘密〉讀回 2010 年的完整曲序。",
+      "paragraphs": [
+        "《MySecret》是 2010 年的十首作品，由〈One Button〉開始，經過〈Good to Be Bad〉、〈Get Over You〉與〈寂寞星球的玫瑰〉，最後以〈Say It Loud〉結束。",
+        "同名曲〈我的秘密〉位在第七首，後來在 2025《I AM GLORIA》中成為重生版的開場。從十首唱片中段走到新唱片第一首，同一個歌名連結起她早期與後來的發行。"
+      ],
+      "editorial": "不要只停在同名歌。沿著曲序讀下去，再與《18...》和《Xposed》對照，可以聽見早期作品並非只有一種抒情面貌。",
+      "tags": [
+        "My Secret",
+        "我的秘密",
+        "2010",
+        "早期作品"
+      ],
+      "relatedIDs": [
+        "event-my-secret",
+        "release-18",
+        "release-xposed",
+        "release-i-am-gloria",
+        "track-my-secret"
+      ],
+      "sourceIDs": [
+        "source-my-secret",
+        "source-my-secret-tracks",
+        "source-gloria",
+        "artwork-release-my-secret"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "One Button"
+        },
+        {
+          "number": 2,
+          "title": "Good to Be Bad"
+        },
+        {
+          "number": 3,
+          "title": "Get Over You"
+        },
+        {
+          "number": 4,
+          "title": "美好的舊時光 (In My Heart)"
+        },
+        {
+          "number": 5,
+          "title": "寂寞星球的玫瑰 (The Rose)"
+        },
+        {
+          "number": 6,
+          "title": "The Voice Within"
+        },
+        {
+          "number": 7,
+          "title": "我的秘密 (MySecret)",
+          "entryID": "track-my-secret"
+        },
+        {
+          "number": 8,
+          "title": "末日 (The End)"
+        },
+        {
+          "number": 9,
+          "title": "Twinkle II"
+        },
+        {
+          "number": 10,
+          "title": "Say It Loud"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "版本範圍",
+          "value": "十首數位版"
+        },
+        {
+          "label": "日期精度",
+          "value": "年份；平台記錄 2010-10-22，不代替實體版日期"
+        }
+      ],
+      "links": [
+        {
+          "label": "前往 Apple Music",
+          "url": "https://music.apple.com/us/album/mysecret/6776100461"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/df/dd/69dfdddd-449b-7e9b-deee-c07d4ff7ad85/887158129667.jpg/632x632bb.webp"
+    },
+    {
+      "id": "release-xposed",
+      "kind": "release",
+      "title": "Xposed",
+      "subtitle": "〈泡沫〉所在的十首作品",
+      "date": {
+        "year": 2012
+      },
+      "category": "錄音室專輯",
+      "summary": "一首代表作之外，保留整張作品的閱讀入口。",
+      "paragraphs": [
+        "《Xposed》的名稱取自 exposed，帶有曝光、揭示的意思。Sony 的發行介紹將作品連結到她面對工作、家庭與感情壓力的成長階段，創作成為記錄與分享經驗的方式。",
+        "唱片從〈What Have U Done〉開始，〈泡沫〉位於第四首，另有〈Someday I'll Fly〉、〈Oh Boy〉和〈失真〉。官方介紹也提及搖滾方向與對社會弱勢的關注，讓作品題材走出單一情歌範圍。"
+      ],
+      "editorial": "先從熟悉的〈泡沫〉走進來，再讓前後的歌曲補上整張唱片的輪廓。代表作是入口，曲序則讓它回到作品脈絡。",
+      "tags": [
+        "Xposed",
+        "泡沫",
+        "2012",
+        "標準版"
+      ],
+      "relatedIDs": [
+        "event-xposed",
+        "event-singer-2014",
+        "track-bubble",
+        "release-my-secret",
+        "release-heartbeat"
+      ],
+      "sourceIDs": [
+        "source-xposed",
+        "source-xposed-tracks",
+        "source-singer",
+        "source-xposed-story",
+        "artwork-release-xposed"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "What Have U Done"
+        },
+        {
+          "number": 2,
+          "title": "下一秒 (我們就要死掉)"
+        },
+        {
+          "number": 3,
+          "title": "Someday I'll Fly"
+        },
+        {
+          "number": 4,
+          "title": "泡沫",
+          "entryID": "track-bubble"
+        },
+        {
+          "number": 5,
+          "title": "潛意識的殘酷"
+        },
+        {
+          "number": 6,
+          "title": "Oh Boy"
+        },
+        {
+          "number": 7,
+          "title": "After Tonight"
+        },
+        {
+          "number": 8,
+          "title": "失真"
+        },
+        {
+          "number": 9,
+          "title": "奇蹟"
+        },
+        {
+          "number": 10,
+          "title": "不存在的存在"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "版本範圍",
+          "value": "十首標準版；未加入 Deluxe 影音項目"
+        },
+        {
+          "label": "平台日期",
+          "value": "Apple Music 此版：2012-07-05"
+        }
+      ],
+      "links": [
+        {
+          "label": "前往 Apple Music",
+          "url": "https://music.apple.com/us/album/xposed/6775778892"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/08/81/e6/0881e6e7-a51c-1a5b-bdae-c379f67dce79/887158129650.jpg/632x632bb.webp"
+    },
+    {
+      "id": "release-heartbeat",
+      "kind": "release",
+      "title": "新的心跳",
+      "subtitle": "十首詞曲創作，十個影像入口",
+      "date": {
+        "year": 2015,
+        "month": 11,
+        "day": 6
+      },
+      "category": "錄音室專輯",
+      "summary": "詞曲由鄧紫棋包辦、Lupo Groinig 製作的視聽作品。",
+      "paragraphs": [
+        "《新的心跳》由鄧紫棋包辦十首歌的詞曲，Lupo Groinig 製作。它在《Xposed》之後推出，延續三年間的創作，也以每首歌對應一支 MV 的方式呈現。",
+        "十首曲目從〈多遠都要在一起〉與〈再見〉，走到〈一路逆風〉、〈於是〉及〈查克靠近〉。關係中的思念、面對挑戰與人生感受共同出現在這張視聽作品裡。"
+      ],
+      "editorial": "可以先選〈新的心跳〉與〈來自天堂的魔鬼〉兩個入口，再回到完整曲序，觀察同一位詞曲創作者如何處理不同題材。",
+      "tags": [
+        "Heartbeat",
+        "新的心跳",
+        "2015",
+        "視聽專輯"
+      ],
+      "relatedIDs": [
+        "event-heartbeat",
+        "track-heartbeat",
+        "track-away",
+        "release-xposed",
+        "release-city-zoo"
+      ],
+      "sourceIDs": [
+        "source-heartbeat",
+        "source-heartbeat-sony",
+        "artwork-release-heartbeat"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "多遠都要在一起"
+        },
+        {
+          "number": 2,
+          "title": "再見"
+        },
+        {
+          "number": 3,
+          "title": "新的心跳",
+          "entryID": "track-heartbeat"
+        },
+        {
+          "number": 4,
+          "title": "來自天堂的魔鬼",
+          "entryID": "track-away"
+        },
+        {
+          "number": 5,
+          "title": "盲點"
+        },
+        {
+          "number": 6,
+          "title": "單行的軌道"
+        },
+        {
+          "number": 7,
+          "title": "一路逆風"
+        },
+        {
+          "number": 8,
+          "title": "於是"
+        },
+        {
+          "number": 9,
+          "title": "瞬間"
+        },
+        {
+          "number": 10,
+          "title": "查克靠近"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋（全碟）"
+        },
+        {
+          "label": "製作",
+          "value": "Lupo Groinig"
+        },
+        {
+          "label": "版本範圍",
+          "value": "十首標準版"
+        }
+      ],
+      "links": [
+        {
+          "label": "前往 Apple Music",
+          "url": "https://music.apple.com/us/album/heartbeat/1053567923"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/bb/c7/55bbc782-299e-7f24-bc4a-ae129e6d8030/mzm.rpqttxch.jpg/632x632bb.webp"
+    },
+    {
+      "id": "release-city-zoo",
+      "kind": "release",
+      "title": "摩天動物園",
+      "subtitle": "用動物隱喻讀城市與人性",
+      "date": {
+        "year": 2019,
+        "month": 12,
+        "day": 27
+      },
+      "category": "錄音室專輯",
+      "summary": "詞曲創作之外，首次擔任自己專輯製作人的節點。",
+      "paragraphs": [
+        "《摩天動物園》在 2019 年發行，十三首曲目以動物形象連結人際關係和都市生活。鄧紫棋包辦詞曲，並首次擔任自己專輯的製作人，與 T-Ma 馬敬恆共同合作。",
+        "曲序從同名曲開始，經過〈Fly Away〉、〈很久以後〉、〈差不多姑娘〉與周興哲合作的〈別勉強〉，以〈依然睡公主〉收尾。這張作品後來獲得第 31 屆金曲獎評審團獎。"
+      ],
+      "editorial": "一邊讀動物隱喻，一邊留意十三首歌曲不同的敘事對象，再從獎項事件回看這次製作角色的轉變。",
+      "tags": [
+        "City Zoo",
+        "摩天動物園",
+        "2019",
+        "製作",
+        "金曲獎"
+      ],
+      "relatedIDs": [
+        "event-city-zoo",
+        "event-gma-jury",
+        "track-city-zoo",
+        "track-fly-away",
+        "track-long-after",
+        "track-almost",
+        "track-sleeping-beauty"
+      ],
+      "sourceIDs": [
+        "source-city-zoo",
+        "source-city-zoo-date",
+        "source-gma",
+        "artwork-release-city-zoo"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "摩天動物園",
+          "entryID": "track-city-zoo"
+        },
+        {
+          "number": 2,
+          "title": "Fly Away",
+          "entryID": "track-fly-away"
+        },
+        {
+          "number": 3,
+          "title": "透明"
+        },
+        {
+          "number": 4,
+          "title": "很久以後",
+          "entryID": "track-long-after"
+        },
+        {
+          "number": 5,
+          "title": "WALK ON WATER"
+        },
+        {
+          "number": 6,
+          "title": "螢火"
+        },
+        {
+          "number": 7,
+          "title": "灰狼"
+        },
+        {
+          "number": 8,
+          "title": "差不多姑娘",
+          "entryID": "track-almost"
+        },
+        {
+          "number": 9,
+          "title": "好想好想妳"
+        },
+        {
+          "number": 10,
+          "title": "別勉強 (with 周興哲)"
+        },
+        {
+          "number": 11,
+          "title": "多美麗"
+        },
+        {
+          "number": 12,
+          "title": "句號"
+        },
+        {
+          "number": 13,
+          "title": "依然睡公主"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋（全碟）"
+        },
+        {
+          "label": "製作",
+          "value": "G.E.M. 鄧紫棋、T-Ma 馬敬恆"
+        },
+        {
+          "label": "版本範圍",
+          "value": "十三首正式版；限定版另有封面"
+        }
+      ],
+      "links": [
+        {
+          "label": "前往官方收聽入口",
+          "url": "https://gem.lnk.to/CityZoo"
+        }
+      ],
+      "artworkURL": "https://cdn-p.smehost.net/sites/d563907ee0c84f41b15553bfb3eb554c/wp-content/uploads/2020/06/19439725172.jpg"
+    },
+    {
+      "id": "release-revelation",
+      "kind": "release",
+      "title": "啟示錄",
+      "subtitle": "十四首歌與影像的長篇世界",
+      "date": {
+        "year": 2022
+      },
+      "category": "錄音室專輯",
+      "summary": "專輯曲序與 MV 故事章節，從不同入口閱讀。",
+      "paragraphs": [
+        "《啟示錄》把十四首歌與十四支劇情 MV 串成音樂連續劇。鄧紫棋除了詞曲創作，也參與編劇、監製，並在影像中飾演 Gloria 與秋，讓作品同時由聲音與角色推進。",
+        "作品以愛為核心，觸及自我、自愛與被愛。專輯聆聽由〈少年與海〉開始，影像故事則先以〈GLORIA〉開門；兩種順序，讓同一世界擁有不同的進入方式。"
+      ],
+      "editorial": "第一次探索可以從〈GLORIA〉進入；想了解整體敘事時，分別按專輯曲序聆聽、按官方影片目錄觀看，讓兩條閱讀路徑各自成立。",
+      "tags": [
+        "REVELATION",
+        "啟示錄",
+        "2022",
+        "GLORIA",
+        "概念"
+      ],
+      "relatedIDs": [
+        "event-revelation",
+        "track-gloria",
+        "release-revelacion"
+      ],
+      "sourceIDs": [
+        "source-revelation",
+        "source-revelacion",
+        "source-revelation-story",
+        "source-revelation-hell",
+        "artwork-release-revelation"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "少年與海"
+        },
+        {
+          "number": 2,
+          "title": "HELL"
+        },
+        {
+          "number": 3,
+          "title": "只有我和你的地方"
+        },
+        {
+          "number": 4,
+          "title": "你不是第一個離開的人"
+        },
+        {
+          "number": 5,
+          "title": "不想回家"
+        },
+        {
+          "number": 6,
+          "title": "冰河時代"
+        },
+        {
+          "number": 7,
+          "title": "受難曲"
+        },
+        {
+          "number": 8,
+          "title": "GLORIA",
+          "entryID": "track-gloria"
+        },
+        {
+          "number": 9,
+          "title": "老人與海"
+        },
+        {
+          "number": 10,
+          "title": "FIND YOU"
+        },
+        {
+          "number": 11,
+          "title": "離心力"
+        },
+        {
+          "number": 12,
+          "title": "世界暫停一分鐘"
+        },
+        {
+          "number": 13,
+          "title": "夜的盡頭"
+        },
+        {
+          "number": 14,
+          "title": "天空沒有極限"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "版本範圍",
+          "value": "十四首專輯曲序；不作為 MV 章節順序"
+        },
+        {
+          "label": "官網頁面日期",
+          "value": "2022-09-23"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方專輯",
+          "url": "https://www.iamgem.com/qishilu/"
+        },
+        {
+          "label": "前往官方影片目錄",
+          "url": "https://www.iamgem.com/videos/"
+        }
+      ],
+      "artworkURL": "https://www.iamgem.com/wp-content/uploads/2022/08/qishilu-fan.jpg"
+    },
+    {
+      "id": "release-revelacion",
+      "kind": "release",
+      "title": "Revelación",
+      "subtitle": "讓同一個世界跨過語言",
+      "date": {
+        "year": 2023,
+        "month": 7,
+        "day": 10
+      },
+      "category": "語言版本專輯",
+      "summary": "十四首西語作品，與《啟示錄》建立對照。",
+      "paragraphs": [
+        "2023 年的《Revelación》以西語重新打開《啟示錄》的音樂世界。十四首曲目包括〈El Joven y El Mar〉、〈Me & You〉、〈Gloria〉及〈Mira Hacia El Cielo〉。",
+        "〈Gloria〉與中文作品同樣位於專輯曲序第八首，曲名前後則是一整張語言版本的發行。對熟悉中文作品的人而言，這是一條從熟悉旋律走向另一種發音與表達的入口。"
+      ],
+      "editorial": "先選熟悉的中文歌曲，再打開西語作品對照。把它當成另一個語言入口，觀察文字發音如何改變熟悉旋律的聆聽感受。",
+      "tags": [
+        "Revelacion",
+        "Revelación",
+        "西班牙語",
+        "西語",
+        "2023"
+      ],
+      "relatedIDs": [
+        "event-revelacion",
+        "release-revelation",
+        "track-gloria"
+      ],
+      "sourceIDs": [
+        "source-revelacion",
+        "source-revelacion-date",
+        "artwork-release-revelacion"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "El Joven y El Mar"
+        },
+        {
+          "number": 2,
+          "title": "Hell"
+        },
+        {
+          "number": 3,
+          "title": "Me & You"
+        },
+        {
+          "number": 4,
+          "title": "El Hombre que Ríe"
+        },
+        {
+          "number": 5,
+          "title": "One More Night"
+        },
+        {
+          "number": 6,
+          "title": "La Edad de Hielo"
+        },
+        {
+          "number": 7,
+          "title": "Pasión"
+        },
+        {
+          "number": 8,
+          "title": "Gloria",
+          "entryID": "track-gloria"
+        },
+        {
+          "number": 9,
+          "title": "El Viejo y El Mar"
+        },
+        {
+          "number": 10,
+          "title": "Find You"
+        },
+        {
+          "number": 11,
+          "title": "Fuerza Centrífuga"
+        },
+        {
+          "number": 12,
+          "title": "Un Momento"
+        },
+        {
+          "number": 13,
+          "title": "Yo Soy Eterno"
+        },
+        {
+          "number": 14,
+          "title": "Mira Hacia El Cielo"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "語言版本",
+          "value": "西班牙語"
+        },
+        {
+          "label": "版本範圍",
+          "value": "十四首；曲名依官方網站"
+        },
+        {
+          "label": "平台日期",
+          "value": "Apple Music 此版：2023-07-10"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方專輯",
+          "url": "https://www.iamgem.com/revelacion/"
+        },
+        {
+          "label": "前往 Apple Music",
+          "url": "https://music.apple.com/us/album/revelaci%C3%B3n/1695076267"
+        }
+      ],
+      "artworkURL": "https://www.iamgem.com/wp-content/uploads/2024/03/Revelacion-scaled.jpg"
+    },
+    {
+      "id": "release-time",
+      "kind": "release",
+      "title": "T.I.M.E.",
+      "subtitle": "用重新詮釋連結不同年代",
+      "date": {
+        "year": 2023
+      },
+      "category": "EP",
+      "summary": "六首作品，讀見演唱、創作與製作角色的差別。",
+      "paragraphs": [
+        "《T.I.M.E.》以六首歌展現重新詮釋作品的面貌。曲序由〈情人〉開始，經過〈唯一〉、〈李香蘭〉、〈11〉與〈你成為了誰的幸福〉，最後以〈海闊天空〉收尾。",
+        "例如〈李香蘭〉的此版本保留玉置浩二作曲、周禮茂填詞的原作脈絡，同時由鄧紫棋與 T-Ma 參與製作。演唱與製作，成為她在這組作品裡連結不同年代歌曲的方式。"
+      ],
+      "editorial": "把關注點從「她寫了什麼」換成「她如何演唱別人的作品」。先選一首熟悉的歌，回聽原作，再觀察不同演唱者對同一旋律的處理。",
+      "tags": [
+        "TIME",
+        "T.I.M.E.",
+        "2023",
+        "翻唱",
+        "EP"
+      ],
+      "relatedIDs": [
+        "event-time",
+        "release-revelacion",
+        "program-i-am-singer-2",
+        "stage-like-you-2014"
+      ],
+      "sourceIDs": [
+        "source-time",
+        "source-time-platform",
+        "source-time-credit",
+        "artwork-release-time"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "情人"
+        },
+        {
+          "number": 2,
+          "title": "唯一"
+        },
+        {
+          "number": 3,
+          "title": "李香蘭"
+        },
+        {
+          "number": 4,
+          "title": "11"
+        },
+        {
+          "number": 5,
+          "title": "你成為了誰的幸福"
+        },
+        {
+          "number": 6,
+          "title": "海闊天空"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "類型",
+          "value": "六首重新詮釋作品 EP"
+        },
+        {
+          "label": "角色提醒",
+          "value": "演唱／製作不等於原作詞曲；各曲 credit 分別核對"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品頁",
+          "url": "https://www.iamgem.com/time/"
+        }
+      ],
+      "artworkURL": "https://www.iamgem.com/wp-content/uploads/2024/03/T.I.M.E.%E7%B9%81.jpg"
+    },
+    {
+      "id": "release-i-am-gloria",
+      "kind": "release",
+      "title": "I AM GLORIA",
+      "subtitle": "經典作品的 G.E.M. 重生版",
+      "date": {
+        "year": 2025,
+        "month": 6,
+        "day": 12
+      },
+      "category": "重錄專輯",
+      "summary": "把早期歌曲與後來版本放在同一條探索路徑。",
+      "paragraphs": [
+        "《I AM GLORIA》是鄧紫棋在 2025 年推出的首張重錄專輯，以十首主曲與兩首 Bonus 組成。〈我的秘密〉、〈Where Did U Go〉、〈泡沫〉與〈睡公主〉等熟悉作品，以「G.E.M.重生版」再度相遇。",
+        "曲序從〈我的秘密〉開始，亦有〈天空沒有極限〉粵語版；兩首 Bonus 為〈後會無期〉與〈喜歡你〉重生版。早期 EP、專輯與電影單曲，在這張唱片中交會成另一個階段。"
+      ],
+      "editorial": "從你最熟悉的一首歌開始，先讀原版所在年代，再打開重生版。版本對照的價值，是讓相隔多年的錄音保有各自的位置。",
+      "tags": [
+        "I AM GLORIA",
+        "2025",
+        "重錄",
+        "重生版",
+        "版本對照"
+      ],
+      "relatedIDs": [
+        "event-i-am-gloria",
+        "release-gem-ep",
+        "release-18",
+        "release-my-secret",
+        "release-xposed",
+        "track-bubble",
+        "track-sleeping-beauty",
+        "track-where-did-u-go",
+        "track-a-i-n-y",
+        "track-light-years-away",
+        "track-my-secret"
+      ],
+      "sourceIDs": [
+        "source-gloria",
+        "source-gloria-date",
+        "artwork-release-i-am-gloria"
+      ],
+      "tracks": [
+        {
+          "number": 1,
+          "title": "我的秘密 (G.E.M.重生版)",
+          "entryID": "track-my-secret"
+        },
+        {
+          "number": 2,
+          "title": "Where Did U Go (G.E.M.重生版)",
+          "entryID": "track-where-did-u-go"
+        },
+        {
+          "number": 3,
+          "title": "A.I.N.Y. 愛你 (G.E.M.重生版)",
+          "entryID": "track-a-i-n-y"
+        },
+        {
+          "number": 4,
+          "title": "泡沫 (G.E.M.重生版)",
+          "entryID": "track-bubble"
+        },
+        {
+          "number": 5,
+          "title": "回憶的沙漏 (G.E.M.重生版)"
+        },
+        {
+          "number": 6,
+          "title": "紅薔薇白玫瑰 (G.E.M.重生版)"
+        },
+        {
+          "number": 7,
+          "title": "畫 (G.E.M.重生版)"
+        },
+        {
+          "number": 8,
+          "title": "光年之外 (G.E.M.重生版)",
+          "entryID": "track-light-years-away"
+        },
+        {
+          "number": 9,
+          "title": "睡公主 (G.E.M.重生版)",
+          "entryID": "track-sleeping-beauty"
+        },
+        {
+          "number": 10,
+          "title": "天空沒有極限 (粵)"
+        },
+        {
+          "number": 11,
+          "title": "後會無期 (G.E.M.重生版)"
+        },
+        {
+          "number": 12,
+          "title": "喜歡你 (G.E.M.重生版)"
+        }
+      ],
+      "metadata": [
+        {
+          "label": "類型",
+          "value": "重錄專輯：十首主曲＋兩首 Bonus"
+        },
+        {
+          "label": "平台日期",
+          "value": "Apple Music 此版：2025-06-12"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看 Sony 官方介紹",
+          "url": "https://www.sonymusic.com.tw/album/i-am-gloria/"
+        },
+        {
+          "label": "前往 Apple Music",
+          "url": "https://music.apple.com/us/album/i-am-gloria/1818539834"
+        }
+      ],
+      "artworkURL": "https://cdn-p.smehost.net/sites/d563907ee0c84f41b15553bfb3eb554c/wp-content/uploads/2026/10/G.E.M.%E9%84%A7%E7%B4%AB%E6%A3%8B-I-AM-GLORIA-%E7%B9%81%E9%AB%94%E7%89%88%E5%B0%81%E9%9D%A2.jpg"
+    },
+    {
+      "id": "track-sleeping-beauty",
+      "kind": "track",
+      "title": "睡公主",
+      "subtitle": "從出道 EP 到重生版",
+      "date": {
+        "year": 2008
+      },
+      "category": "原創歌曲",
+      "summary": "一首歌連結 2008 與 2025，版本各自保有年代。",
+      "paragraphs": [
+        "〈睡公主〉是 2008 年同名 EP 的收尾曲，詞曲由鄧紫棋創作。五首歌的最初作品，留下以唱作身分出發的一個具體入口。",
+        "2019《摩天動物園》以〈依然睡公主〉結尾，2025《I AM GLORIA》又收錄〈睡公主〉重生版。相隔多年的曲名呼應與新錄音，讓早期作品持續出現在後來的音樂裡。"
+      ],
+      "editorial": "可以先回到五首 EP 的收尾，再走到《摩天動物園》的最後一首，最後比較重生版。把「呼應」與「重錄」分清楚，會比只按歌名找歌更有意思。",
+      "tags": [
+        "睡公主",
+        "Sleeping Beauty",
+        "2008",
+        "重生版"
+      ],
+      "relatedIDs": [
+        "release-gem-ep",
+        "release-city-zoo",
+        "release-i-am-gloria",
+        "event-debut",
+        "event-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-debut",
+        "source-sleep-credit",
+        "source-gloria",
+        "source-city-zoo",
+        "source-gloria-streaming",
+        "artwork-release-gem-ep"
+      ],
+      "versions": [
+        {
+          "id": "sleeping-beauty-2008",
+          "title": "睡公主｜EP 版",
+          "date": {
+            "year": 2008
+          },
+          "releaseID": "release-gem-ep",
+          "note": "收錄於五首出道 EP。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://open.spotify.com/intl-ar/track/46TqGb5wGiXh7LMh2nXJjy"
+            }
+          ],
+          "sourceIDs": [
+            "source-debut"
+          ]
+        },
+        {
+          "id": "sleeping-beauty-2025",
+          "title": "睡公主｜G.E.M.重生版",
+          "date": {
+            "year": 2025
+          },
+          "releaseID": "release-i-am-gloria",
+          "note": "新錄音依官方重生版名稱標示。",
+          "links": [
+            {
+              "label": "查看重生版發行",
+              "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV"
+            }
+          ],
+          "sourceIDs": [
+            "source-gloria-streaming"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        },
+        {
+          "label": "原版所屬",
+          "value": "G.E.M. EP"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://open.spotify.com/intl-ar/track/46TqGb5wGiXh7LMh2nXJjy"
+        }
+      ],
+      "artworkURL": "https://i.scdn.co/image/ab67616d0000b273f6cf85b3e98d2c48f7bd1bed"
+    },
+    {
+      "id": "track-where-did-u-go",
+      "kind": "track",
+      "title": "Where Did U Go",
+      "subtitle": "一個歌名，保留不同錄音身分",
+      "date": {
+        "year": 2008
+      },
+      "category": "歌曲",
+      "summary": "出道 EP 原版、2009 混音與 2025 重生版。",
+      "paragraphs": [
+        "〈Where Did U Go〉是 2008 年同名 EP 的第二首。隔年的《18...》數位版收錄〈Where Did U Go 2.0 (Sam Vahdat Remix)〉，熟悉的歌名以混音形式延伸。",
+        "2025《I AM GLORIA》再以「G.E.M.重生版」收錄它。EP 錄音、2009 混音與後來重錄，為同一首熟悉作品留下三個相隔多年的入口，也連結她最早兩份發行。"
+      ],
+      "editorial": "先聽 EP 版本，再把混音與重生版加入比較。以錄音版本為單位閱讀，才不會讓熟悉的歌名掩蓋了作品多年之間的變化。",
+      "tags": [
+        "Where Did You Go",
+        "Where Did U Go",
+        "2008",
+        "Remix"
+      ],
+      "relatedIDs": [
+        "release-gem-ep",
+        "release-18",
+        "release-i-am-gloria",
+        "event-debut"
+      ],
+      "sourceIDs": [
+        "source-debut",
+        "source-18-tracks",
+        "source-gloria",
+        "source-gloria-streaming",
+        "artwork-release-gem-ep"
+      ],
+      "versions": [
+        {
+          "id": "where-2008",
+          "title": "Where Did U Go｜EP 版",
+          "date": {
+            "year": 2008
+          },
+          "releaseID": "release-gem-ep",
+          "note": "五首 EP 的第二首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://open.spotify.com/intl-ar/track/46TqGb5wGiXh7LMh2nXJjy"
+            }
+          ],
+          "sourceIDs": [
+            "source-debut"
+          ]
+        },
+        {
+          "id": "where-2009-remix",
+          "title": "Where Did U Go 2.0｜Sam Vahdat Remix",
+          "date": {
+            "year": 2009
+          },
+          "releaseID": "release-18",
+          "note": "《18...》此數位版的第十一首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://www.shazam.com/album/6775749474/18"
+            }
+          ],
+          "sourceIDs": [
+            "source-18-tracks"
+          ]
+        },
+        {
+          "id": "where-2025",
+          "title": "Where Did U Go｜G.E.M.重生版",
+          "date": {
+            "year": 2025
+          },
+          "releaseID": "release-i-am-gloria",
+          "note": "重錄專輯第二首。",
+          "links": [
+            {
+              "label": "查看重生版發行",
+              "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV"
+            }
+          ],
+          "sourceIDs": [
+            "source-gloria-streaming"
+          ]
+        }
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://open.spotify.com/intl-ar/track/46TqGb5wGiXh7LMh2nXJjy"
+        }
+      ],
+      "artworkURL": "https://i.scdn.co/image/ab67616d0000b273f6cf85b3e98d2c48f7bd1bed"
+    },
+    {
+      "id": "track-a-i-n-y",
+      "kind": "track",
+      "title": "A.I.N.Y. 愛你",
+      "subtitle": "2009 與 2025 的兩個入口",
+      "date": {
+        "year": 2009
+      },
+      "category": "歌曲",
+      "summary": "從《18...》原版，走到《I AM GLORIA》重生版。",
+      "paragraphs": [
+        "〈A.I.N.Y.〉收錄於 2009《18...》，位於十三首數位版第四首。它與〈All About U〉、〈Game Over〉等歌曲同在這張早期唱片，成為走回出道後階段的入口。",
+        "2025《I AM GLORIA》以〈A.I.N.Y. 愛你 (G.E.M.重生版)〉列為第三首。原版與新錄音分別連向兩張唱片，讓多年之間的演唱和作品位置都保留在聆聽路徑裡。"
+      ],
+      "editorial": "從這首歌回到《18...》，可以補看熟悉作品周圍的歌曲；再走到重錄專輯，讓兩個時期的唱片脈絡一起進入聆聽。",
+      "tags": [
+        "AINY",
+        "A.I.N.Y.",
+        "愛你",
+        "2009",
+        "重錄"
+      ],
+      "relatedIDs": [
+        "release-18",
+        "release-i-am-gloria",
+        "event-18",
+        "event-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-18-tracks",
+        "source-gloria",
+        "source-gloria-streaming",
+        "artwork-release-18"
+      ],
+      "versions": [
+        {
+          "id": "ainy-2009",
+          "title": "A.I.N.Y.｜18... 版",
+          "date": {
+            "year": 2009
+          },
+          "releaseID": "release-18",
+          "note": "十三首數位版第四首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://www.shazam.com/album/6775749474/18"
+            }
+          ],
+          "sourceIDs": [
+            "source-18-tracks"
+          ]
+        },
+        {
+          "id": "ainy-2025",
+          "title": "A.I.N.Y. 愛你｜G.E.M.重生版",
+          "date": {
+            "year": 2025
+          },
+          "releaseID": "release-i-am-gloria",
+          "note": "十二首重錄專輯第三首。",
+          "links": [
+            {
+              "label": "查看重生版發行",
+              "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV"
+            }
+          ],
+          "sourceIDs": [
+            "source-gloria-streaming"
+          ]
+        }
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.shazam.com/album/6775749474/18"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music221/v4/12/32/5e/12325ea3-7db2-2808-de0b-e8fd0807dc29/887158126253.jpg/632x632bb.webp"
+    },
+    {
+      "id": "track-bubble",
+      "kind": "track",
+      "title": "泡沫",
+      "subtitle": "專輯、競演與重錄之間",
+      "date": {
+        "year": 2012
+      },
+      "category": "歌曲",
+      "summary": "從《Xposed》追到《我是歌手》，再回到重生版。",
+      "paragraphs": [
+        "〈泡沫〉最早所在的專輯是 2012《Xposed》，在十首標準版中位於第四首。2014 年，鄧紫棋再把它帶上《我是歌手》第二季，歌曲由唱片走進電視競演現場。",
+        "2025《I AM GLORIA》收錄〈泡沫〉重生版。從早期唱片、節目舞台到後來的新錄音，這首歌連起三個階段；每一個版本，也都能讓人重新回到當時的作品背景。"
+      ],
+      "editorial": "適合用來走第一條探索路徑：先看專輯曲序，再看舞台檔案，最後比較後來的重錄。熟悉的一首歌，也能成為理解她不同階段的線索。",
+      "tags": [
+        "泡沫",
+        "Bubble",
+        "Xposed",
+        "我是歌手",
+        "重生版"
+      ],
+      "relatedIDs": [
+        "release-xposed",
+        "program-i-am-singer-2",
+        "stage-bubble-2014",
+        "event-singer-2014",
+        "release-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-xposed",
+        "source-xposed-tracks",
+        "source-singer",
+        "source-gloria",
+        "source-gloria-streaming",
+        "artwork-release-xposed"
+      ],
+      "versions": [
+        {
+          "id": "bubble-2012",
+          "title": "泡沫｜Xposed 版",
+          "date": {
+            "year": 2012
+          },
+          "releaseID": "release-xposed",
+          "note": "十首標準版第四首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://music.amazon.in/albums/B0H3PBJ6S6"
+            }
+          ],
+          "sourceIDs": [
+            "source-xposed-tracks"
+          ]
+        },
+        {
+          "id": "bubble-2014-live",
+          "title": "泡沫｜我是歌手第二季現場",
+          "date": {
+            "year": 2014
+          },
+          "note": "節目演出；影片重發日不作為演出日。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://www.youtube.com/watch?v=JkNRqhxH3OY"
+            }
+          ],
+          "sourceIDs": [
+            "source-singer"
+          ]
+        },
+        {
+          "id": "bubble-2025",
+          "title": "泡沫｜G.E.M.重生版",
+          "date": {
+            "year": 2025
+          },
+          "releaseID": "release-i-am-gloria",
+          "note": "重錄專輯第四首。",
+          "links": [
+            {
+              "label": "查看重生版發行",
+              "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV"
+            }
+          ],
+          "sourceIDs": [
+            "source-gloria-streaming"
+          ]
+        }
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://music.apple.com/us/album/xposed/6775778892"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/08/81/e6/0881e6e7-a51c-1a5b-bdae-c379f67dce79/887158129650.jpg/632x632bb.webp"
+    },
+    {
+      "id": "track-heartbeat",
+      "kind": "track",
+      "title": "新的心跳",
+      "subtitle": "同名專輯中的第三首",
+      "date": {
+        "year": 2015
+      },
+      "category": "原創歌曲",
+      "summary": "鄧紫棋詞曲、Lupo Groinig 製作的作品。",
+      "paragraphs": [
+        "〈新的心跳〉是 2015 年同名專輯的第三首，由鄧紫棋創作詞曲、Lupo Groinig 製作。Sony 的歌曲介紹將它連結到面對挫折、挑戰與重新出發。",
+        "它接在〈多遠都要在一起〉與〈再見〉之後，成為唱片前段由關係題材走向個人力量的入口。這張視聽專輯十首歌皆有 MV，同名曲也以歌曲和影像兩種方式與聽眾相遇。"
+      ],
+      "editorial": "把同名曲放回專輯前三首一起聽，看看它與前兩首情感題材的歌曲如何接續；再從 MV 入口比較文字、聲音與影像的不同敘事。",
+      "tags": [
+        "Heartbeat",
+        "新的心跳",
+        "2015"
+      ],
+      "relatedIDs": [
+        "release-heartbeat",
+        "track-away",
+        "event-heartbeat"
+      ],
+      "sourceIDs": [
+        "source-heartbeat-sony",
+        "source-heartbeat",
+        "artwork-release-heartbeat"
+      ],
+      "versions": [
+        {
+          "id": "heartbeat-2015",
+          "title": "新的心跳｜標準專輯版",
+          "date": {
+            "year": 2015
+          },
+          "releaseID": "release-heartbeat",
+          "note": "十首標準版第三首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://music.apple.com/us/album/heartbeat/1053567923"
+            }
+          ],
+          "sourceIDs": [
+            "source-heartbeat"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        },
+        {
+          "label": "製作",
+          "value": "Lupo Groinig"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/%E6%96%B0%E7%9A%84%E5%BF%83%E8%B7%B3-%E5%85%A8%E7%90%83%E9%99%90%E9%87%8F%E9%BB%91%E8%86%A0%E7%89%88-%E9%84%A7%E7%B4%AB%E6%A3%8B-gem-88875199231/"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/bb/c7/55bbc782-299e-7f24-bc4a-ae129e6d8030/mzm.rpqttxch.jpg/632x632bb.webp"
+    },
+    {
+      "id": "track-away",
+      "kind": "track",
+      "title": "來自天堂的魔鬼",
+      "subtitle": "Away",
+      "date": {
+        "year": 2015
+      },
+      "category": "原創歌曲",
+      "summary": "從單首熟悉旋律走回《新的心跳》。",
+      "paragraphs": [
+        "〈來自天堂的魔鬼〉收錄於 2015《新的心跳》，英語顯示名為〈Away〉。十首歌的詞曲由鄧紫棋包辦，這首與同名曲、〈盲點〉相鄰。",
+        "在整張唱片裡，它是第四首，前面已經過〈多遠都要在一起〉、〈再見〉與〈新的心跳〉。熟悉的單曲於是有了前後位置，也和專輯其他九首歌共享一次完整的視聽發行。"
+      ],
+      "editorial": "若你只記得這首歌的副歌，試著完整聽一次，再把前一首〈新的心跳〉與後一首〈盲點〉接起來，為熟悉旋律補上唱片位置。",
+      "tags": [
+        "Away",
+        "來自天堂的魔鬼",
+        "2015"
+      ],
+      "relatedIDs": [
+        "release-heartbeat",
+        "track-heartbeat",
+        "event-heartbeat"
+      ],
+      "sourceIDs": [
+        "source-heartbeat-sony",
+        "source-heartbeat",
+        "artwork-release-heartbeat"
+      ],
+      "versions": [
+        {
+          "id": "away-2015",
+          "title": "來自天堂的魔鬼｜新的心跳版",
+          "date": {
+            "year": 2015
+          },
+          "releaseID": "release-heartbeat",
+          "note": "十首標準版第四首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://music.apple.com/us/album/heartbeat/1053567923"
+            }
+          ],
+          "sourceIDs": [
+            "source-heartbeat"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        },
+        {
+          "label": "製作",
+          "value": "Lupo Groinig"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/%E6%96%B0%E7%9A%84%E5%BF%83%E8%B7%B3-%E5%85%A8%E7%90%83%E9%99%90%E9%87%8F%E9%BB%91%E8%86%A0%E7%89%88-%E9%84%A7%E7%B4%AB%E6%A3%8B-gem-88875199231/"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music124/v4/55/bb/c7/55bbc782-299e-7f24-bc4a-ae129e6d8030/mzm.rpqttxch.jpg/632x632bb.webp"
+    },
+    {
+      "id": "track-light-years-away",
+      "kind": "track",
+      "title": "光年之外",
+      "subtitle": "與電影相遇的單曲",
+      "date": {
+        "year": 2016
+      },
+      "category": "電影主題曲",
+      "summary": "《Passengers》中國區主題曲，並有後來的重生版。",
+      "paragraphs": [
+        "〈光年之外〉在 2016 年以單曲發行，是電影《Passengers》中國區主題曲。它以電影合作的身分出現，也透過官方 MV 連結歌曲與影像。",
+        "2025《I AM GLORIA》收錄〈光年之外〉重生版，將這首先以單曲出現的作品，和不同年代的經典歌曲放在同一張唱片裡。原單曲與重錄，各自留下時間與合作脈絡。"
+      ],
+      "editorial": "這首適合與〈泡沫〉一起閱讀版本：一首從專輯出發，一首先以電影單曲出現，最後都在重錄專輯中得到新的入口。",
+      "tags": [
+        "Light Years Away",
+        "光年之外",
+        "Passengers",
+        "太空旅客",
+        "2016"
+      ],
+      "relatedIDs": [
+        "event-light-years",
+        "release-i-am-gloria",
+        "track-bubble",
+        "event-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-light-years",
+        "source-light-years-mv",
+        "source-gloria",
+        "source-gloria-streaming"
+      ],
+      "versions": [
+        {
+          "id": "light-years-2016",
+          "title": "光年之外｜2016 單曲",
+          "date": {
+            "year": 2016
+          },
+          "note": "電影 Passengers 中國區主題曲。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://music.apple.com/us/album/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96-%E9%9B%BB%E5%BD%B1-passengers-%E4%B8%AD%E5%9C%8B%E5%8D%80%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1190070714"
+            }
+          ],
+          "sourceIDs": [
+            "source-light-years"
+          ]
+        },
+        {
+          "id": "light-years-2025",
+          "title": "光年之外｜G.E.M.重生版",
+          "date": {
+            "year": 2025
+          },
+          "releaseID": "release-i-am-gloria",
+          "note": "重錄專輯第八首。",
+          "links": [
+            {
+              "label": "查看重生版發行",
+              "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV"
+            }
+          ],
+          "sourceIDs": [
+            "source-gloria-streaming"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "合作",
+          "value": "電影 Passengers 中國區主題曲"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://music.apple.com/us/album/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96-%E9%9B%BB%E5%BD%B1-passengers-%E4%B8%AD%E5%9C%8B%E5%8D%80%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1190070714"
+        }
+      ]
+    },
+    {
+      "id": "track-almost",
+      "kind": "track",
+      "title": "差不多姑娘",
+      "subtitle": "Miss Similar",
+      "date": {
+        "year": 2019
+      },
+      "category": "原創歌曲",
+      "summary": "《摩天動物園》中關於相似與差異的一個入口。",
+      "paragraphs": [
+        "〈差不多姑娘〉是《摩天動物園》的第八首，位於〈灰狼〉與〈好想好想妳〉之間。它和十三首正式曲目一起，構成鄧紫棋 2019 年的作品。",
+        "這張唱片由她包辦詞曲，並與 T-Ma 馬敬恆共同製作；官方概念以動物形象連向城市與人際觀察。從這首歌可以走回整張唱片，也能看見她在創作之外參與製作的角色。"
+      ],
+      "editorial": "可以帶著「相似到底由誰定義」這個問題進入歌曲，再回到同名曲的城市隱喻。這是閱讀提問，並非替創作者指定唯一答案。",
+      "tags": [
+        "Miss Similar",
+        "差不多姑娘",
+        "2019",
+        "摩天動物園"
+      ],
+      "relatedIDs": [
+        "release-city-zoo",
+        "track-city-zoo",
+        "track-fly-away",
+        "event-city-zoo"
+      ],
+      "sourceIDs": [
+        "source-city-zoo",
+        "source-city-zoo-date",
+        "source-city-zoo-artist",
+        "artwork-release-city-zoo"
+      ],
+      "versions": [
+        {
+          "id": "almost-2019",
+          "title": "差不多姑娘｜摩天動物園版",
+          "date": {
+            "year": 2019
+          },
+          "releaseID": "release-city-zoo",
+          "note": "十三首正式版第八首。",
+          "links": [
+            {
+              "label": "查看官方曲序",
+              "url": "https://www.iamgem.com/motiandongwuyuan/"
+            }
+          ],
+          "sourceIDs": [
+            "source-city-zoo-artist"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        },
+        {
+          "label": "專輯製作",
+          "value": "G.E.M. 鄧紫棋、T-Ma 馬敬恆"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo/"
+        }
+      ],
+      "artworkURL": "https://cdn-p.smehost.net/sites/d563907ee0c84f41b15553bfb3eb554c/wp-content/uploads/2020/06/19439725172.jpg"
+    },
+    {
+      "id": "track-city-zoo",
+      "kind": "track",
+      "title": "摩天動物園",
+      "subtitle": "City Zoo",
+      "date": {
+        "year": 2019
+      },
+      "category": "原創歌曲",
+      "summary": "同名專輯的開場與概念入口。",
+      "paragraphs": [
+        "〈摩天動物園〉是 2019 年同名專輯的開場。城市高樓與動物形象構成官方介紹的核心隱喻，將人際關係、社會觀察與人的不同面貌帶進作品。",
+        "這張唱片由鄧紫棋包辦詞曲，並與 T-Ma 馬敬恆共同製作；2020 年整張專輯獲得金曲獎評審團獎。同名曲於是既是第一首歌，也是進入這次創作與製作階段的門。"
+      ],
+      "editorial": "從開場進入後，接著聽〈Fly Away〉，再選一首情感題材的歌，看看同一個專輯概念如何容納不同的敘事尺度。",
+      "tags": [
+        "City Zoo",
+        "摩天動物園",
+        "2019",
+        "金曲"
+      ],
+      "relatedIDs": [
+        "release-city-zoo",
+        "event-city-zoo",
+        "event-gma-jury",
+        "track-fly-away",
+        "track-almost"
+      ],
+      "sourceIDs": [
+        "source-city-zoo",
+        "source-gma",
+        "source-city-zoo-artist",
+        "artwork-release-city-zoo"
+      ],
+      "versions": [
+        {
+          "id": "city-zoo-2019",
+          "title": "摩天動物園｜專輯版",
+          "date": {
+            "year": 2019
+          },
+          "releaseID": "release-city-zoo",
+          "note": "十三首正式版第一首。",
+          "links": [
+            {
+              "label": "查看官方曲序",
+              "url": "https://www.iamgem.com/motiandongwuyuan/"
+            }
+          ],
+          "sourceIDs": [
+            "source-city-zoo-artist"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo/"
+        }
+      ],
+      "artworkURL": "https://cdn-p.smehost.net/sites/d563907ee0c84f41b15553bfb3eb554c/wp-content/uploads/2020/06/19439725172.jpg"
+    },
+    {
+      "id": "track-long-after",
+      "kind": "track",
+      "title": "很久以後",
+      "subtitle": "Long After",
+      "date": {
+        "year": 2019
+      },
+      "category": "原創歌曲",
+      "summary": "《摩天動物園》裡的情感敘事入口。",
+      "paragraphs": [
+        "〈很久以後〉收錄於 2019《摩天動物園》，曲序位於〈透明〉之後、〈WALK ON WATER〉之前。它與同名開場、〈差不多姑娘〉共同存在於十三首作品之中。",
+        "Sony 的專輯介紹除了社會觀察，也談到關係中的溫柔與無奈。由鄧紫棋包辦詞曲的這張唱片，讓人可以在同一個概念下，同時走進對外的觀察與親密關係的距離。"
+      ],
+      "editorial": "可以先聽這首，再回到同名曲。兩首放在一起，試著比較它們如何把關注點放在不同的人際距離，看看整張唱片能容納多少種情感與觀察。",
+      "tags": [
+        "Long After",
+        "很久以後",
+        "2019"
+      ],
+      "relatedIDs": [
+        "release-city-zoo",
+        "track-city-zoo",
+        "event-city-zoo",
+        "event-gma-jury"
+      ],
+      "sourceIDs": [
+        "source-city-zoo-date",
+        "source-city-zoo",
+        "source-city-zoo-artist",
+        "artwork-release-city-zoo"
+      ],
+      "versions": [
+        {
+          "id": "long-after-2019",
+          "title": "很久以後｜摩天動物園版",
+          "date": {
+            "year": 2019
+          },
+          "releaseID": "release-city-zoo",
+          "note": "十三首正式版第四首。",
+          "links": [
+            {
+              "label": "查看官方曲序",
+              "url": "https://www.iamgem.com/motiandongwuyuan/"
+            }
+          ],
+          "sourceIDs": [
+            "source-city-zoo-artist"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo-limited-edition/"
+        }
+      ],
+      "artworkURL": "https://cdn-p.smehost.net/sites/d563907ee0c84f41b15553bfb3eb554c/wp-content/uploads/2020/06/19439725172.jpg"
+    },
+    {
+      "id": "track-gloria",
+      "kind": "track",
+      "title": "GLORIA",
+      "subtitle": "中文與西語的兩個版本",
+      "date": {
+        "year": 2022
+      },
+      "category": "原創歌曲",
+      "summary": "由《啟示錄》走到《Revelación》。",
+      "paragraphs": [
+        "〈GLORIA〉是《啟示錄》的首波主打，也揭開音樂連續劇的序章。Warner 的官方介紹提到，Gloria 源自父親在她小時候取的名字；歌曲因而把個人名字與作品世界連在一起。",
+        "在專輯聆聽順序裡，〈GLORIA〉位於第八首；隔年的西語《Revelación》同一位置則收錄〈Gloria〉。從影像開場到跨語言版本，這首作品擁有不只一個入口。"
+      ],
+      "editorial": "從這首歌回到《啟示錄》，再走進西語作品，是理解相同音樂世界跨語言呈現的一條短路徑。也可以順手比較三個帶有 GLORIA 的名稱各指向什麼。",
+      "tags": [
+        "Gloria",
+        "GLORIA",
+        "啟示錄",
+        "Revelación",
+        "2022"
+      ],
+      "relatedIDs": [
+        "release-revelation",
+        "release-revelacion",
+        "release-i-am-gloria",
+        "event-revelation",
+        "event-revelacion"
+      ],
+      "sourceIDs": [
+        "source-revelation",
+        "source-revelacion",
+        "source-gloria",
+        "source-revelation-story",
+        "artwork-release-revelation"
+      ],
+      "versions": [
+        {
+          "id": "gloria-2022",
+          "title": "GLORIA｜啟示錄版",
+          "date": {
+            "year": 2022
+          },
+          "releaseID": "release-revelation",
+          "note": "官方專輯曲序第八首；不是 MV 第八章的意思。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://www.iamgem.com/qishilu/"
+            }
+          ],
+          "sourceIDs": [
+            "source-revelation"
+          ]
+        },
+        {
+          "id": "gloria-2023",
+          "title": "Gloria｜Revelación 版",
+          "date": {
+            "year": 2023
+          },
+          "releaseID": "release-revelacion",
+          "note": "西語發行曲序第八首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://www.iamgem.com/revelacion/"
+            }
+          ],
+          "sourceIDs": [
+            "source-revelacion"
+          ]
+        }
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.iamgem.com/qishilu/"
+        }
+      ],
+      "artworkURL": "https://www.iamgem.com/wp-content/uploads/2022/08/qishilu-fan.jpg"
+    },
+    {
+      "id": "track-fly-away",
+      "kind": "track",
+      "title": "Fly Away",
+      "subtitle": "同名開場之後的第二首",
+      "date": {
+        "year": 2019
+      },
+      "category": "原創歌曲",
+      "summary": "把《摩天動物園》的開場延伸成兩首閱讀。",
+      "paragraphs": [
+        "〈Fly Away〉是 2019《摩天動物園》的第二首，緊接同名開場、再往下接〈透明〉。這個位置讓它成為聽眾進入十三首作品後最早遇見的歌曲之一。",
+        "整張唱片的詞曲由鄧紫棋創作，製作則由她與 T-Ma 馬敬恆共同完成。從這首歌回到唱片，可以再沿著〈差不多姑娘〉、〈很久以後〉和收尾的〈依然睡公主〉繼續探索。"
+      ],
+      "editorial": "在開場之後不要急著跳到熟悉的歌。讓第二首完整播放，再回想開場提出的世界，試著找出一張專輯如何透過相鄰曲序推動聆聽。",
+      "tags": [
+        "Fly Away",
+        "2019",
+        "摩天動物園"
+      ],
+      "relatedIDs": [
+        "release-city-zoo",
+        "track-city-zoo",
+        "track-almost",
+        "event-gma-jury"
+      ],
+      "sourceIDs": [
+        "source-city-zoo-date",
+        "source-city-zoo",
+        "source-city-zoo-artist",
+        "artwork-release-city-zoo"
+      ],
+      "versions": [
+        {
+          "id": "fly-away-2019",
+          "title": "Fly Away｜摩天動物園版",
+          "date": {
+            "year": 2019
+          },
+          "releaseID": "release-city-zoo",
+          "note": "十三首正式版第二首。",
+          "links": [
+            {
+              "label": "查看官方曲序",
+              "url": "https://www.iamgem.com/motiandongwuyuan/"
+            }
+          ],
+          "sourceIDs": [
+            "source-city-zoo-artist"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo-limited-edition/"
+        }
+      ],
+      "artworkURL": "https://cdn-p.smehost.net/sites/d563907ee0c84f41b15553bfb3eb554c/wp-content/uploads/2020/06/19439725172.jpg"
+    },
+    {
+      "id": "track-my-secret",
+      "kind": "track",
+      "title": "我的秘密",
+      "subtitle": "MySecret",
+      "date": {
+        "year": 2010
+      },
+      "category": "歌曲",
+      "summary": "2010 同名作品與 2025 重生版的對照。",
+      "paragraphs": [
+        "〈我的秘密〉是 2010《MySecret》的第七首。它與〈One Button〉、〈寂寞星球的玫瑰〉和〈Twinkle II〉等歌曲同在十首唱片裡，留下她早期作品的一個入口。",
+        "十五年後，〈我的秘密 (G.E.M.重生版)〉成為《I AM GLORIA》的第一首。從舊唱片中段走到新唱片開場，同一個歌名在兩個時期的曲序裡，連起不同的聆聽起點。"
+      ],
+      "editorial": "除了聽聲音，也比較它在唱片裡的前後關係。原版第七首與重生版開場，讓同一首歌在不同曲序中成為不同的閱讀入口。",
+      "tags": [
+        "MySecret",
+        "My Secret",
+        "我的秘密",
+        "2010",
+        "重生版"
+      ],
+      "relatedIDs": [
+        "release-my-secret",
+        "release-i-am-gloria",
+        "event-my-secret",
+        "event-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-my-secret-tracks",
+        "source-gloria",
+        "source-gloria-streaming",
+        "artwork-release-my-secret"
+      ],
+      "versions": [
+        {
+          "id": "my-secret-2010",
+          "title": "我的秘密｜MySecret 版",
+          "date": {
+            "year": 2010
+          },
+          "releaseID": "release-my-secret",
+          "note": "十首數位版第七首。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://open.spotify.com/intl-fr/album/2ZkF6zANeekBDgwMFGLIlf"
+            }
+          ],
+          "sourceIDs": [
+            "source-my-secret-tracks"
+          ]
+        },
+        {
+          "id": "my-secret-2025",
+          "title": "我的秘密｜G.E.M.重生版",
+          "date": {
+            "year": 2025
+          },
+          "releaseID": "release-i-am-gloria",
+          "note": "重錄專輯開場第一首。",
+          "links": [
+            {
+              "label": "查看重生版發行",
+              "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV"
+            }
+          ],
+          "sourceIDs": [
+            "source-gloria-streaming"
+          ]
+        }
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://open.spotify.com/intl-fr/album/2ZkF6zANeekBDgwMFGLIlf"
+        }
+      ],
+      "artworkURL": "https://is1-ssl.mzstatic.com/image/thumb/Music211/v4/69/df/dd/69dfdddd-449b-7e9b-deee-c07d4ff7ad85/887158129667.jpg/632x632bb.webp"
+    },
+    {
+      "id": "track-free-to-be-you",
+      "kind": "track",
+      "title": "自由的你",
+      "subtitle": "Free to Be You",
+      "date": {
+        "year": 2026
+      },
+      "category": "原創單曲",
+      "summary": "以獨立感受、思考與選擇為題的近期入口。",
+      "paragraphs": [
+        "2026 年單曲〈自由的你〉，英語名為〈Free to Be You〉。鄧紫棋包辦詞曲，李榮浩負責製作與編曲，兩位音樂人在這首作品裡合作。",
+        "Sony 的介紹把題材放在科技與資訊環境中的感受、思考與選擇，也提及歌曲在《I AM GLORIA》巡演深圳最終站唱響。它以新創作專輯先行主打的身分，延伸出巡演之後的新問題。"
+      ],
+      "editorial": "從早期 EP 走到這首新作，可以把「作品如何表達自己」當成一條閱讀線；最後也留下一個問題：你想以什麼方式回應這首歌談的選擇？",
+      "tags": [
+        "Free to Be You",
+        "自由的你",
+        "2026",
+        "李榮浩"
+      ],
+      "relatedIDs": [
+        "event-free-to-be-you",
+        "event-i-am-gloria",
+        "release-i-am-gloria",
+        "event-debut"
+      ],
+      "sourceIDs": [
+        "source-free"
+      ],
+      "versions": [
+        {
+          "id": "free-to-be-you-2026",
+          "title": "自由的你｜2026 單曲",
+          "date": {
+            "year": 2026
+          },
+          "note": "以正式公布的單曲資訊建檔。",
+          "links": [
+            {
+              "label": "查看此版本來源",
+              "url": "https://www.sonymusic.com.tw/album/free-to-be-you/"
+            }
+          ],
+          "sourceIDs": [
+            "source-free"
+          ]
+        }
+      ],
+      "metadata": [
+        {
+          "label": "詞曲",
+          "value": "G.E.M. 鄧紫棋"
+        },
+        {
+          "label": "製作／編曲",
+          "value": "李榮浩"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看官方作品或平台資料",
+          "url": "https://www.sonymusic.com.tw/album/free-to-be-you/"
+        }
+      ]
+    },
+    {
+      "id": "event-debut",
+      "kind": "event",
+      "title": "以《G.E.M.》開始",
+      "subtitle": "五首歌的出道起點",
+      "date": {
+        "year": 2008
+      },
+      "category": "音樂",
+      "summary": "先從她的第一份作品認識她。",
+      "paragraphs": [
+        "2008 年，鄧紫棋以同名 EP《G.E.M.》出道。五首歌包含〈Where Did U Go〉、〈回憶的沙漏〉和她創作詞曲的〈睡公主〉，錄音作品成為她進入樂壇的起點。",
+        "這些早期歌名此後仍與她的音樂相連：〈Where Did U Go〉延伸出混音與重生版，〈睡公主〉也在後來唱片留下呼應。出道年份背後，是可以一直聽下去的作品。"
+      ],
+      "editorial": "先花一張 EP 的時間認識她，再回到時間線。你會帶著歌曲的記憶閱讀後來的舞台與專輯，而不只記住「2008」。",
+      "tags": [
+        "出道",
+        "G.E.M.",
+        "2008"
+      ],
+      "relatedIDs": [
+        "release-gem-ep",
+        "track-sleeping-beauty",
+        "track-where-did-u-go",
+        "event-18"
+      ],
+      "sourceIDs": [
+        "source-debut-press",
+        "source-debut",
+        "source-sleep-credit"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://media.ticketmaster.com/en-au/img/static/pdf/G.E.MPressRelease.pdf"
+        }
+      ]
+    },
+    {
+      "id": "event-18",
+      "kind": "event",
+      "title": "走進《18...》",
+      "subtitle": "從 EP 延伸到長篇曲序",
+      "date": {
+        "year": 2009
+      },
+      "category": "音樂",
+      "summary": "〈A.I.N.Y.〉所在的早期作品。",
+      "paragraphs": [
+        "2009 年《18...》把五首 EP 之後的作品延伸為完整專輯。Sony 的早期回顧將它放在鄧紫棋走向台灣與內地觀眾的階段，〈All About U〉與〈A.I.N.Y.〉也出現在這張唱片。",
+        "十三首數位版收錄原有歌曲的混音、不同版本與林海峰合作曲。從〈A.I.N.Y.〉原版繼續往後，還能走到 2025 年重生版，讓早期作品的閱讀不只停在一個年份。"
+      ],
+      "editorial": "把〈A.I.N.Y.〉當入口，也試著聽它前後的曲目，感受一首歌如何在唱片裡獲得位置。",
+      "tags": [
+        "18...",
+        "2009",
+        "愛你"
+      ],
+      "relatedIDs": [
+        "release-18",
+        "track-a-i-n-y",
+        "event-debut",
+        "event-my-secret"
+      ],
+      "sourceIDs": [
+        "source-18",
+        "source-18-tracks",
+        "source-early-retrospective",
+        "source-gloria"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/18/6775749474"
+        }
+      ]
+    },
+    {
+      "id": "event-my-secret",
+      "kind": "event",
+      "title": "把秘密放進一張唱片",
+      "subtitle": "2010 的十首數位作品",
+      "date": {
+        "year": 2010
+      },
+      "category": "音樂",
+      "summary": "不只同名歌，還有完整的早期曲序。",
+      "paragraphs": [
+        "2010 年《MySecret》收錄〈Good to Be Bad〉、〈Get Over You〉、〈我的秘密〉與〈Twinkle II〉等十首歌。同名曲位於第七首，和其他作品一起構成她出道後的唱片階段。",
+        "〈我的秘密〉後來在 2025 年的重錄專輯成為開場。從早期曲序到後來的新錄音，這首歌讓聽眾可以往前認識整張《MySecret》，也可以往後比較不同時期的演唱。"
+      ],
+      "editorial": "同名作品常是最容易被記住的入口，但沿著曲序走，才會看見一張唱片的其他房間。",
+      "tags": [
+        "MySecret",
+        "我的秘密",
+        "2010"
+      ],
+      "relatedIDs": [
+        "release-my-secret",
+        "track-my-secret",
+        "event-18",
+        "event-xposed"
+      ],
+      "sourceIDs": [
+        "source-my-secret",
+        "source-my-secret-tracks",
+        "source-gloria"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/mysecret/6776100461"
+        }
+      ]
+    },
+    {
+      "id": "event-hong-kong-2011",
+      "kind": "event",
+      "title": "在紅館留下巡演紀錄",
+      "subtitle": "Get Everybody Moving",
+      "date": {
+        "year": 2011,
+        "month": 5,
+        "day": 14
+      },
+      "category": "節目舞台",
+      "summary": "官方巡演紀錄列出 5 月 14 至 16 日紅館場次。",
+      "paragraphs": [
+        "2011 年，Get Everybody Moving 巡演在香港紅磡體育館留下五月三場、九月兩場的官方紀錄。同年的路線還包含悉尼、廣州、澳門、溫哥華與多倫多等城市。",
+        "在《MySecret》與《Xposed》之間，現場演出成為另一條持續前進的線。Sony 的《Xposed》介紹也回顧紅館演出的工作階段，將舞台經驗放進下一張作品的成長背景。"
+      ],
+      "editorial": "把視線從唱片曲序移到城市與場館，想像同一批歌曲如何走出錄音室。再看看後來的巡演路線怎樣延伸。",
+      "tags": [
+        "2011",
+        "紅館",
+        "Get Everybody Moving",
+        "巡演"
+      ],
+      "relatedIDs": [
+        "release-my-secret",
+        "release-18",
+        "event-xxx-tour",
+        "event-queen-of-hearts"
+      ],
+      "sourceIDs": [
+        "source-tours",
+        "source-xposed-story"
+      ],
+      "metadata": [
+        {
+          "label": "官網列出場次",
+          "value": "2011-05-14 至 2011-05-16"
+        },
+        {
+          "label": "場館",
+          "value": "香港紅磡體育館"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.iamgem.com/tours/"
+        }
+      ]
+    },
+    {
+      "id": "event-xposed",
+      "kind": "event",
+      "title": "《Xposed》與〈泡沫〉",
+      "subtitle": "先有作品，後有電視舞台",
+      "date": {
+        "year": 2012
+      },
+      "category": "音樂",
+      "summary": "把 2012 的專輯與 2014 的演出分開閱讀。",
+      "paragraphs": [
+        "2012 年《Xposed》以曝光、揭示為名字的出發點。Sony 的介紹將它連結到鄧紫棋經歷工作、家庭與情感壓力後，藉由創作記錄與分享經驗的階段。",
+        "這張唱片包含〈What Have U Done〉、〈Someday I'll Fly〉與〈泡沫〉。兩年後，〈泡沫〉又被帶進《我是歌手》第二季，讓唱片裡的作品與電視現場建立連續的路徑。"
+      ],
+      "editorial": "如果你是因節目認識〈泡沫〉，這一站可以讓你往前追一步：它在成為舞台記憶之前，已是一張唱片裡的作品。",
+      "tags": [
+        "Xposed",
+        "2012",
+        "泡沫"
+      ],
+      "relatedIDs": [
+        "release-xposed",
+        "track-bubble",
+        "event-singer-2014",
+        "stage-bubble-2014",
+        "event-xxx-tour"
+      ],
+      "sourceIDs": [
+        "source-xposed",
+        "source-xposed-tracks",
+        "source-singer",
+        "source-xposed-story"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/xposed/6775778892"
+        }
+      ]
+    },
+    {
+      "id": "event-xxx-tour",
+      "kind": "event",
+      "title": "《X.X.X. Live》展開",
+      "subtitle": "從香港場次走向更多城市",
+      "date": {
+        "year": 2013,
+        "month": 4,
+        "day": 12
+      },
+      "category": "節目舞台",
+      "summary": "官方紀錄列出 4 月 12 至 16 日香港紅館場次。",
+      "paragraphs": [
+        "2013 年，《G.E.M. X.X.X. Live 世界巡迴演唱會》的香港紅磡體育館紀錄從 4 月 12 日延續至 16 日；同年還有廣州場次，之後的年份則走向更多城市。",
+        "這輪巡演跨過《Xposed》之後與 2014 年節目競演的時期。作品、電視與巡演因此並行存在：聽眾可以先從一張專輯認識歌曲，再在不同城市與現場重新遇見它。"
+      ],
+      "editorial": "可以把巡演當作時間線的另一層：唱片之間的年份，仍有持續的現場工作。看看歌曲與城市如何在同一段生涯裡交錯。",
+      "tags": [
+        "X.X.X.",
+        "XXX",
+        "2013",
+        "巡演",
+        "紅館"
+      ],
+      "relatedIDs": [
+        "event-xposed",
+        "release-xposed",
+        "event-singer-2014",
+        "event-heartbeat",
+        "event-queen-of-hearts"
+      ],
+      "sourceIDs": [
+        "source-tours"
+      ],
+      "metadata": [
+        {
+          "label": "官網列出香港場次",
+          "value": "2013-04-12 至 2013-04-16"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.iamgem.com/tours/"
+        }
+      ]
+    },
+    {
+      "id": "event-singer-2014",
+      "kind": "event",
+      "title": "走上《我是歌手》第二季",
+      "subtitle": "以競演歌手的身分被看見",
+      "date": {
+        "year": 2014
+      },
+      "category": "節目舞台",
+      "summary": "原創〈泡沫〉與不同風格的現場演出。",
+      "paragraphs": [
+        "2014 年，鄧紫棋以首發歌手身分參與湖南衛視《我是歌手》第二季。她把自己專輯裡的〈泡沫〉帶進競演舞台，同季也演唱〈存在〉、〈喜歡你〉與〈Falling〉等作品。",
+        "原創和翻唱同時出現在一季節目裡，讓觀眾在不同選曲中認識她的現場演唱。這條線也能往後連到《T.I.M.E.》，再看她如何以發行作品的方式重新詮釋別人的歌。"
+      ],
+      "editorial": "看完一首熟悉的歌，再挑一首原本不熟的翻唱。比較選曲與詮釋，是認識歌手現場面貌的一種方式。",
+      "tags": [
+        "我是歌手",
+        "第二季",
+        "2014",
+        "湖南衛視"
+      ],
+      "relatedIDs": [
+        "program-i-am-singer-2",
+        "stage-bubble-2014",
+        "stage-existence-2014",
+        "stage-like-you-2014",
+        "track-bubble",
+        "release-xposed"
+      ],
+      "sourceIDs": [
+        "source-singer",
+        "source-existence-stage",
+        "source-like-stage",
+        "source-falling-stage",
+        "source-time"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.youtube.com/watch?v=JkNRqhxH3OY"
+        }
+      ]
+    },
+    {
+      "id": "event-heartbeat",
+      "kind": "event",
+      "title": "《新的心跳》成形",
+      "subtitle": "詞曲與影像的整張企畫",
+      "date": {
+        "year": 2015,
+        "month": 11,
+        "day": 6
+      },
+      "category": "音樂",
+      "summary": "十首詞曲由她包辦，Lupo Groinig 製作。",
+      "paragraphs": [
+        "2015 年，《新的心跳》推出十首作品，鄧紫棋首次在一張唱片裡包辦全部詞曲，Lupo Groinig 製作。相隔《Xposed》三年的創作，涵蓋思念、離別、挑戰與人生感受。",
+        "每首歌曲都搭配 MV，唱片也以視聽作品呈現。從〈多遠都要在一起〉、〈再見〉到同名曲與〈一路逆風〉，演唱之外的詞曲工作，清楚成為這一階段的共同線索。"
+      ],
+      "editorial": "這一站可以先讀幕後分工，再選兩首不同題材的歌。當名字出現在詞曲欄，聆聽也多了一層理解作品的角度。",
+      "tags": [
+        "2015",
+        "新的心跳",
+        "詞曲",
+        "視聽"
+      ],
+      "relatedIDs": [
+        "release-heartbeat",
+        "track-heartbeat",
+        "track-away",
+        "event-xxx-tour",
+        "event-city-zoo"
+      ],
+      "sourceIDs": [
+        "source-heartbeat",
+        "source-heartbeat-sony"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/heartbeat/1053567923"
+        }
+      ]
+    },
+    {
+      "id": "event-light-years",
+      "kind": "event",
+      "title": "〈光年之外〉與電影相遇",
+      "subtitle": "Passengers 中國區主題曲",
+      "date": {
+        "year": 2016
+      },
+      "category": "音樂",
+      "summary": "一首先以電影合作單曲出現的作品。",
+      "paragraphs": [
+        "2016 年，〈光年之外〉以電影《Passengers》中國區主題曲的身分發行，歌曲也有對應官方 MV。這次先以單曲出現的作品，為她的音樂加入電影合作的脈絡。",
+        "到了 2025《I AM GLORIA》，〈光年之外〉以重生版再被收錄，與出道 EP 和早期唱片中的歌曲在同一張作品相遇。單曲與電影的起點，於是又連到多年後的重錄階段。"
+      ],
+      "editorial": "把它與專輯出身的〈泡沫〉一起看：代表歌曲不一定都從整張唱片出發，單曲、電影與後來重錄也能串出長時間的閱讀線。",
+      "tags": [
+        "2016",
+        "光年之外",
+        "Passengers",
+        "電影"
+      ],
+      "relatedIDs": [
+        "track-light-years-away",
+        "release-i-am-gloria",
+        "event-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-light-years",
+        "source-light-years-mv"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96-%E9%9B%BB%E5%BD%B1-passengers-%E4%B8%AD%E5%9C%8B%E5%8D%80%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1190070714"
+        }
+      ]
+    },
+    {
+      "id": "event-queen-of-hearts",
+      "kind": "event",
+      "title": "《Queen of Hearts》巡演",
+      "subtitle": "2017 的另一輪現場篇章",
+      "date": {
+        "year": 2017,
+        "month": 4,
+        "day": 1
+      },
+      "category": "節目舞台",
+      "summary": "官方紀錄從廣州場次連向不同城市。",
+      "paragraphs": [
+        "2017 年，《Queen of Hearts 世界巡迴演唱會》從官方列出的廣州場次，接著走向北京、新加坡、香港與澳洲等城市，巡演紀錄延伸到 2019 年。",
+        "從 2011 的 Get Everybody Moving，到 2013 的《X.X.X. Live》，再到這一輪巡演，現場演出持續構成她生涯裡的另一條路線。唱片的發行點之間，也有一個個城市與場館。"
+      ],
+      "editorial": "沿著城市讀時間，也是一種認識歌手的方式：錄音作品以外，現場讓音樂一次次和不同地方的聽眾相遇。",
+      "tags": [
+        "2017",
+        "Queen of Hearts",
+        "巡演",
+        "廣州"
+      ],
+      "relatedIDs": [
+        "event-hong-kong-2011",
+        "event-xxx-tour",
+        "release-heartbeat",
+        "event-rap-2018"
+      ],
+      "sourceIDs": [
+        "source-tours"
+      ],
+      "metadata": [
+        {
+          "label": "官網列出廣州場次",
+          "value": "2017-04-01 至 2017-04-02"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.iamgem.com/tours/"
+        }
+      ]
+    },
+    {
+      "id": "event-rap-2018",
+      "kind": "event",
+      "title": "成為《中國新說唱》明星製作人",
+      "subtitle": "換一個位置參與舞台",
+      "date": {
+        "year": 2018
+      },
+      "category": "節目舞台",
+      "summary": "節目製作人身分與〈倒數〉現場入口。",
+      "paragraphs": [
+        "2018 年，鄧紫棋在愛奇藝《中國新說唱》中擔任明星製作人，與潘瑋柏合作戰隊。她的位置由競演歌手轉為參與選擇、合作與表演的節目角色。",
+        "節目的製作人公演、合作演出與四強拉票歌會，讓歌手與其他音樂人共同登台；〈倒數〉也是其中保留官方純享入口的一場。可以由這次節目，回看她在《我是歌手》的不同位置。"
+      ],
+      "editorial": "把同一個人放回不同節目位置：從台上被評選，到參與選擇、合作與舞台呈現，觀看時可以多留意她與其他音樂人的互動。",
+      "tags": [
+        "2018",
+        "中國新說唱",
+        "潘瑋柏",
+        "明星製作人"
+      ],
+      "relatedIDs": [
+        "program-rap-of-china-2018",
+        "stage-countdown-2018",
+        "event-singer-2014",
+        "event-city-zoo"
+      ],
+      "sourceIDs": [
+        "source-rap"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.iqiyi.com/zongyi/zgxsc.html"
+        }
+      ]
+    },
+    {
+      "id": "event-city-zoo",
+      "kind": "event",
+      "title": "寫下《摩天動物園》",
+      "subtitle": "創作之外，走進專輯製作",
+      "date": {
+        "year": 2019,
+        "month": 12,
+        "day": 27
+      },
+      "category": "音樂",
+      "summary": "十三首歌連結城市觀察與人際關係。",
+      "paragraphs": [
+        "2019 年 12 月 27 日，《摩天動物園》正式發行。鄧紫棋包辦詞曲，首次擔任自己專輯的製作人，與 T-Ma 馬敬恆合作；十三首歌以同名曲開場、〈依然睡公主〉收尾。",
+        "作品把動物形象連結到城市生活與人際觀察，也容納關係中的溫柔與無奈。由詞曲走進專輯製作，這一年的改變可以透過具體幕後分工與完整曲序一起閱讀。"
+      ],
+      "editorial": "這張唱片適合把三件事放在一起看：作品如何命名、歌曲如何連成概念、她在幕後負責了什麼。",
+      "tags": [
+        "2019",
+        "摩天動物園",
+        "City Zoo",
+        "T-Ma",
+        "製作"
+      ],
+      "relatedIDs": [
+        "release-city-zoo",
+        "track-city-zoo",
+        "track-almost",
+        "track-long-after",
+        "track-fly-away",
+        "event-gma-jury"
+      ],
+      "sourceIDs": [
+        "source-city-zoo-date",
+        "source-city-zoo"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo-limited-edition/"
+        }
+      ]
+    },
+    {
+      "id": "event-gma-jury",
+      "kind": "event",
+      "title": "《摩天動物園》獲評審團獎",
+      "subtitle": "第 31 屆金曲獎",
+      "date": {
+        "year": 2020,
+        "month": 10,
+        "day": 3
+      },
+      "category": "獎項里程碑",
+      "summary": "以正式獎名記錄這張專輯受到的肯定。",
+      "paragraphs": [
+        "2020 年 10 月 3 日，第 31 屆金曲獎在台北流行音樂中心舉行。《摩天動物園》獲得評審團獎，台灣索尼音樂代表上台領獎，傳達鄧紫棋的感言。",
+        "這份肯定落在整張唱片。回到 2019 年的發行，可以看見十三首歌、動物隱喻與鄧紫棋和 T-Ma 的製作合作；獎項也因此連回一份具體的創作工作。"
+      ],
+      "editorial": "讀完獎項，再選一首此前沒有聽過的專輯曲。讓肯定成為重新打開作品的理由，比只記住得獎年份更有收穫。",
+      "tags": [
+        "2020",
+        "金曲獎",
+        "評審團獎",
+        "摩天動物園"
+      ],
+      "relatedIDs": [
+        "release-city-zoo",
+        "event-city-zoo",
+        "track-city-zoo",
+        "track-long-after"
+      ],
+      "sourceIDs": [
+        "source-gma"
+      ],
+      "metadata": [
+        {
+          "label": "屆次",
+          "value": "第 31 屆金曲獎"
+        },
+        {
+          "label": "獎項",
+          "value": "評審團獎"
+        },
+        {
+          "label": "作品",
+          "value": "摩天動物園"
+        }
+      ],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://tavis.tw/gma/31st/GMA/News/18.htm"
+        }
+      ]
+    },
+    {
+      "id": "event-revelation",
+      "kind": "event",
+      "title": "打開《啟示錄》",
+      "subtitle": "十四首歌與影像的故事世界",
+      "date": {
+        "year": 2022
+      },
+      "category": "音樂",
+      "summary": "專輯與影片各有自己的順序。",
+      "paragraphs": [
+        "2022 年，《啟示錄》把十四首歌與十四支劇情 MV 串成音樂連續劇。鄧紫棋參與詞曲、編劇與監製，在影像中飾演 Gloria 和秋，作品由錄音延伸成角色故事。",
+        "先行曲〈GLORIA〉替影像開門，專輯曲序則由〈少年與海〉起步。以愛、自我、自愛與被愛為核心的作品，讓歌曲和影像各自帶領聽眾進入同一個世界。"
+      ],
+      "editorial": "選一首開始，然後回到整體。單曲提供一個片段，完整曲序與影像則讓片段彼此發生關係。",
+      "tags": [
+        "2022",
+        "啟示錄",
+        "REVELATION",
+        "GLORIA"
+      ],
+      "relatedIDs": [
+        "release-revelation",
+        "track-gloria",
+        "event-revelacion",
+        "release-revelacion"
+      ],
+      "sourceIDs": [
+        "source-revelation",
+        "source-revelacion",
+        "source-revelation-story",
+        "source-revelation-hell"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.iamgem.com/qishilu/"
+        }
+      ]
+    },
+    {
+      "id": "event-revelacion",
+      "kind": "event",
+      "title": "讓作品跨過語言",
+      "subtitle": "2023《Revelación》",
+      "date": {
+        "year": 2023,
+        "month": 7,
+        "day": 10
+      },
+      "category": "音樂",
+      "summary": "十四首西語作品與中文發行互相連結。",
+      "paragraphs": [
+        "2023 年，《Revelación》以十四首西語作品延伸《啟示錄》的世界，曲目包括〈El Joven y El Mar〉、〈Gloria〉與〈Mira Hacia El Cielo〉。",
+        "同樣位在第八首的〈GLORIA／Gloria〉，連起兩張語言版本的發行。對已熟悉中文作品的人，西語版本讓原有旋律再與另一套發音相遇；對新聽眾，則成為另一個開始。"
+      ],
+      "editorial": "先從熟悉的中文歌名找到對應入口，再用新的語言聆聽。你不必一次理解所有文字，也能開始注意發音與旋律的關係。",
+      "tags": [
+        "2023",
+        "Revelación",
+        "西語",
+        "西班牙語"
+      ],
+      "relatedIDs": [
+        "release-revelacion",
+        "release-revelation",
+        "track-gloria",
+        "event-revelation",
+        "event-time"
+      ],
+      "sourceIDs": [
+        "source-revelacion-date",
+        "source-revelacion"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/revelaci%C3%B3n/1695076267"
+        }
+      ]
+    },
+    {
+      "id": "event-time",
+      "kind": "event",
+      "title": "以《T.I.M.E.》重新詮釋",
+      "subtitle": "演唱別人的歌，也是音樂面貌",
+      "date": {
+        "year": 2023
+      },
+      "category": "音樂",
+      "summary": "六首 EP 讓原作、演唱與製作的角色清楚可讀。",
+      "paragraphs": [
+        "2023 年《T.I.M.E.》以六首歌展現重新詮釋作品的面貌，從〈情人〉開始，經過〈唯一〉、〈李香蘭〉、〈11〉與〈你成為了誰的幸福〉，以〈海闊天空〉收尾。",
+        "〈李香蘭〉這個版本保留玉置浩二、周禮茂的原作脈絡，也列出鄧紫棋與 T-Ma 的製作工作。這條線能回到她的電視翻唱舞台，讓不同時期的詮釋工作互相連結。"
+      ],
+      "editorial": "回想《我是歌手》的翻唱舞台，再看這張 EP，可以把「唱作」之外的詮釋能力連成另一條線。",
+      "tags": [
+        "2023",
+        "T.I.M.E.",
+        "TIME",
+        "翻唱",
+        "EP"
+      ],
+      "relatedIDs": [
+        "release-time",
+        "program-i-am-singer-2",
+        "stage-like-you-2014",
+        "event-revelacion"
+      ],
+      "sourceIDs": [
+        "source-time",
+        "source-time-platform",
+        "source-time-credit"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.iamgem.com/time/"
+        }
+      ]
+    },
+    {
+      "id": "event-i-am-gloria",
+      "kind": "event",
+      "title": "讓經典以重生版相遇",
+      "subtitle": "2025《I AM GLORIA》",
+      "date": {
+        "year": 2025,
+        "month": 6,
+        "day": 12
+      },
+      "category": "音樂",
+      "summary": "十二首正式曲目，串起早期與後來的錄音。",
+      "paragraphs": [
+        "2025 年首張重錄專輯《I AM GLORIA》，將〈我的秘密〉、〈Where Did U Go〉、〈A.I.N.Y. 愛你〉、〈泡沫〉與〈睡公主〉等作品以重生版重新呈現。",
+        "十二首正式曲目也包括〈天空沒有極限〉粵語版，以及〈後會無期〉與〈喜歡你〉兩首 Bonus。從這張唱片往前走，早期 EP、專輯與電影單曲，重新在同一條作品路徑上相遇。"
+      ],
+      "editorial": "挑一首伴隨你很久的歌，先找原版，再聽重生版。比較的重點可以由你決定：演唱、編曲，或那首歌如今帶給你的記憶。",
+      "tags": [
+        "2025",
+        "I AM GLORIA",
+        "重生版",
+        "重錄"
+      ],
+      "relatedIDs": [
+        "release-i-am-gloria",
+        "track-my-secret",
+        "track-bubble",
+        "track-sleeping-beauty",
+        "track-light-years-away",
+        "event-free-to-be-you"
+      ],
+      "sourceIDs": [
+        "source-gloria-date",
+        "source-gloria"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://music.apple.com/us/album/i-am-gloria/1818539834"
+        }
+      ]
+    },
+    {
+      "id": "event-free-to-be-you",
+      "kind": "event",
+      "title": "走向〈自由的你〉",
+      "subtitle": "2026 的新創作入口",
+      "date": {
+        "year": 2026
+      },
+      "category": "音樂",
+      "summary": "鄧紫棋詞曲，李榮浩製作與編曲。",
+      "paragraphs": [
+        "2026 年〈自由的你〉以 Free to Be You 為英語名，鄧紫棋創作詞曲，李榮浩負責製作與編曲。兩人在這首單曲裡共同處理一個關於當代生活的題目。",
+        "Sony 將它連結到科技、資訊環境與個人的感受、思考、選擇；作品也曾在《I AM GLORIA》巡演深圳最終站唱響。從熟悉的重錄曲目再走向新創作，故事繼續延伸。"
+      ],
+      "editorial": "時間線不必停在一座獎盃。從最早的五首 EP 走到新單曲，你可以帶著自己對她作品的理解，繼續聽下一個問題。",
+      "tags": [
+        "2026",
+        "自由的你",
+        "Free to Be You",
+        "李榮浩"
+      ],
+      "relatedIDs": [
+        "track-free-to-be-you",
+        "event-i-am-gloria",
+        "event-debut"
+      ],
+      "sourceIDs": [
+        "source-free"
+      ],
+      "metadata": [],
+      "links": [
+        {
+          "label": "查看事件來源",
+          "url": "https://www.sonymusic.com.tw/album/free-to-be-you/"
+        }
+      ]
+    },
+    {
+      "id": "program-i-am-singer-2",
+      "kind": "program",
+      "title": "我是歌手 第二季",
+      "subtitle": "2014｜湖南衛視",
+      "date": {
+        "year": 2014
+      },
+      "category": "音樂競演",
+      "summary": "從原創〈泡沫〉到翻唱，觀察一季裡的現場面貌。",
+      "paragraphs": [
+        "2014 年，鄧紫棋以首發歌手身分參與湖南衛視《我是歌手》第二季，與韓磊、韋唯、張宇、周筆暢、羅琦、曹格同列最初陣容。節目以專業歌手之間的競演展開。",
+        "她把《Xposed》中的〈泡沫〉帶上舞台，也演唱〈存在〉、〈喜歡你〉、〈Falling〉和〈你不是真正的快樂〉。原創與不同背景的作品並列，留下一季可循著選曲觀看的現場面貌。"
+      ],
+      "editorial": "第一次看，可以在原創與翻唱各挑一首。之後再回到作品庫，試著比較「唱自己的歌」與「重新詮釋他人作品」兩種現場任務。",
+      "tags": [
+        "我是歌手",
+        "I Am a Singer",
+        "第二季",
+        "2014",
+        "湖南衛視"
+      ],
+      "relatedIDs": [
+        "event-singer-2014",
+        "stage-bubble-2014",
+        "stage-existence-2014",
+        "stage-like-you-2014",
+        "stage-falling-2014",
+        "stage-happiness-2014",
+        "release-xposed",
+        "release-time"
+      ],
+      "sourceIDs": [
+        "source-singer",
+        "source-existence-stage",
+        "source-like-stage",
+        "source-falling-stage",
+        "source-happy-stage"
+      ],
+      "metadata": [
+        {
+          "label": "季別",
+          "value": "第二季（2014）"
+        },
+        {
+          "label": "參與身分",
+          "value": "首發競演歌手"
+        },
+        {
+          "label": "播出平台",
+          "value": "湖南衛視／芒果 TV"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://www.youtube.com/watch?v=JkNRqhxH3OY"
+        }
+      ]
+    },
+    {
+      "id": "program-rap-of-china-2018",
+      "kind": "program",
+      "title": "中國新說唱 2018",
+      "subtitle": "2018｜愛奇藝",
+      "date": {
+        "year": 2018
+      },
+      "category": "音樂競演",
+      "summary": "以明星製作人的位置，參與選擇與合作。",
+      "paragraphs": [
+        "2018 年愛奇藝《中國新說唱》中，鄧紫棋以明星製作人身分與潘瑋柏合作戰隊。節目安排製作人公演、合作表演與四強拉票歌會，讓製作人與選手共同參與舞台。",
+        "〈倒數〉在拉票歌會留下官方純享片段。和 2014 年《我是歌手》的競演身分相比，這一次可以看見她從另一個位置參與節目：除了自己演唱，也與其他音樂人互動、選擇和合作。"
+      ],
+      "editorial": "看她如何與其他音樂人共同工作，再回看她獨自演唱的舞台，能替「歌手」這個稱呼補上更多具體位置。",
+      "tags": [
+        "中國新說唱",
+        "The Rap of China",
+        "2018",
+        "愛奇藝",
+        "潘瑋柏"
+      ],
+      "relatedIDs": [
+        "event-rap-2018",
+        "stage-countdown-2018",
+        "program-i-am-singer-2",
+        "event-city-zoo"
+      ],
+      "sourceIDs": [
+        "source-rap"
+      ],
+      "metadata": [
+        {
+          "label": "年份",
+          "value": "2018"
+        },
+        {
+          "label": "參與身分",
+          "value": "明星製作人"
+        },
+        {
+          "label": "合作戰隊",
+          "value": "潘瑋柏、G.E.M. 鄧紫棋"
+        },
+        {
+          "label": "觀看",
+          "value": "官方平台可能有地區或會員限制"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://www.iqiyi.com/zongyi/zgxsc.html"
+        }
+      ]
+    },
+    {
+      "id": "stage-bubble-2014",
+      "kind": "stage",
+      "title": "泡沫｜我是歌手第二季",
+      "subtitle": "原創作品的競演舞台",
+      "date": {
+        "year": 2014
+      },
+      "category": "節目舞台",
+      "summary": "從 2012 唱片走到 2014 電視現場。",
+      "paragraphs": [
+        "2014 年《我是歌手》第二季，鄧紫棋演唱自己的作品〈泡沫〉。這首歌在 2012《Xposed》中位於第四首，唱片裡的錄音於是走進電視競演現場。",
+        "湖南衛視歌手官方頻道保留該季純享片段。沿著這個舞台向前，是她出道後的《Xposed》；向後則能遇到 2025《I AM GLORIA》重生版，一首歌把唱片、節目與後來錄音連起來。"
+      ],
+      "editorial": "先完整看完表演，再回到原專輯與後來版本。你可以留意同一旋律在不同演出場合的進入方式與情緒安排。",
+      "tags": [
+        "泡沫",
+        "Bubble",
+        "2014",
+        "我是歌手"
+      ],
+      "relatedIDs": [
+        "program-i-am-singer-2",
+        "event-singer-2014",
+        "track-bubble",
+        "release-xposed",
+        "release-i-am-gloria"
+      ],
+      "sourceIDs": [
+        "source-singer",
+        "source-xposed",
+        "source-gloria"
+      ],
+      "metadata": [
+        {
+          "label": "場合",
+          "value": "我是歌手 第二季"
+        },
+        {
+          "label": "演唱曲目",
+          "value": "泡沫"
+        },
+        {
+          "label": "時間精度",
+          "value": "2014 年；未使用重發影片日期"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://www.youtube.com/watch?v=JkNRqhxH3OY"
+        }
+      ]
+    },
+    {
+      "id": "stage-existence-2014",
+      "kind": "stage",
+      "title": "存在｜我是歌手第二季",
+      "subtitle": "同一季裡的另一種選曲",
+      "date": {
+        "year": 2014
+      },
+      "category": "節目舞台",
+      "summary": "由官方純享片段走進演唱者的詮釋。",
+      "paragraphs": [
+        "〈存在〉是汪峰 2011《生無所求》中的歌曲。鄧紫棋在 2014《我是歌手》第二季演唱它，留下湖南衛視歌手官方音樂頻道收錄的純享片段。",
+        "這一季她同時帶來自己的〈泡沫〉與不同音樂人的作品。從原創走到〈存在〉這樣的翻唱，選曲讓觀眾在熟悉的作品裡，重新認識另一位演唱者的聲音與現場處理。"
+      ],
+      "editorial": "把它接在〈泡沫〉後面看，試著比較她面對不同作品時如何安排段落。比較不必只剩高音，開始與收尾也值得留意。",
+      "tags": [
+        "存在",
+        "2014",
+        "我是歌手",
+        "現場"
+      ],
+      "relatedIDs": [
+        "program-i-am-singer-2",
+        "event-singer-2014",
+        "stage-bubble-2014",
+        "stage-falling-2014"
+      ],
+      "sourceIDs": [
+        "source-existence-stage",
+        "source-wang-existence"
+      ],
+      "metadata": [
+        {
+          "label": "場合",
+          "value": "我是歌手 第二季"
+        },
+        {
+          "label": "演唱曲目",
+          "value": "存在"
+        },
+        {
+          "label": "原作脈絡",
+          "value": "汪峰《生無所求》（2011）"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://www.youtube.com/watch?v=IUML3CqqOHk"
+        }
+      ]
+    },
+    {
+      "id": "stage-like-you-2014",
+      "kind": "stage",
+      "title": "喜歡你｜我是歌手第二季",
+      "subtitle": "粵語作品的現場詮釋",
+      "date": {
+        "year": 2014
+      },
+      "category": "節目舞台",
+      "summary": "舞台與後來的錄音發行分開保存。",
+      "paragraphs": [
+        "〈喜歡你〉來自 Beyond 的 1988《秘密警察》。鄧紫棋在 2014《我是歌手》第二季以粵語演唱這首作品，節目官方頻道保留當時的純享片段。",
+        "這首歌也持續出現在她後來的發行：2025《I AM GLORIA》以重生版列作 Bonus。從 Beyond 的早期作品、鄧紫棋的節目現場到多年後的新錄音，可以看見一首歌如何跨越演唱者與時間。"
+      ],
+      "editorial": "先把注意力放在這一次表演，再比較其他時期的版本。每個現場都有具體的演出情境，值得保留，而不是只留下一個歌名。",
+      "tags": [
+        "喜歡你",
+        "2014",
+        "粵語",
+        "我是歌手"
+      ],
+      "relatedIDs": [
+        "program-i-am-singer-2",
+        "event-singer-2014",
+        "release-i-am-gloria",
+        "release-time",
+        "stage-bubble-2014"
+      ],
+      "sourceIDs": [
+        "source-like-stage",
+        "source-gloria",
+        "source-beyond-like"
+      ],
+      "metadata": [
+        {
+          "label": "場合",
+          "value": "我是歌手 第二季"
+        },
+        {
+          "label": "演唱曲目",
+          "value": "喜歡你"
+        },
+        {
+          "label": "錄音身分",
+          "value": "2014 節目現場"
+        },
+        {
+          "label": "原作脈絡",
+          "value": "Beyond《秘密警察》（1988）"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://www.youtube.com/watch?v=8Cg9dJ1g1yU"
+        }
+      ]
+    },
+    {
+      "id": "stage-falling-2014",
+      "kind": "stage",
+      "title": "Falling｜我是歌手第二季",
+      "subtitle": "第十期官方片段",
+      "date": {
+        "year": 2014,
+        "month": 3,
+        "day": 14
+      },
+      "category": "節目舞台",
+      "summary": "官方標題記錄的英文歌曲演出。",
+      "paragraphs": [
+        "《我是歌手》第二季第十期，鄧紫棋演唱〈Fallin'〉。湖南衛視官方影片以〈Falling〉為標題，標示 2014 年 3 月 14 日，留下她在這一季英語選曲的現場入口。",
+        "歌曲原作為 Alicia Keys 在 2001《Songs in A Minor》中的作品。與同季的〈泡沫〉、〈存在〉和粵語〈喜歡你〉並看，不同語言與音樂背景的選曲，構成她在節目裡的演唱面貌。"
+      ],
+      "editorial": "在同一季的華語與英語選曲之間切換，留意語言如何影響咬字、節奏與樂句。先提出聆聽問題，再讓影片提供你的答案。",
+      "tags": [
+        "Falling",
+        "Fallin",
+        "2014",
+        "第十期",
+        "英文"
+      ],
+      "relatedIDs": [
+        "program-i-am-singer-2",
+        "event-singer-2014",
+        "stage-existence-2014",
+        "stage-bubble-2014"
+      ],
+      "sourceIDs": [
+        "source-falling-stage",
+        "source-keys-fallin"
+      ],
+      "metadata": [
+        {
+          "label": "場合",
+          "value": "我是歌手 第二季 第十期"
+        },
+        {
+          "label": "官方標題日期",
+          "value": "2014-03-14"
+        },
+        {
+          "label": "曲名顯示",
+          "value": "Falling（依官方影片標題）"
+        },
+        {
+          "label": "原作脈絡",
+          "value": "Alicia Keys《Songs in A Minor》（2001）"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://www.youtube.com/watch?v=FSvjkUZ6_90"
+        }
+      ]
+    },
+    {
+      "id": "stage-happiness-2014",
+      "kind": "stage",
+      "title": "你不是真正的快樂｜我是歌手第二季",
+      "subtitle": "芒果 TV 官方觀看入口",
+      "date": {
+        "year": 2014
+      },
+      "category": "節目舞台",
+      "summary": "從一季中的不同歌曲認識現場詮釋。",
+      "paragraphs": [
+        "〈你不是真正的快樂〉由五月天發行於 2008《後青春期的詩》。鄧紫棋在 2014《我是歌手》第二季演唱這首歌，芒果 TV 保留該季的官方內容頁。",
+        "它與〈存在〉、〈喜歡你〉等同季選曲，讓觀眾透過熟悉作品認識不同的演唱者。從歌曲原作走向這一次現場，也能延伸到她後來以《T.I.M.E.》發行重新詮釋作品的另一個階段。"
+      ],
+      "editorial": "可與同季〈存在〉一起看，留意兩首作品各自如何鋪陳。把表演放回一整季，而不是只挑最高音片段，會看見更多細節。",
+      "tags": [
+        "你不是真正的快樂",
+        "2014",
+        "我是歌手",
+        "芒果TV"
+      ],
+      "relatedIDs": [
+        "program-i-am-singer-2",
+        "event-singer-2014",
+        "stage-existence-2014",
+        "stage-like-you-2014",
+        "release-time"
+      ],
+      "sourceIDs": [
+        "source-happy-stage",
+        "source-mayday-happiness"
+      ],
+      "metadata": [
+        {
+          "label": "場合",
+          "value": "我是歌手 第二季"
+        },
+        {
+          "label": "演唱曲目",
+          "value": "你不是真正的快樂"
+        },
+        {
+          "label": "時間精度",
+          "value": "2014 年"
+        },
+        {
+          "label": "原作脈絡",
+          "value": "五月天《後青春期的詩》（2008）"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看官方節目內容",
+          "url": "https://w.mgtv.com/b/44819/3178980.html?lang=zh-cn"
+        }
+      ]
+    },
+    {
+      "id": "stage-countdown-2018",
+      "kind": "stage",
+      "title": "倒數｜中國新說唱",
+      "subtitle": "四強拉票歌會純享",
+      "date": {
+        "year": 2018
+      },
+      "category": "節目舞台",
+      "summary": "明星製作人回到演唱舞台的一個片段。",
+      "paragraphs": [
+        "2018《中國新說唱》的四強拉票歌會裡，鄧紫棋演唱〈倒數〉，愛奇藝官方專題保留純享入口。她在這一季以明星製作人身分，與潘瑋柏合作戰隊。",
+        "這個片段讓節目中的製作人再回到自己演唱的位置。和 2014《我是歌手》的競演表演並看，相同的台上歌手，已處在另一個節目角色與合作關係裡。"
+      ],
+      "editorial": "先看表演，再回到節目頁讀參與身分。相同的台上演唱，在不同節目裡可能肩負不同任務，這正是值得連起來探索的地方。",
+      "tags": [
+        "倒數",
+        "Countdown",
+        "2018",
+        "中國新說唱"
+      ],
+      "relatedIDs": [
+        "program-rap-of-china-2018",
+        "event-rap-2018",
+        "program-i-am-singer-2"
+      ],
+      "sourceIDs": [
+        "source-rap",
+        "source-countdown-stage"
+      ],
+      "metadata": [
+        {
+          "label": "場合",
+          "value": "中國新說唱 2018 四強拉票歌會"
+        },
+        {
+          "label": "演唱曲目",
+          "value": "倒數"
+        },
+        {
+          "label": "節目身分",
+          "value": "明星製作人"
+        }
+      ],
+      "links": [
+        {
+          "label": "觀看愛奇藝官方純享",
+          "url": "https://www.iqiyi.com/v_19rr5li2r0.html"
+        },
+        {
+          "label": "查看官方節目專題",
+          "url": "https://www.iqiyi.com/zongyi/zgxsc.html"
+        }
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "source-debut",
+      "title": "G.E.M. EP：曲目與平台發行資料",
+      "publisher": "Spotify",
+      "url": "https://open.spotify.com/album/3Kz3xJzl7gTIiL7u111dCW",
+      "verifiedAt": "2026-10-15",
+      "scope": "同名 EP 五首曲目、2008 年平台資料；只取專輯與曲目欄，不取歌詞。"
+    },
+    {
+      "id": "source-debut-press",
+      "title": "Queen of Hearts 巡演新聞稿",
+      "publisher": "iMe／Ticketmaster",
+      "url": "https://media.ticketmaster.com/en-au/img/static/pdf/G.E.MPressRelease.pdf",
+      "verifiedAt": "2026-10-15",
+      "scope": "2008 年以同名 EP 出道；不引用宣傳用最高紀錄。"
+    },
+    {
+      "id": "source-18",
+      "title": "18...：13 首數位版",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/18/6775749474",
+      "verifiedAt": "2026-10-15",
+      "scope": "此數位版年份、曲數與平台日期 2009-10-27。"
+    },
+    {
+      "id": "source-18-tracks",
+      "title": "18...：數位版曲目",
+      "publisher": "Shazam／Apple",
+      "url": "https://www.shazam.com/album/6775749474/18",
+      "verifiedAt": "2026-10-15",
+      "scope": "對應 13 首數位版完整曲目，含 remix、Glossy Version 及與林海峰合作曲。"
+    },
+    {
+      "id": "source-my-secret",
+      "title": "MySecret：數位版資料",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/mysecret/6776100461",
+      "verifiedAt": "2026-10-15",
+      "scope": "2010 年、10 首數位版；平台日期 2010-10-22 不當作所有實體版本的發行日。"
+    },
+    {
+      "id": "source-my-secret-tracks",
+      "title": "MySecret：完整曲目",
+      "publisher": "Spotify",
+      "url": "https://open.spotify.com/intl-fr/album/2ZkF6zANeekBDgwMFGLIlf",
+      "verifiedAt": "2026-10-15",
+      "scope": "10 首曲目順序與該數位版資料。"
+    },
+    {
+      "id": "source-xposed",
+      "title": "Xposed：10 首數位版",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/xposed/6775778892",
+      "verifiedAt": "2026-10-15",
+      "scope": "2012 年、10 首、該平台版日期 2012-07-05。"
+    },
+    {
+      "id": "source-xposed-tracks",
+      "title": "Xposed：10 首曲目",
+      "publisher": "Amazon Music",
+      "url": "https://music.amazon.in/albums/B0H3PBJ6S6",
+      "verifiedAt": "2026-10-15",
+      "scope": "10 首版本曲序；不混入 Deluxe 版附加影音。"
+    },
+    {
+      "id": "source-heartbeat",
+      "title": "新的心跳：標準版",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/heartbeat/1053567923",
+      "verifiedAt": "2026-10-15",
+      "scope": "2015-11-06、10 首標準版，不混入 20 項 Deluxe 影音版。"
+    },
+    {
+      "id": "source-heartbeat-sony",
+      "title": "新的心跳：作品與創作介紹",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://www.sonymusic.com.tw/album/%E6%96%B0%E7%9A%84%E5%BF%83%E8%B7%B3-%E5%85%A8%E7%90%83%E9%99%90%E9%87%8F%E9%BB%91%E8%86%A0%E7%89%88-%E9%84%A7%E7%B4%AB%E6%A3%8B-gem-88875199231/",
+      "verifiedAt": "2026-10-15",
+      "scope": "歌曲中英文名、全碟詞曲由鄧紫棋創作及作品背景。黑膠版頁不作為數位版日期依據。"
+    },
+    {
+      "id": "source-city-zoo",
+      "title": "摩天動物園：作品介紹與曲目",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo/",
+      "verifiedAt": "2026-10-15",
+      "scope": "2019 年、13 首、全碟詞曲、與 T-Ma 共同製作的角色。"
+    },
+    {
+      "id": "source-city-zoo-date",
+      "title": "摩天動物園：預購限定版公告",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo-limited-edition/",
+      "verifiedAt": "2026-10-15",
+      "scope": "公告 2019-12-27 發行；限定版與正式版封面不同。"
+    },
+    {
+      "id": "source-revelation",
+      "title": "啟示錄：專輯曲序",
+      "publisher": "G.E.M. 官方網站",
+      "url": "https://www.iamgem.com/qishilu/",
+      "verifiedAt": "2026-10-15",
+      "scope": "14 首專輯曲序；頁面標示 SEP 23 2022，與 MV 章節順序分開。"
+    },
+    {
+      "id": "source-revelacion",
+      "title": "Revelación：完整曲目",
+      "publisher": "G.E.M. 官方網站",
+      "url": "https://www.iamgem.com/revelacion/",
+      "verifiedAt": "2026-10-15",
+      "scope": "14 首曲名與曲序。"
+    },
+    {
+      "id": "source-revelacion-date",
+      "title": "Revelación：發行資料",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/revelaci%C3%B3n/1695076267",
+      "verifiedAt": "2026-10-15",
+      "scope": "2023 年西語發行版本。"
+    },
+    {
+      "id": "source-time",
+      "title": "T.I.M.E.：曲目",
+      "publisher": "G.E.M. 官方網站",
+      "url": "https://www.iamgem.com/time/",
+      "verifiedAt": "2026-10-15",
+      "scope": "六首曲目與曲序。"
+    },
+    {
+      "id": "source-time-platform",
+      "title": "T.I.M.E. EP：發行類型",
+      "publisher": "Shazam／Apple",
+      "url": "https://www.shazam.com/album/1717034215/t.i.m.e.-ep",
+      "verifiedAt": "2026-10-15",
+      "scope": "2023 年 EP、六首曲目及英語顯示名。"
+    },
+    {
+      "id": "source-time-credit",
+      "title": "李香蘭：此版本創作名單",
+      "publisher": "Shazam／Apple",
+      "url": "https://www.shazam.com/en-gb/song/1717034363/dont-go",
+      "verifiedAt": "2026-10-15",
+      "scope": "玉置浩二作曲、周禮茂填詞；鄧紫棋及 T-Ma 製作，支持翻唱與創作角色區分。"
+    },
+    {
+      "id": "source-gloria",
+      "title": "I AM GLORIA：重錄專輯介紹",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://www.sonymusic.com.tw/album/i-am-gloria/",
+      "verifiedAt": "2026-10-15",
+      "scope": "2025 年重錄專輯、12 首曲目與 G.E.M.重生版標示；天空沒有極限為粵語版。"
+    },
+    {
+      "id": "source-gloria-date",
+      "title": "I AM GLORIA：平台發行資料",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/i-am-gloria/1818539834",
+      "verifiedAt": "2026-10-15",
+      "scope": "2025 年平台專輯，日期僅按該版記錄。"
+    },
+    {
+      "id": "source-tours",
+      "title": "歷年巡演紀錄",
+      "publisher": "G.E.M. 官方網站",
+      "url": "https://www.iamgem.com/tours/",
+      "verifiedAt": "2026-10-15",
+      "scope": "2011 紅館、2013 X.X.X.、2017 Queen of Hearts 及 I AM GLORIA 官方場次紀錄／排期；排期不單獨證明每場實際舉行。"
+    },
+    {
+      "id": "source-gma",
+      "title": "第 31 屆金曲獎官方回顧",
+      "publisher": "金曲獎／文化部影視及流行音樂產業局",
+      "url": "https://tavis.tw/gma/31st/GMA/News/18.htm",
+      "verifiedAt": "2026-10-15",
+      "scope": "2020-10-03 典禮；摩天動物園獲評審團獎；台灣索尼代表領獎。"
+    },
+    {
+      "id": "source-singer",
+      "title": "我是歌手第二季：官方純享與節目介紹",
+      "publisher": "歌手官方音樂頻道／湖南衛視",
+      "url": "https://www.youtube.com/watch?v=JkNRqhxH3OY",
+      "verifiedAt": "2026-10-15",
+      "scope": "2014 節目演出泡沫，頻道介紹列鄧紫棋為首發歌手；影片重發日期不當作演出日。"
+    },
+    {
+      "id": "source-existence-stage",
+      "title": "我是歌手 2：存在",
+      "publisher": "歌手官方音樂頻道／湖南衛視",
+      "url": "https://www.youtube.com/watch?v=IUML3CqqOHk",
+      "verifiedAt": "2026-10-15",
+      "scope": "該季演出〈存在〉；不從上架日期推斷演出日期。"
+    },
+    {
+      "id": "source-like-stage",
+      "title": "我是歌手 2：喜歡你",
+      "publisher": "歌手官方音樂頻道／湖南衛視",
+      "url": "https://www.youtube.com/watch?v=8Cg9dJ1g1yU",
+      "verifiedAt": "2026-10-15",
+      "scope": "該季演出〈喜歡你〉；不等於同年發行的錄音室版本。"
+    },
+    {
+      "id": "source-falling-stage",
+      "title": "我是歌手第二季第十期：Falling",
+      "publisher": "湖南衛視芒果 TV 官方頻道",
+      "url": "https://www.youtube.com/watch?v=FSvjkUZ6_90",
+      "verifiedAt": "2026-10-15",
+      "scope": "官方標題標明第十期與 2014-03-14；保留官方顯示 Falling 拼寫。"
+    },
+    {
+      "id": "source-happy-stage",
+      "title": "我是歌手第二季：你不是真正的快樂",
+      "publisher": "芒果 TV",
+      "url": "https://w.mgtv.com/b/44819/3178980.html?lang=zh-cn",
+      "verifiedAt": "2026-10-15",
+      "scope": "該季演唱曲目與官方觀看頁。"
+    },
+    {
+      "id": "source-rap",
+      "title": "中國新說唱 2018 官方專題",
+      "publisher": "愛奇藝",
+      "url": "https://www.iqiyi.com/zongyi/zgxsc.html",
+      "verifiedAt": "2026-10-15",
+      "scope": "明星製作人角色、與潘瑋柏合作戰隊、拉票歌會〈倒數〉官方入口。"
+    },
+    {
+      "id": "source-countdown-stage",
+      "title": "中國新說唱：倒數純享",
+      "publisher": "愛奇藝",
+      "url": "https://www.iqiyi.com/v_19rr5li2r0.html",
+      "verifiedAt": "2026-10-15",
+      "scope": "官方專題連到的拉票歌會純享頁；入口已由官方索引核對，播放需依平台服務。"
+    },
+    {
+      "id": "source-light-years",
+      "title": "光年之外：電影 Passengers 中國區主題曲",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/album/%E5%85%89%E5%B9%B4%E4%B9%8B%E5%A4%96-%E9%9B%BB%E5%BD%B1-passengers-%E4%B8%AD%E5%9C%8B%E5%8D%80%E4%B8%BB%E9%A1%8C%E6%9B%B2-single/1190070714",
+      "verifiedAt": "2026-10-15",
+      "scope": "2016 年單曲、正式電影合作名稱。"
+    },
+    {
+      "id": "source-light-years-mv",
+      "title": "光年之外官方 MV",
+      "publisher": "G.E.M. 官方 YouTube",
+      "url": "https://www.youtube.com/watch?v=T4SimnaiktU",
+      "verifiedAt": "2026-10-15",
+      "scope": "官方 MV 觀看入口。"
+    },
+    {
+      "id": "source-sleep-credit",
+      "title": "睡公主：詞曲資料",
+      "publisher": "Shazam／Apple",
+      "url": "https://www.shazam.com/zh-tw/song/538380284/e79da1e585ace4b8bb",
+      "verifiedAt": "2026-10-15",
+      "scope": "鄧紫棋詞曲 credit；該頁 2009-01-24 為此平台版日期，未覆寫 2008 首作年份。"
+    },
+    {
+      "id": "source-free",
+      "title": "自由的你：官方發行介紹",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://www.sonymusic.com.tw/album/free-to-be-you/",
+      "verifiedAt": "2026-10-15",
+      "scope": "2026 年單曲、Free to Be You 中英文名與詞曲創作資訊。"
+    },
+    {
+      "id": "source-early-retrospective",
+      "title": "早期四張作品官方回顧",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://www.sonymusic.com.tw/album/gem-best-20082012-gem-gem-best-20082012-gem-%E9%84%A7%E7%B4%AB%E6%A3%8B-88883721272/",
+      "scope": "2008 至 2012 四份作品的生涯位置；《18》面向台灣及內地觀眾。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-xposed-story",
+      "title": "Xposed：2012 原始作品介紹",
+      "publisher": "Sony Music Taiwan",
+      "url": "https://sonymusic.com.tw/album/%E7%AC%AC%E5%9B%9B%E5%BC%B5%E5%B0%88%E8%BC%AF-xposed%E6%9B%9D%E5%85%89-cddvd%E9%99%90%E9%87%8F%E7%89%B9%E5%88%A5%E7%89%88-gem-%E9%84%A7%E7%B4%AB%E6%A3%8B-88725454412/",
+      "scope": "唱片名稱來源、成長背景與歌曲創作方向；不採當時點擊量與銷量宣傳紀錄。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-revelation-story",
+      "title": "啟示錄：GLORIA 與音樂連續劇發行公告",
+      "publisher": "Warner Music Taiwan",
+      "url": "https://www.warnermusic.com.tw/blog/posts/gem%E9%84%A7%E7%B4%AB%E6%A3%8B2022%E5%B9%B4%E5%85%A8%E6%96%B0%E5%B0%88%E8%BC%AF%E3%80%8A%E5%95%9F%E7%A4%BA%E9%8C%84%E3%80%8B923%E5%85%A8%E9%9D%A2%E6%95%B8%E4%BD%8D%E7%99%BC%E8%A1%8C-%E9%A6%96%E6%B3%A2%E5%96%AE%E6%9B%B2%E3%80%8Agloria%E3%80%8Bmv%E4%B8%8A%E7%B7%9A-%E6%8B%89%E9%96%8B%E9%80%A3%E7%BA%8C%E5%8A%87%E5%BA%8F%E7%AB%A0%E5%BC%95%E6%9C%9F%E5%BE%85-%E5%94%B1%E5%87%BA%E6%84%9B%E8%88%87%E5%8B%87%E6%B0%A3",
+      "scope": "14 首歌與 14 支劇情 MV、詞曲／編劇／監製角色、GLORIA 名稱來源、2022-09-23 數位發行公告。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-revelation-hell",
+      "title": "啟示錄：HELL 與角色介紹",
+      "publisher": "Warner Music Taiwan",
+      "url": "https://www.warnermusic.com.tw/blog/posts/gem%E9%84%A7%E7%B4%AB%E6%A3%8B%E6%96%B0%E5%B0%88%E8%BC%AF%E7%AC%AC%E4%BA%8C%E6%B3%A2%E4%B8%BB%E6%89%93%E3%80%8Ahell%E3%80%8B%E7%88%86%E8%A3%82%E4%B8%8A%E7%B7%9A-%E5%A4%9A%E8%AE%8A%E5%94%B1%E8%85%94%E8%A9%AE%E9%87%8B%E6%84%9B%E7%9A%84%E8%87%B4%E5%91%BD%E5%82%B7",
+      "scope": "Gloria 與秋由鄧紫棋分飾；歌曲與影像形成完整故事，以愛、自我、自愛、被愛為命題。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-wang-existence",
+      "title": "存在：汪峰作品資料",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/artist/wang-feng/166694332",
+      "scope": "〈存在〉收錄於汪峰 2011《生無所求》；僅取曲目／作品資訊。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-beyond-like",
+      "title": "Beyond：喜歡你的早期所屬作品",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/tw/playlist/beyond-essentials/pl.6322913854da40ae931efb22d9bf706b",
+      "scope": "Beyond〈喜歡你〉收錄於 1988《秘密警察》；只用來交代原作脈絡。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-keys-fallin",
+      "title": "Fallin'：Alicia Keys 發行資料",
+      "publisher": "Apple Music",
+      "url": "https://music.apple.com/us/song/256937038",
+      "scope": "2001《Songs in A Minor》歌曲資料；不由此推定鄧紫棋舞台編曲credit。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-mayday-happiness",
+      "title": "你不是真正的快樂：官方發行音軌",
+      "publisher": "相信音樂／YouTube",
+      "url": "https://www.youtube.com/watch?v=vqWy029ErdQ",
+      "scope": "五月天原作收錄於2008《後青春期的詩》；Provided to YouTube by B'IN Music，影片上架與發行日期分開。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-city-zoo-artist",
+      "title": "摩天動物園：藝術家官方曲序",
+      "publisher": "G.E.M. 官方網站",
+      "url": "https://www.iamgem.com/motiandongwuyuan/",
+      "scope": "十三首曲序；網頁標示 Oct 8 2021 是此官網頁面日期，未覆蓋 Sony 的 2019 發行資訊。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "source-gloria-streaming",
+      "title": "I AM GLORIA：重生版曲序",
+      "publisher": "Spotify",
+      "url": "https://open.spotify.com/intl-es/track/3rsRtxvol3kLDe39MRjzDV",
+      "scope": "正式平台顯示十二首曲名、重生版標示及 2025-06-12 日期；不取歌詞與播放數。",
+      "verifiedAt": "2026-10-15"
+    },
+    {
+      "id": "artwork-release-gem-ep",
+      "title": "G.E.M.｜封面來源",
+      "publisher": "open.spotify.com",
+      "url": "https://open.spotify.com/album/3Kz3xJzl7gTIiL7u111dCW",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-18",
+      "title": "18...｜封面來源",
+      "publisher": "music.apple.com",
+      "url": "https://music.apple.com/us/album/18/6775749474",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-my-secret",
+      "title": "MySecret｜封面來源",
+      "publisher": "music.apple.com",
+      "url": "https://music.apple.com/us/album/mysecret/6776100461",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-xposed",
+      "title": "Xposed｜封面來源",
+      "publisher": "music.apple.com",
+      "url": "https://music.apple.com/us/album/xposed/6775778892",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-heartbeat",
+      "title": "新的心跳｜封面來源",
+      "publisher": "music.apple.com",
+      "url": "https://music.apple.com/us/album/heartbeat/1053567923",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-city-zoo",
+      "title": "摩天動物園｜封面來源",
+      "publisher": "www.sonymusic.com.tw",
+      "url": "https://www.sonymusic.com.tw/album/g-e-m-city-zoo/",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-revelation",
+      "title": "啟示錄｜封面來源",
+      "publisher": "www.iamgem.com",
+      "url": "https://www.iamgem.com/qishilu/",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-revelacion",
+      "title": "Revelación｜封面來源",
+      "publisher": "www.iamgem.com",
+      "url": "https://www.iamgem.com/revelacion/",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-time",
+      "title": "T.I.M.E.｜封面來源",
+      "publisher": "www.iamgem.com",
+      "url": "https://www.iamgem.com/time/",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    },
+    {
+      "id": "artwork-release-i-am-gloria",
+      "title": "I AM GLORIA｜封面來源",
+      "publisher": "www.sonymusic.com.tw",
+      "url": "https://www.sonymusic.com.tw/album/i-am-gloria/",
+      "verifiedAt": "2026-10-15",
+      "scope": "此發行作品的遠端封面來源；封面權利屬相應權利人。"
+    }
+  ]
+}

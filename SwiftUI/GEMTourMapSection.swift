@@ -1,165 +1,95 @@
 import SwiftUI
 import MapKit
 
-/// Integrated into the About page between The Journey and Discography.
-/// Demonstrates SwiftUI Map, Marker, Annotation, animated camera movement,
-/// custom data-driven Views, and a detail card synchronized with map selection.
 struct GEMTourMapSection: View {
-    @State private var selectedStopID: String? = "taipei"
+    @State private var selectedStopID: String? = nil
     @State private var cameraPosition: MapCameraPosition = .region(GEMTourContent.overviewRegion)
-    @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.colorScheme) private var scheme
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
 
-    private var selectedStop: GEMTourStop {
-        GEMTourContent.stops.first(where: { $0.id == selectedStopID }) ?? GEMTourContent.stops[0]
+    private var selectedStop: GEMTourStop? {
+        GEMTourContent.stops.first { $0.id == selectedStopID }
     }
 
     var body: some View {
-        VStack(alignment: .leading, spacing: 17) {
-            GEMSectionHeading(
-                eyebrow: "03  /  WORLD TOUR",
-                title: "每一座城市，都是一首歌。",
-                description: "FOLLOW HER FOOTSTEPS · 探索 I AM GLORIA 世界巡演足跡。點擊地標或切換城市，看見舞台背後的故事。"
-            )
-
-            HStack(spacing: 7) {
-                Image(systemName: "globe.asia.australia.fill")
-                    .foregroundStyle(GEMPalette.gold)
-                    .font(.system(size: 12))
-                Text("THE WORLD IS OUR STAGE")
-                    .font(GEMFont.display(10))
-                    .tracking(1.0)
-                    .foregroundStyle(GEMPalette.secondary(for: colorScheme))
-                Spacer(minLength: 0)
-                Text("2026 ARCHIVE")
-                    .font(GEMFont.display(9))
-                    .foregroundStyle(GEMPalette.purple)
-            }
-            .padding(.top, 1)
-
-            ZStack {
-                Map(position: $cameraPosition, selection: $selectedStopID) {
-                    ForEach(GEMTourContent.stops) { stop in
-                        if stop.id == "taipei" {
-                            // Required custom Annotation; tap is a real camera interaction.
-                            Annotation(stop.city, coordinate: stop.coordinate, anchor: .bottom) {
-                                Button {
-                                    select(stop)
-                                } label: {
-                                    GEMTourSpotlightPin(isSelected: selectedStop.id == stop.id)
-                                }
-                                .buttonStyle(.plain)
-                            }
-                            .tag(stop.id)
-                        } else {
-                            // Required MapKit Marker; selection is bound to selectedStopID.
-                            Marker(stop.city, systemImage: "music.mic", coordinate: stop.coordinate)
-                                .tint(GEMPalette.violet)
-                                .tag(stop.id)
+        VStack(alignment: .leading, spacing: 20) {
+            GEMSectionHeading(eyebrow: "06 / TOUR ARCHIVE", title: "歌聲，走過的城市。",
+                              description: "探索 I AM GLORIA 的精選巡演公告。點擊城市，在地圖與場館資訊之間切換。")
+            if GEMTourContent.stops.isEmpty {
+                GEMEmptyState(title: "巡演紀錄整理中", message: "先到作品區，認識這段旅程的音樂。", symbol: "map")
+            } else {
+                map
+                ScrollView(.horizontal, showsIndicators: false) {
+                    HStack(spacing: 10) {
+                        ForEach(GEMTourContent.stops) { stop in
+                            GEMTourCityChip(stop: stop, isSelected: selectedStopID == stop.id,
+                                            onSelect: { select(stop) })
                         }
-                    }
+                    }.padding(.vertical, 4)
                 }
-                .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: .excludingAll))
-                .mapControlVisibility(.hidden)
-                .onChange(of: selectedStopID) { _, newID in
-                    guard let stop = GEMTourContent.stops.first(where: { $0.id == newID }) else { return }
-                    focusCamera(on: stop)
+                if let stop = selectedStop {
+                    GEMTourDetailCard(stop: stop)
+                        .id(stop.id).transition(.opacity)
+                } else {
+                    Label("選擇一座城市，查看場館與公告日期。", systemImage: "hand.tap")
+                        .font(GEMFont.body(15)).foregroundStyle(GEMPalette.secondary(for: scheme))
+                        .padding(.vertical, 10)
                 }
-
-                // Lightweight editorial map HUD matches the hero/album overlays.
-                VStack {
-                    HStack(alignment: .top) {
-                        Label("GLORIA / LIVE", systemImage: "waveform")
-                            .font(GEMFont.display(10))
-                            .tracking(0.8)
-                            .foregroundStyle(.white)
-                            .padding(.horizontal, 13)
-                            .padding(.vertical, 11)
-                            .background(Color(red: 0.13, green: 0.07, blue: 0.26).opacity(0.93), in: Capsule())
-
-                        Spacer()
-
-                    }
-
-                    Spacer()
-
-                    HStack {
-                        Image(systemName: "hand.draw")
-                        Text("點擊城市，探索巡演記憶")
-                        Spacer()
-                        Text("04 STOPS")
-                            .foregroundStyle(GEMPalette.gold)
-                    }
-                    .font(GEMFont.body(10))
-                    .foregroundStyle(.white.opacity(0.95))
-                    .padding(.horizontal, 14)
-                    .padding(.vertical, 11)
-                    .background(Color(red: 0.13, green: 0.07, blue: 0.26).opacity(0.93), in: Capsule())
-                }
-                .padding(14)
-                .allowsHitTesting(false) // Do not block map gestures or pins.
-                // The real reset button is layered above this decorative HUD.
+                Text("收錄範圍：2026 年 \(GEMTourContent.stops.count) 座城市的官方公告精選，核對於 2026-10-15。排期不等於實際舉行證明，亦非即時售票資訊。")
+                    .font(GEMFont.body(12)).lineSpacing(4).foregroundStyle(GEMPalette.secondary(for: scheme))
+                NavigationLink(value: GEMRoute.entry("release-i-am-gloria")) {
+                    Label("延伸閱讀：《I AM GLORIA》音樂篇章", systemImage: "opticaldisc")
+                        .font(GEMFont.body(15)).foregroundStyle(GEMPalette.purple).frame(minHeight: 44)
+                }.buttonStyle(GEMPressStyle())
             }
-            .frame(height: 330)
-            .clipShape(RoundedRectangle(cornerRadius: 24))
-            .overlay {
-                RoundedRectangle(cornerRadius: 24)
-                    .strokeBorder(GEMPalette.purple.opacity(colorScheme == .dark ? 0.36 : 0.18), lineWidth: 1)
-            }
-            .shadow(color: GEMPalette.violet.opacity(colorScheme == .dark ? 0.22 : 0.10), radius: 16, y: 8)
-            .overlay(alignment: .topTrailing) {
-                // An active control above the non-hit-testing decorative HUD.
-                Button {
-                    withAnimation(.easeInOut(duration: 0.85)) {
-                        cameraPosition = .region(GEMTourContent.overviewRegion)
-                    }
-                } label: {
-                    Image(systemName: "arrow.up.left.and.arrow.down.right")
-                        .font(.system(size: 14, weight: .semibold))
-                        .foregroundStyle(.white)
-                        .frame(width: 39, height: 39)
-                        .background(Color(red: 0.13, green: 0.07, blue: 0.26).opacity(0.93), in: Circle())
-                }
-                .buttonStyle(.plain)
-                .padding(14)
-                .accessibilityLabel("查看所有巡演城市")
-            }
-
-            ScrollView(.horizontal, showsIndicators: false) {
-                HStack(spacing: 10) {
-                    ForEach(GEMTourContent.stops) { stop in
-                        GEMTourCityChip(
-                            stop: stop,
-                            isSelected: selectedStop.id == stop.id,
-                            onSelect: { select(stop) }
-                        )
-                    }
-                }
-                .padding(.vertical, 3)
-            }
-
-            GEMTourDetailCard(stop: selectedStop)
-                .id(selectedStop.id)
-                .transition(.opacity.combined(with: .move(edge: .bottom)))
-                .animation(.easeInOut(duration: 0.25), value: selectedStopID)
-
-            Text("* 巡演站點與日期來自 G.E.M. 官方巡演頁面；地標為對應場館位置。此區塊為巡演回顧，非售票或即時場次資訊。")
-                .font(GEMFont.body(10))
-                .foregroundStyle(GEMPalette.secondary(for: colorScheme))
-                .fixedSize(horizontal: false, vertical: true)
-                .lineSpacing(3)
         }
+        .animation(reduceMotion ? nil : .easeInOut(duration: 0.22), value: selectedStopID)
+    }
+
+    private var map: some View {
+        Map(position: $cameraPosition, selection: $selectedStopID) {
+            ForEach(GEMTourContent.stops) { stop in
+                if stop.id == "taipei" {
+                    Annotation(stop.city, coordinate: stop.coordinate, anchor: .bottom) {
+                        Button { select(stop) } label: {
+                            GEMTourSpotlightPin(isSelected: selectedStopID == stop.id)
+                        }.buttonStyle(.plain).accessibilityLabel("查看台北巡演公告")
+                    }.tag(stop.id)
+                } else {
+                    Marker(stop.city, systemImage: "music.mic", coordinate: stop.coordinate)
+                        .tint(GEMPalette.violet).tag(stop.id)
+                }
+            }
+        }
+        .mapStyle(.standard(elevation: .flat, emphasis: .muted, pointsOfInterest: .excludingAll))
+        .mapControlVisibility(.hidden)
+        .onChange(of: selectedStopID) { _, _ in updateCamera() }
+        .frame(height: 320)
+        .clipShape(RoundedRectangle(cornerRadius: 24))
+        .overlay(alignment: .topLeading) {
+            Text("GLORIA / \(GEMTourContent.stops.count) CITIES")
+                .font(GEMFont.display(10)).foregroundStyle(.white)
+                .padding(13).background(GEMPalette.violet, in: Capsule()).padding(13)
+                .allowsHitTesting(false)
+        }
+        .overlay(alignment: .topTrailing) {
+            Button {
+                if selectedStopID == nil { updateCamera() } else { selectedStopID = nil }
+            } label: {
+                Image(systemName: "arrow.up.left.and.arrow.down.right")
+                    .frame(width: 44, height: 44)
+            }.buttonStyle(.glass).padding(12).accessibilityLabel("返回所有城市概覽")
+        }
+        .accessibilityHint("也可使用地圖下方的城市按鈕選擇場館")
     }
 
     private func select(_ stop: GEMTourStop) {
-        withAnimation(.easeInOut(duration: 0.55)) {
-            selectedStopID = stop.id
-            cameraPosition = .region(stop.focusedRegion)
-        }
+        if selectedStopID == stop.id { updateCamera() } else { selectedStopID = stop.id }
     }
 
-    private func focusCamera(on stop: GEMTourStop) {
-        withAnimation(.easeInOut(duration: 0.65)) {
-            cameraPosition = .region(stop.focusedRegion)
+    private func updateCamera() {
+        withAnimation(reduceMotion ? nil : .easeInOut(duration: 0.55)) {
+            cameraPosition = .region(selectedStop?.focusedRegion ?? GEMTourContent.overviewRegion)
         }
     }
 }

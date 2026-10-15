@@ -1,96 +1,57 @@
 import SwiftUI
+import UIKit
 
 struct GEMHeroView: View {
-    private let officialWebsite = URL(string: "https://www.iamgem.com/")!
-
+    @State private var appeared = false
+    @Environment(\.accessibilityReduceMotion) private var reduceMotion
     var body: some View {
-        ZStack(alignment: .bottomLeading) {
-            GeometryReader { geometry in
-                Image("gem_hero")
-                    .resizable()
-                    .scaledToFill()
-                    .frame(width: geometry.size.width, height: geometry.size.height)
-                    .clipped()
-            }
-
-            LinearGradient(
-                stops: [
-                    .init(color: .black.opacity(0.12), location: 0),
-                    .init(color: Color(red: 0.11, green: 0.04, blue: 0.23).opacity(0.31), location: 0.38),
-                    .init(color: Color(red: 0.09, green: 0.03, blue: 0.18).opacity(0.98), location: 1)
-                ],
-                startPoint: .top,
-                endPoint: .bottom
-            )
-
-            // Editorial / concert-light motif.
-            Circle()
-                .strokeBorder(.white.opacity(0.16), lineWidth: 1)
-                .frame(width: 330, height: 330)
-                .offset(x: 166, y: -175)
-                .allowsHitTesting(false)
-
-            Circle()
-                .strokeBorder(GEMPalette.gold.opacity(0.50), lineWidth: 1)
-                .frame(width: 270, height: 270)
-                .offset(x: 197, y: -202)
-                .allowsHitTesting(false)
-
-            VStack(alignment: .leading, spacing: 12) {
-                HStack(spacing: 9) {
-                    Circle()
-                        .fill(GEMPalette.gold)
-                        .frame(width: 6, height: 6)
-                    Text("THE VOICE OF A GENERATION")
-                        .font(GEMFont.display(10))
-                        .tracking(1.8)
-                        .foregroundStyle(GEMPalette.gold)
+        VStack(alignment: .leading, spacing: 15) {
+            Spacer(minLength: 240)
+            Text("THE ARTIST. THE SONGS. THE STORY.")
+                .font(GEMFont.display(10)).tracking(1.6).foregroundStyle(GEMPalette.gold)
+            Text("G.E.M.").font(GEMFont.display(70)).tracking(-3).foregroundStyle(.white)
+                .minimumScaleFactor(0.6).lineLimit(1)
+            Text("鄧紫棋").font(GEMFont.headline(32)).tracking(5).foregroundStyle(.white)
+            Text("從一首歌，走進她的世界。")
+                .font(GEMFont.body(17)).foregroundStyle(.white.opacity(0.88)).lineSpacing(4)
+            NavigationLink(value: GEMRoute.timeline) {
+                HStack(spacing: 12) {
+                    Text("走進她的故事").font(GEMFont.headline(15))
+                    Image(systemName: "arrow.right")
                 }
-
-                Text("G.E.M.")
-                    .font(GEMFont.display(66))
-                    .tracking(-3)
-                    .minimumScaleFactor(0.7)
-                    .lineLimit(1)
-                    .foregroundStyle(.white)
-                    .shadow(color: .black.opacity(0.25), radius: 10, y: 5)
-
-                Text("鄧 紫 棋")
-                    .font(GEMFont.headline(30))
-                    .tracking(5)
-                    .foregroundStyle(.white)
-
-                Text("BEYOND THE VOICE")
-                    .font(GEMFont.display(11))
-                    .tracking(2.4)
-                    .foregroundStyle(.white.opacity(0.79))
-                    .padding(.top, 4)
-
-                Text("不只是聲音，更是一種力量。")
-                    .font(GEMFont.body(13))
-                    .foregroundStyle(.white.opacity(0.85))
-                    .padding(.top, 2)
-
-                Link(destination: officialWebsite) {
-                    HStack(spacing: 9) {
-                        Text("EXPLORE G.E.M.")
-                            .font(GEMFont.display(11))
-                            .tracking(1.2)
-                        Image(systemName: "arrow.up.right")
-                            .font(.system(size: 12, weight: .bold))
-                    }
-                    .foregroundStyle(Color(red: 0.14, green: 0.08, blue: 0.23))
-                    .padding(.horizontal, 18)
-                    .padding(.vertical, 13)
-                    .background(GEMPalette.gold, in: Capsule())
-                }
-                .padding(.top, 12)
-            }
-            .padding(.horizontal, 25)
-            .padding(.bottom, 75)
+                .foregroundStyle(Color(red: 0.13, green: 0.06, blue: 0.22))
+                .padding(.horizontal, 7).padding(.vertical, 5)
+            }.buttonStyle(.glassProminent).tint(GEMPalette.gold).controlSize(.large).padding(.top, 6)
+            Text("BEYOND THE VOICE  /  FAN ARCHIVE")
+                .font(GEMFont.display(10)).tracking(1.5).foregroundStyle(.white.opacity(0.60)).padding(.top, 10)
         }
-        .frame(height: 490)
-        .clipShape(GEMStageCutShape())
-        .accessibilityLabel("G.E.M. 鄧紫棋，BEYOND THE VOICE 藝人形象視覺")
+        .padding(.horizontal, 28).padding(.top, 26).padding(.bottom, 78)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background {
+            GeometryReader { geometry in
+                ZStack(alignment: .top) {
+                    Color(red: 0.12, green: 0.06, blue: 0.22)
+                    if UIImage(named: "gem_portrait") != nil {
+                        Image("gem_portrait").resizable().scaledToFill()
+                            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
+                            .clipped()
+                    }
+                    LinearGradient(stops: [.init(color: .black.opacity(0.03), location: 0),
+                                           .init(color: Color(red: 0.10, green: 0.04, blue: 0.19).opacity(0.42), location: 0.38),
+                                           .init(color: Color(red: 0.10, green: 0.04, blue: 0.19), location: 0.88)],
+                                   startPoint: .top, endPoint: .bottom)
+                }
+            }
+            .clipShape(GEMStageCutShape())
+        }
+        // Clip the photograph, not the interactive content: large text must
+        // remain readable beyond the sloping edge of the artwork.
+        .background(Color(red: 0.10, green: 0.04, blue: 0.19))
+        .opacity(appeared ? 1 : 0)
+        .offset(y: appeared || reduceMotion ? 0 : 10)
+        .onAppear {
+            guard !appeared else { return }
+            withAnimation(reduceMotion ? nil : .easeOut(duration: 0.5)) { appeared = true }
+        }
     }
 }

@@ -1,68 +1,200 @@
 import Foundation
 
-struct GEMAlbum: Identifiable {
-    let id: String
-    let title: String
-    let description: String
-    let year: String
-    let assetName: String
+enum GEMEntryKind: String, Codable, CaseIterable, Identifiable, Hashable {
+    case event, release, track, program, stage
+    var id: String { rawValue }
+    var title: String {
+        switch self {
+        case .event: return "成長故事"
+        case .release: return "專輯與 EP"
+        case .track: return "歌曲"
+        case .program: return "節目"
+        case .stage: return "重要舞台"
+        }
+    }
+    var symbol: String {
+        switch self {
+        case .event: return "point.topleft.down.to.point.bottomright.curvepath"
+        case .release: return "opticaldisc"
+        case .track: return "music.note"
+        case .program: return "tv"
+        case .stage: return "music.mic"
+        }
+    }
 }
 
-struct GEMTrack: Identifiable {
+struct GEMDate: Codable, Hashable {
+    let year: Int
+    var month: Int? = nil
+    var day: Int? = nil
+    var sortKey: Int { year * 10_000 + (month ?? 0) * 100 + (day ?? 0) }
+    var decade: Int { year / 10 * 10 }
+    var displayText: String {
+        guard let month = month else { return "\(year)" }
+        guard let day = day else { return "\(year) 年 \(month) 月" }
+        return "\(year) 年 \(month) 月 \(day) 日"
+    }
+}
+
+struct GEMLink: Codable, Hashable, Identifiable {
+    let label: String
+    let url: String
+    var id: String { label + "|" + url }
+    var destination: URL? { GEMURL.https(url) }
+}
+
+enum GEMURL {
+    static func https(_ value: String) -> URL? {
+        guard let url = URL(string: value), url.scheme?.lowercased() == "https",
+              let host = url.host, !host.isEmpty else { return nil }
+        return url
+    }
+}
+
+struct GEMSource: Codable, Hashable, Identifiable {
+    let id: String
+    let title: String
+    let publisher: String
+    let url: String
+    let verifiedAt: String
+    let scope: String
+    var destination: URL? { GEMURL.https(url) }
+}
+
+struct GEMMetadata: Codable, Hashable, Identifiable {
+    let label: String
+    let value: String
+    var id: String { label + "|" + value }
+}
+
+struct GEMTrackListing: Codable, Hashable, Identifiable {
     let number: Int
     let title: String
-    let description: String
-    let symbol: String
-
+    var entryID: String? = nil
     var id: Int { number }
 }
 
-enum GEMContent {
-    static let albums: [GEMAlbum] = [
-        GEMAlbum(
-            id: "gloria",
-            title: "I AM GLORIA",
-            description: "經典作品，以新的聲音再次綻放",
-            year: "2025",
-            assetName: "album_gloria"
-        ),
-        GEMAlbum(
-            id: "revelation",
-            title: "啟示錄",
-            description: "以音樂編織的長篇故事",
-            year: "2022",
-            assetName: "album_revelation"
-        ),
-        GEMAlbum(
-            id: "zoo",
-            title: "摩天動物園",
-            description: "觀察世界，也凝視內心",
-            year: "2019",
-            assetName: "album_zoo"
-        )
-    ]
-
-    static let tracks: [GEMTrack] = [
-        GEMTrack(number: 1, title: "光年之外", description: "BEYOND THE LIGHT YEARS", symbol: "sparkles"),
-        GEMTrack(number: 2, title: "泡沫", description: "BUBBLE", symbol: "circle.hexagongrid.fill"),
-        GEMTrack(number: 3, title: "倒數", description: "TIK TOK", symbol: "timer"),
-        GEMTrack(number: 4, title: "天空沒有極限", description: "THE SKY'S THE LIMIT", symbol: "moon.stars.fill")
-    ]
-}
-
-struct GEMMilestone: Identifiable {
-    let year: String
+struct GEMRecordingVersion: Codable, Hashable, Identifiable {
+    let id: String
     let title: String
-    let detail: String
-    var id: String { year }
+    let date: GEMDate
+    var releaseID: String? = nil
+    let note: String
+    let links: [GEMLink]
+    let sourceIDs: [String]
 }
 
-extension GEMContent {
-    static let milestones: [GEMMilestone] = [
-        GEMMilestone(year: "2008", title: "故事開始", detail: "推出首張作品《G.E.M.》，正式展開音樂旅程。"),
-        GEMMilestone(year: "2019", title: "摩天動物園", detail: "以音樂觀察世界，寫下新的創作篇章。"),
-        GEMMilestone(year: "2022", title: "啟示錄", detail: "將音樂與影像敘事串連成完整作品。"),
-        GEMMilestone(year: "2025", title: "I AM GLORIA", detail: "重錄經典歌曲，讓熟悉的旋律呈現全新聲音。"),
-        GEMMilestone(year: "2026", title: "自由的你", detail: "推出新創作單曲，延伸關於自我與自由的思考。")
-    ]
+struct GEMEntry: Codable, Identifiable, Hashable {
+    let id: String
+    let kind: GEMEntryKind
+    let title: String
+    let subtitle: String
+    let date: GEMDate
+    let category: String
+    let summary: String
+    let paragraphs: [String]
+    let editorial: String
+    let tags: [String]
+    let relatedIDs: [String]
+    let sourceIDs: [String]
+    let imageAsset: String?
+    let artworkURL: String?
+    let metadata: [GEMMetadata]
+    let tracks: [GEMTrackListing]
+    let versions: [GEMRecordingVersion]
+    let links: [GEMLink]
+
+    var year: Int { date.year }
+    var dateLabel: String { date.displayText }
+    var searchText: String {
+        ([title, subtitle, summary, editorial, category, String(year)] + tags +
+         paragraphs + tracks.map(\.title) + metadata.map(\.value))
+            .joined(separator: " ").gemSearchNormalized
+    }
+
+    enum CodingKeys: String, CodingKey {
+        case id, kind, title, subtitle, date, category, summary, paragraphs, editorial,
+             tags, relatedIDs, sourceIDs, imageAsset, artworkURL, metadata, tracks, versions, links
+    }
+
+    init(from decoder: Decoder) throws {
+        let v = try decoder.container(keyedBy: CodingKeys.self)
+        id = try v.decode(String.self, forKey: .id)
+        kind = try v.decode(GEMEntryKind.self, forKey: .kind)
+        title = try v.decode(String.self, forKey: .title)
+        date = try v.decode(GEMDate.self, forKey: .date)
+        category = try v.decode(String.self, forKey: .category)
+        summary = try v.decode(String.self, forKey: .summary)
+        paragraphs = try v.decode([String].self, forKey: .paragraphs)
+        subtitle = try v.decodeIfPresent(String.self, forKey: .subtitle) ?? ""
+        editorial = try v.decodeIfPresent(String.self, forKey: .editorial) ?? ""
+        tags = try v.decodeIfPresent([String].self, forKey: .tags) ?? []
+        relatedIDs = try v.decodeIfPresent([String].self, forKey: .relatedIDs) ?? []
+        sourceIDs = try v.decodeIfPresent([String].self, forKey: .sourceIDs) ?? []
+        imageAsset = try v.decodeIfPresent(String.self, forKey: .imageAsset)
+        artworkURL = try v.decodeIfPresent(String.self, forKey: .artworkURL)
+        metadata = try v.decodeIfPresent([GEMMetadata].self, forKey: .metadata) ?? []
+        tracks = try v.decodeIfPresent([GEMTrackListing].self, forKey: .tracks) ?? []
+        versions = try v.decodeIfPresent([GEMRecordingVersion].self, forKey: .versions) ?? []
+        links = try v.decodeIfPresent([GEMLink].self, forKey: .links) ?? []
+    }
+}
+
+struct GEMCatalog: Codable {
+    let schemaVersion: Int
+    let updatedAt: String
+    let entries: [GEMEntry]
+    let sources: [GEMSource]
+    static let empty = GEMCatalog(schemaVersion: 1, updatedAt: "", entries: [], sources: [])
+
+    static func load(bundle: Bundle = .main) throws -> GEMCatalog {
+        guard let url = bundle.url(forResource: "gem-catalog", withExtension: "json") else {
+            throw GEMCatalogError.missingResource
+        }
+        let catalog = try JSONDecoder().decode(GEMCatalog.self, from: Data(contentsOf: url))
+        try catalog.validate()
+        return catalog
+    }
+
+    func validate() throws {
+        let ids = Set(entries.map(\.id))
+        let sourceIDs = Set(sources.map(\.id))
+        guard schemaVersion == 1, ids.count == entries.count,
+              sourceIDs.count == sources.count else { throw GEMCatalogError.invalidCatalog }
+        for item in entries {
+            let related = item.relatedIDs + item.tracks.compactMap(\.entryID) + item.versions.compactMap(\.releaseID)
+            let referenced = item.sourceIDs + item.versions.flatMap(\.sourceIDs)
+            guard !item.title.isEmpty, !item.paragraphs.isEmpty, !item.sourceIDs.isEmpty,
+                  related.allSatisfy({ ids.contains($0) }),
+                  referenced.allSatisfy({ sourceIDs.contains($0) }) else {
+                throw GEMCatalogError.invalidCatalog
+            }
+        }
+    }
+}
+
+enum GEMCatalogError: Error { case missingResource, invalidCatalog }
+
+struct GEMMediaCredit: Codable, Identifiable {
+    let id: String
+    let assetName: String
+    let title: String
+    let author: String
+    let sourceURL: String
+    let license: String
+    let licenseURL: String
+    let modifications: String
+}
+
+enum GEMRoute: Hashable {
+    case timeline, library(GEMEntryKind), search, favorites, entry(String), sources
+}
+
+extension String {
+    var gemSearchNormalized: String {
+        let traditional = applyingTransform(StringTransform(rawValue: "Simplified-Traditional"), reverse: false) ?? self
+        return traditional.folding(options: [.caseInsensitive, .diacriticInsensitive, .widthInsensitive],
+                                   locale: Locale(identifier: "zh_TW"))
+            .trimmingCharacters(in: .whitespacesAndNewlines)
+    }
 }

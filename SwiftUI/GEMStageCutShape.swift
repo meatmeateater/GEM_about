@@ -1,6 +1,7 @@
 import SwiftUI
 
-/// A custom five-point polygon designed first with Keynote's Pen tool.
+/// A five-point polygon specified for the accompanying Keynote drawing guide.
+/// A real Keynote drawing and evidence must be completed separately on a Mac.
 /// Keynote coordinates, expressed as percentages of the bounding box:
 /// (0%, 0%) → (100%, 0%) → (100%, 83%) → (38%, 100%) → (0%, 90%).
 /// The same geometry is recreated here using SwiftUI Path and used to clip photos.

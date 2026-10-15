@@ -1,4 +1,5 @@
 import SwiftUI
+import UIKit
 
 // Replace the PostScript font names if your downloaded font version differs.
 // Download fonts from their respective official/open-source distributors.
@@ -17,7 +18,11 @@ enum GEMFont {
 }
 
 enum GEMPalette {
-    static let purple = Color(red: 0.70, green: 0.45, blue: 0.99)
+    static let purple = Color(uiColor: UIColor { traits in
+        traits.userInterfaceStyle == .dark
+            ? UIColor(red: 0.77, green: 0.61, blue: 1.0, alpha: 1)
+            : UIColor(red: 0.39, green: 0.18, blue: 0.65, alpha: 1)
+    })
     static let violet = Color(red: 0.44, green: 0.25, blue: 0.83)
     static let gold = Color(red: 0.99, green: 0.82, blue: 0.55)
 

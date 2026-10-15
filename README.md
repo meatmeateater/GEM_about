@@ -1,100 +1,72 @@
 # G.E.M. — BEYOND THE VOICE
 
-以 SwiftUI 打造的 G.E.M. 鄧紫棋藝人 About Page。設計：午夜紫 / 香檳金 / 唱片雜誌感，支援 Dark / Light 切換，並新增 **MapKit 世界巡演互動地圖**（Map、Marker、Annotation）。
+以鄧紫棋的成長、作品和舞台為主題的 SwiftUI 粉絲音樂檔案。沿用午夜紫／香檳金，從 About 首頁探索「事件 → 作品 → 歌曲 → 舞台／版本 → 收藏」。
 
-## 打開專案
+## 開啟與執行
 
-1. 若壓縮包包含 `GEM_BeyondTheVoice.xcodeproj`，在 Mac 上以 Xcode 15+ 開啟。部署目標 iOS 17.0+。
-2. 確認 SwiftUI 11 個檔案位於專案內、`Assets.xcassets` 在 Target 的資源中。
-3. 在 Xcode > Project > Target > Signing & Capabilities 選自己的 Team，必要時變更 Bundle Identifier。
-4. 選 iPhone Simulator，按 `⌘R` 執行。
-5. 頂端右側太陽/月亮按鈕切換 Light / Dark；此選項以 AppStorage 記住偏好。
-6. 向下捲動到 **03 / WORLD TOUR**，點選台北／新加坡／吉隆坡／深圳的標記或城市按鈕，檢查地圖鏡頭移動與下方資訊卡。
+1. 在 **含 iOS 27 SDK 的 Xcode 27** 開啟 `GEM_BeyondTheVoice.xcodeproj`。App 與測試的最低部署目標都是 **iOS／iPadOS 27.0**，Swift language mode 維持 5。
+2. 選擇 `GEM_BeyondTheVoice` shared scheme 與 iOS 27 Simulator。真機執行時，在 Signing & Capabilities 選自己的 Team。
+3. 按 `⌘R`。資料、兩張署名照片與三個自訂字型會隨 App 打包，無須重新拖入 Xcode。
+4. 按 `⌘U` 執行已加入的 XCTest target。具體驗收流程見 [Mac 驗收清單](docs/MAC_ACCEPTANCE.md)。
 
-如 Xcode 無法直接開啟專案：自行建立 iOS App，Interface 選 SwiftUI、Language 選 Swift；**刪掉 Xcode 原始的 `@main App` 檔，僅保留 `GEMAboutApp.swift`**，將 `SwiftUI` 內所有 `.swift` 檔加入 App target，然後將五個 `.imageset` 複製到新專案 Assets.xcassets。
+本次修改在 Windows 完成。已執行的檢查與未執行的 Mac 驗收分別記錄於 [驗證紀錄](docs/VALIDATION.md)；靜態檢查不等於 Xcode build 或 XCTest 執行成功。
 
-## 自訂字型：必要的手動步驟
+## 可以探索什麼
 
-**此包不包含字型檔**（請從官方免費授權來源自行下載）。
+- **成長時間線**：18 個事件，依年代快速跳轉、依類型篩選，同年可保留不同故事。
+- **發行作品**：10 張專輯／EP／重錄發行，含版本說明、曲目與相關歌曲入口。
+- **歌曲**：14 首歌曲檔案，包含〈泡沫〉、〈我的秘密〉等不同時期的版本對照。
+- **節目與舞台**：2 個節目、6 件舞台精選；參與身分、歌曲和官方影片分開整理。
+- **搜尋**：跨事件、作品、歌曲、節目和舞台搜尋；支援繁簡中文、英文字大小寫、全半形及多個關鍵字。
+- **收藏**：每份檔案可收藏／取消；本機保存，重開仍在。收藏頁可依類型篩選，也可向左滑動取消。
+- **巡演地圖**：四座精選城市的官方公告，城市按鈕／標記、鏡頭、場館卡和概覽重置同步。這是公告檔案，不是完整場次清單或即時售票服務。
+- **來源與署名**：每則詳情附來源及核對日期；編輯導讀與已查證資料分開。
 
-- 下載 **Sora ExtraBold**、**Noto Sans TC Bold**、**Noto Sans TC Regular** TTF 字型。
-- 官方來源： https://fonts.google.com/specimen/Sora 及 https://fonts.google.com/noto/specimen/Noto+Sans+TC 。
-- 若下載到 Variable Font，請確認檔名及真實 PostScript name；可另用 Google Fonts 的靜態 TTF 字重版本。
-- 把字型拖進 Xcode target，勾選 **Copy items if needed** 和 App target。
-- `Info.plist` / Target Info → `Fonts provided by application` (UIAppFonts) 加入實際隨 App 打包的 TTF 檔名。例如 `Sora-ExtraBold.ttf`、`NotoSansTC-Bold.ttf`、`NotoSansTC-Regular.ttf`。
-- `GEMTheme.swift` 中 `.custom("Sora-ExtraBold", ...)` / `.custom("NotoSansTC-Bold", ...)` / `.custom("NotoSansTC-Regular", ...)` 使用**字型的 PostScript 名稱，而不是單純字型檔名**。若取得的版本名稱不同，要同步修改。
+內容是精選檔案，資料核對日期為 2026-10-15。完整來源與編輯範圍見 [CONTENT_SOURCES.md](docs/CONTENT_SOURCES.md)。
 
-未安裝字型，iOS 會以系統字型備援，仍可預覽頁面，但課堂展示「自訂字型」前必須真的安裝。
+## iOS 27 與原生介面
 
-## 圖片 Asset 與授權
+- `AsyncImage(request:)` 與 `asyncImageURLSession(_:)`：使用遵守伺服器 HTTP cache header 的封面快取，設定快取容量和逾時；不承諾所有遠端圖片都能離線顯示。
+- `swipeActionsContainer()`：讓收藏頁的 ScrollView 支援原生取消收藏操作；獨立心形按鈕仍保留。
+- 長文與檔案欄位使用 `textSelection(.enabled)`，使用 iOS 27 原生互動選取。
+- 主按鈕、章節列與地圖控制採原生 Liquid Glass；其他卡片保留紫金色的閱讀層次。
+- 互動微動畫與一次性 Hero 淡入；開啟 Reduce Motion 時停用位移、彈跳及地圖鏡頭動畫。
 
-包內有**五張原創抽象示意圖**，都是 placeholder，**不是鄧紫棋真人照片，也不是官方專輯封面**。以避免未授權再散布照片／唱片封面。請用你已取得合法使用權的素材直接替換（保持 Asset 名稱）：
+API 核對：[SwiftUI 更新](https://developer.apple.com/documentation/updates/swiftui)、[AsyncImage](https://developer.apple.com/documentation/swiftui/asyncimage)、[iOS 27 release notes](https://developer.apple.com/documentation/ios-ipados-release-notes/ios-ipados-27-release-notes)。新 SDK 的實際建置與手勢行為仍需在 Mac 驗收。
 
-- `gem_hero`: Artist hero portrait (推薦直式，至少 900×1200)
-- `gem_stage`: Artist stage photo (推薦橫式，至少 1000×650)
-- `album_gloria`: 《I AM GLORIA》封面
-- `album_revelation`: 《啟示錄》封面
-- `album_zoo`: 《摩天動物園》封面
+## 圖片、封面與字型
 
-正式版請適當標註影像來源，不要將示意圖當成官方影像。
+`gem_portrait`、`gem_live` 使用 Wikimedia Commons 作者茂木木的 CC BY-SA 3.0 照片，皆為 2014-05-24 武漢 XXX Live，不當作其他演出照片。原始 JPEG 保留；介面的裁切、遮罩與漸層呈現已記錄在署名中。[照片與授權](docs/MEDIA_CREDITS.md)
 
-## Keynote 自訂形狀（作業要求第 10 點）
+發行作品封面使用正式來源的遠端網址，完整比例顯示；失敗或未提供時呈現作品名稱與年份的文字設計，仍可查看詳情及官方入口。原版抽象素材留在 Assets 作為歷史設計檔，新的作品卡不將其當成官方封面。
 
-請讀 `Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md`，依照五個頂點在 Keynote 真正畫出多邊形並截圖。SwiftUI 中 `GEMStageCutShape.swift` 使用 `Path` 重建完全相同的形狀；`GEMHeroView.swift`、`GEMComponents.swift` 都以 `.clipShape(GEMStageCutShape())` 裁切照片。
+字型隨 App 打包：Sora ExtraBold、Noto Sans TC Regular／Bold。`font/` 內附 SIL OFL 授權。`Info.plist`、資源引用與 PostScript 名稱由靜態檢查核對，實際註冊另由 XCTest／Mac 驗收確認。
 
-## 十項規格檢查
+## 維護與驗證
 
-| # | 規格 | 實作位置 |
+核心內容在 `Content/gem-catalog.json`；署名在 `Content/media-credits.json`。新增條目使用穩定 ID，日期可只填年份，不要以排序序號或年份作唯一 ID。
+
+```sh
+python3 scripts/apply_artwork.py
+python3 scripts/update_xcode_project.py
+python3 scripts/validate_project.py
+```
+
+第一個指令依封面來源索引更新作品圖像與出處；第二個更新 Xcode 檔案引用，保留 App 身分並補上測試、JSON、字型與 Privacy manifest；第三個檢查資料關聯、日期、連結格式、資源、project 與 Swift 文法。Swift 文法檢查需另外安裝 `tree-sitter`、`tree-sitter-swift`，或使用 `--syntax-deps` 指向現有套件；沒有時會明確列為跳過。
+
+## 原作業十項對照
+
+| # | 要求 | 展示位置 |
 |---|---|---|
-| 1 | VStack、HStack、ZStack、Text、Image、ScrollView | `GEMAboutView.swift`, `GEMHeroView.swift`, `GEMSections.swift`, `GEMTourMapSection.swift` |
-| 2 | 圖片 Asset + SF Symbol | `Assets.xcassets`、`Image("gem_hero")`、`Image(systemName: "waveform")` |
-| 3 | 多個 modifier | `.font` `.tracking` `.padding` `.background` `.overlay` `.clipShape` `.foregroundStyle` 等 |
-| 4 | 上下捲動 | `GEMAboutView.swift` 的 `ScrollView(.vertical)` |
-| 5 | 多檔案 View 型別 | `GEMAboutView.swift`, `GEMHeroView.swift`, `GEMComponents.swift`, `GEMSections.swift`, `GEMTourMapSection.swift`, `GEMTourComponents.swift` |
-| 6 | View property 客製化 | `GEMAlbumCard(album:)`, `GEMTourCityChip(stop:isSelected:onSelect:)`, `GEMTourDetailCard(stop:)` 等 |
-| 7 | Light / Dark mode | `GEMAboutView.swift` 的切換按鈕 + `.preferredColorScheme` |
-| 8 | Text + Markdown 連結 | `GEMConnectSection`：`Text("前往 [G.E.M. 官方網站](https://www.iamgem.com/) ...")` |
-| 9 | 自訂字型 | `GEMTheme.swift` 中 `Font.custom`；**須自己下載字型並加入 Target** |
-| 10 | Keynote 形狀 / SwiftUI 剪裁 | Keynote 手動繪製＋`GEMStageCutShape.swift`＋`.clipShape(...)`；**須自行完成 Keynote 繪圖存證** |
+| 1 | VStack／HStack／ZStack／Text／Image／ScrollView | 首頁、探索頁與詳情 |
+| 2 | Asset + SF Symbol | 真實照片、分類與操作圖示 |
+| 3 | 多種 modifier | 字型、間距、背景、裁切、動態與玻璃材質 |
+| 4 | 上下捲動 | About 首頁與詳情 |
+| 5 | 多檔 View | `SwiftUI/` 各功能檔 |
+| 6 | View property 客製化 | `GEMEntryRow(entry:)`、`GEMReleaseCard(entry:)`、城市卡 |
+| 7 | Light／Dark | 首頁右上角切換，所有內頁沿用 |
+| 8 | Text + Markdown 連結 | 頁尾官方網站／Spotify 文字連結 |
+| 9 | 自訂字型 | Sora／Noto Sans TC，真實 TTF 已加入 Resources |
+| 10 | Keynote Shape／SwiftUI 裁切 | Hero／舞台保留 `GEMStageCutShape`；真正 Keynote 檔與繪圖存證需依 [指南](Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md) 在 Mac 完成 |
 
-## 新增功能：03 / WORLD TOUR（MapKit）
-
-本次更新直接沿用原專案的 **GEMPalette** 與 **GEMFont**，而非另外建立一套地圖主題：
-
-- `SwiftUI/GEMTourModels.swift`：`GEMTourStop` 自訂資料模型、演唱會日期、場館名稱與座標、概覽地圖範圍。
-- `SwiftUI/GEMTourMapSection.swift`：嵌入 About 頁面的 `Map(position:selection:)`、`Marker`、自訂 `Annotation`、鏡頭動畫、返回全部城市按鈕。
-- `SwiftUI/GEMTourComponents.swift`：紫金色自訂地圖圖釘、資料驅動城市選單、互動式巡演資訊卡。
-- `SwiftUI/GEMAboutView.swift`：將 `GEMTourMapSection()` 插入音樂旅程與專輯列表之間。
-- `SwiftUI/GEMSections.swift`：更新後續章節編號為 04（專輯）、05（歌曲）、06（官方連結）。
-
-### 如何操作地圖
-
-1. 地圖預設顯示四座城市：台北、新加坡、吉隆坡、深圳。
-2. 直接點擊台北的 **G.E.M. / TAIPEI** 自訂 Annotation，或其他城市的 **Marker**，地圖會以動畫聚焦所選場館並更新卡片。
-3. 地圖下方可橫向滑動的城市標籤也能切換城市。
-4. 地圖右上角的四向箭頭可返回所有城市概覽。
-5. `APPLE MAPS` 會使用 `MKMapItem` 開啟對應場館；`OFFICIAL TOUR` 會開啟 G.E.M. 官方巡演頁面。
-6. Light / Dark 模式跟隨原專案的切換按鈕；地圖採用 **muted standard** 樣式，卡片使用 `GEMPalette` 色票。
-
-本範例**不需要使用者定位權限**（沒有要求當前位置）也不需要 MapKit API key；但地圖圖磚必須能連線載入。部分地區的 Apple Maps 地圖供應與詳細程度可能不同。
-
-### 本次範例資料來源
-
-- 巡演日期與場館：官方 https://www.iamgem.com/tours/ （2026 年 10 月核對）。
-- 場館座標（近似）：Taipei Dome / Mapcarta；Singapore National Stadium / Wikidata；Bukit Jalil National Stadium / Mapcarta；Shenzhen Universiade Sports Centre Stadium / Mapcarta。
-- **這是歷史場次地圖，不是售票系統、非未來行程保證。** 展示用圖片目前仍為原創佔位素材。
-- 若要增加站點，在 `GEMTourContent.stops` 陣列中增加 `GEMTourStop` 即可；城市清單、標記與資訊卡會隨資料同步產生。
-
-## 內容查證與導覽
-
-- 官方網站：https://www.iamgem.com/
-- Sony Music 2025 專輯：https://www.sonymusic.com.tw/album/i-am-gloria/
-- Sony Music 2019 專輯：https://www.sonymusic.com.tw/album/g-e-m-city-zoo/
-- Sony Music 2026 作品：https://www.sonymusic.com.tw/album/free-to-be-you/
-- Spotify：https://open.spotify.com/artist/7aRC4L63dBn3CiLDuWaLSI
-
-資料與文字為粉絲性質的作品示範，並非官方 App。
-
-## 已知限制
-
-開發環境中無 macOS/iOS SDK，已用 Swift parser 檢查語法及 plist/project 格式，但無法在此進行真正的 Xcode 編譯或 iPhone 模擬器截圖；需要你在 Xcode 開啟後按 `⌘R` 最終驗證。Keynote 實際繪圖、字型安裝、正版照片替換等必須在你的 Mac 上完成。
+此為非官方粉絲作品，沒有 App 內音樂播放功能；聆聽與觀看會進入相應官方平台。

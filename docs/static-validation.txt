@@ -1,0 +1,6 @@
+Content: event=18, program=2, release=10, stage=6, track=14 sources=53
+Project: 14 App Swift files, 1 XCTest files, 10 resources, shared scheme.
+Resources: 3 font PostScript names, 7 asset images, 2 attributed photos, valid privacy plist.
+Swift syntax: Tree-sitter parsed 15 files. This does not type-check Apple frameworks.
+Static validation: 1859 checks, 0 failures, 0 optional skips.
+NOT RUN: Xcode build, XCTest execution, Simulator/device, VoiceOver, layout and font registration.
