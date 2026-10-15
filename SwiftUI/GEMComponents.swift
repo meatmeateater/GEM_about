@@ -244,3 +244,83 @@ struct GEMReleaseCard: View {
         }.frame(width: 220, alignment: .leading)
     }
 }
+
+struct GEMStreamingPlatformSection: View {
+    let entry: GEMEntry
+    @Environment(\.colorScheme) private var scheme
+    @Environment(\.openURL) private var openURL
+    @State private var couldNotOpen = false
+
+    var body: some View {
+        VStack(alignment: .leading, spacing: 14) {
+            HStack(spacing: 8) {
+                Image(systemName: "headphones")
+                    .font(.system(size: 16, weight: .semibold))
+                    .foregroundStyle(GEMPalette.purple)
+                Text("串流平台線上收聽")
+                    .font(GEMFont.headline(18))
+                    .foregroundStyle(GEMPalette.foreground(for: scheme))
+            }
+            .accessibilityAddTraits(.isHeader)
+
+            Text("在常用音樂串流平台即時聆聽《\(entry.title)》：")
+                .font(GEMFont.body(13))
+                .foregroundStyle(GEMPalette.secondary(for: scheme))
+                .fixedSize(horizontal: false, vertical: true)
+
+            VStack(spacing: 10) {
+                ForEach(GEMStreamingPlatform.allCases) { platform in
+                    if let url = entry.streamingURL(for: platform) {
+                        Button {
+                            openURL(url) { accepted in
+                                couldNotOpen = !accepted
+                            }
+                        } label: {
+                            HStack(spacing: 12) {
+                                Image(systemName: platform.symbol)
+                                    .font(.system(size: 18, weight: .medium))
+                                    .foregroundStyle(GEMPalette.purple)
+                                    .frame(width: 26)
+                                Text("在 \(platform.rawValue) 聆聽")
+                                    .font(GEMFont.headline(15))
+                                    .foregroundStyle(GEMPalette.foreground(for: scheme))
+                                Spacer(minLength: 8)
+                                Image(systemName: "arrow.up.right")
+                                    .font(.system(size: 12, weight: .semibold))
+                                    .foregroundStyle(GEMPalette.secondary(for: scheme))
+                            }
+                            .padding(.horizontal, 16)
+                            .padding(.vertical, 13)
+                            .frame(maxWidth: .infinity, alignment: .leading)
+                            .background(
+                                RoundedRectangle(cornerRadius: 14, style: .continuous)
+                                    .fill(scheme == .dark
+                                        ? Color.white.opacity(0.06)
+                                        : GEMPalette.purple.opacity(0.06))
+                            )
+                        }
+                        .buttonStyle(GEMPressStyle())
+                        .accessibilityLabel("在 \(platform.rawValue) 聆聽 \(entry.title)")
+                    }
+                }
+            }
+        }
+        .padding(18)
+        .frame(maxWidth: .infinity, alignment: .leading)
+        .background(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .fill(scheme == .dark
+                    ? Color(red: 0.13, green: 0.09, blue: 0.19)
+                    : Color.white)
+        )
+        .overlay(
+            RoundedRectangle(cornerRadius: 20, style: .continuous)
+                .stroke(GEMPalette.purple.opacity(0.16), lineWidth: 1)
+        )
+        .alert("暫時無法開啟連結", isPresented: $couldNotOpen) {
+            Button("好", role: .cancel) { }
+        } message: {
+            Text("請確認設備已連線或已安裝對應音樂 App。")
+        }
+    }
+}

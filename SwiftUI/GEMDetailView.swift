@@ -5,6 +5,7 @@ struct GEMDetailView: View {
 
     @EnvironmentObject private var library: GEMLibrary
     @Environment(\.colorScheme) private var colorScheme
+    @Environment(\.openURL) private var openURL
 
     var body: some View {
         Group {
@@ -12,6 +13,9 @@ struct GEMDetailView: View {
                 ScrollView {
                     VStack(alignment: .leading, spacing: 26) {
                         hero(entry)
+                        if entry.kind == .release || entry.kind == .track {
+                            GEMStreamingPlatformSection(entry: entry)
+                        }
                         if !entry.metadata.isEmpty { metadata(entry) }
                         story(entry)
                         if !entry.editorial.isEmpty { editorial(entry) }
@@ -140,45 +144,81 @@ struct GEMDetailView: View {
 
     private func trackList(_ entry: GEMEntry) -> some View {
         GEMDetailSection(title: entry.kind == .release ? "曲目" : "相關曲目", symbol: "list.number") {
-            Text("有「歌曲檔案」入口的曲目，可以點開閱讀背景與其他版本。")
+            Text("有「歌曲檔案」入口的曲目，可以點開閱讀背景與其他版本；亦可點擊「串流」直接前往音樂平台播放。")
                 .font(GEMFont.body(13))
                 .foregroundStyle(GEMPalette.secondary(for: colorScheme))
                 .fixedSize(horizontal: false, vertical: true)
 
             ForEach(entry.tracks) { track in
                 if let targetID = track.entryID, library.entry(id: targetID) != nil {
-                    NavigationLink(value: GEMRoute.entry(targetID)) {
-                        trackRow(track, navigable: true)
-                    }
-                    .buttonStyle(.plain)
-                    .accessibilityLabel("第 \(track.number) 首，\(track.title)，查看歌曲檔案")
+                    trackRow(track, navigable: true, albumTitle: entry.title)
                 } else {
-                    trackRow(track, navigable: false)
-                        .accessibilityElement(children: .combine)
+                    trackRow(track, navigable: false, albumTitle: entry.title)
                 }
                 if track.id != entry.tracks.last?.id { Divider() }
             }
         }
     }
 
-    private func trackRow(_ track: GEMTrackListing, navigable: Bool) -> some View {
-        HStack(alignment: .firstTextBaseline, spacing: 12) {
+    private func trackRow(_ track: GEMTrackListing, navigable: Bool, albumTitle: String) -> some View {
+        HStack(alignment: .center, spacing: 12) {
             Text(String(format: "%02d", track.number))
                 .font(GEMFont.display(14))
                 .foregroundStyle(GEMPalette.purple)
                 .frame(minWidth: 26, alignment: .leading)
-            VStack(alignment: .leading, spacing: 5) {
-                Text(track.title)
-                    .font(GEMFont.headline(16))
-                    .foregroundStyle(GEMPalette.foreground(for: colorScheme))
-                    .fixedSize(horizontal: false, vertical: true)
-                if navigable {
-                    Text("歌曲檔案")
-                        .font(GEMFont.body(12))
-                        .foregroundStyle(GEMPalette.purple)
+
+            if navigable, let targetID = track.entryID {
+                NavigationLink(value: GEMRoute.entry(targetID)) {
+                    VStack(alignment: .leading, spacing: 3) {
+                        Text(track.title)
+                            .font(GEMFont.headline(16))
+                            .foregroundStyle(GEMPalette.foreground(for: colorScheme))
+                            .fixedSize(horizontal: false, vertical: true)
+                        Text("歌曲檔案")
+                            .font(GEMFont.body(12))
+                            .foregroundStyle(GEMPalette.purple)
+                    }
+                    .frame(maxWidth: .infinity, alignment: .leading)
                 }
+                .buttonStyle(.plain)
+                .accessibilityLabel("第 \(track.number) 首，\(track.title)，查看歌曲檔案")
+            } else {
+                VStack(alignment: .leading, spacing: 3) {
+                    Text(track.title)
+                        .font(GEMFont.headline(16))
+                        .foregroundStyle(GEMPalette.foreground(for: colorScheme))
+                        .fixedSize(horizontal: false, vertical: true)
+                }
+                .frame(maxWidth: .infinity, alignment: .leading)
             }
+
             Spacer(minLength: 4)
+
+            Menu {
+                ForEach(GEMStreamingPlatform.allCases) { platform in
+                    if let url = trackStreamingURL(for: track, platform: platform, albumTitle: albumTitle) {
+                        Button {
+                            openURL(url) { _ in }
+                        } label: {
+                            Label("在 \(platform.rawValue) 播放", systemImage: platform.symbol)
+                        }
+                    }
+                }
+            } label: {
+                HStack(spacing: 4) {
+                    Image(systemName: "headphones")
+                        .font(.system(size: 11, weight: .semibold))
+                    Text("串流")
+                        .font(GEMFont.headline(12))
+                }
+                .foregroundStyle(GEMPalette.purple)
+                .padding(.horizontal, 9)
+                .padding(.vertical, 6)
+                .background(GEMPalette.purple.opacity(0.12), in: Capsule())
+            }
+            .buttonStyle(.plain)
+            .accessibilityLabel("在串流平台聆聽 \(track.title)")
+
             if navigable {
                 Image(systemName: "chevron.right")
                     .font(.footnote.weight(.semibold))
@@ -186,14 +226,21 @@ struct GEMDetailView: View {
                     .accessibilityHidden(true)
             }
         }
-        .padding(.vertical, 9)
+        .padding(.vertical, 8)
         .frame(maxWidth: .infinity, alignment: .leading)
         .contentShape(Rectangle())
     }
 
+    private func trackStreamingURL(for track: GEMTrackListing, platform: GEMStreamingPlatform, albumTitle: String) -> URL? {
+        if let targetID = track.entryID, let entry = library.entry(id: targetID), let url = entry.streamingURL(for: platform) {
+            return url
+        }
+        return track.streamingURL(for: platform, albumTitle: albumTitle)
+    }
+
     private func recordingVersions(_ entry: GEMEntry) -> some View {
         GEMDetailSection(title: "同一首歌，不同時期", symbol: "square.on.square") {
-            Text("對照發行時間與版本背景，或前往各版本的官方入口。")
+            Text("對照發行時間與版本背景，或前往各版本的官方入口與串流平台聆聽。")
                 .font(GEMFont.body(14))
                 .foregroundStyle(GEMPalette.secondary(for: colorScheme))
                 .fixedSize(horizontal: false, vertical: true)
@@ -209,6 +256,35 @@ struct GEMDetailView: View {
                         .fixedSize(horizontal: false, vertical: true)
                         .accessibilityAddTraits(.isHeader)
                     GEMDetailParagraph(text: version.note)
+
+                    // Version streaming platform links
+                    VStack(alignment: .leading, spacing: 6) {
+                        Text("此版本串流聆聽：")
+                            .font(GEMFont.body(12))
+                            .foregroundStyle(GEMPalette.secondary(for: colorScheme))
+                        HStack(spacing: 8) {
+                            ForEach(GEMStreamingPlatform.allCases) { platform in
+                                if let url = platform.searchURL(for: "G.E.M. 鄧紫棋 \(version.title)") {
+                                    Button {
+                                        openURL(url) { _ in }
+                                    } label: {
+                                        HStack(spacing: 4) {
+                                            Image(systemName: platform.symbol)
+                                                .font(.system(size: 11))
+                                            Text(platform.rawValue)
+                                                .font(GEMFont.body(11))
+                                        }
+                                        .foregroundStyle(GEMPalette.purple)
+                                        .padding(.horizontal, 9)
+                                        .padding(.vertical, 5)
+                                        .background(GEMPalette.purple.opacity(0.1), in: Capsule())
+                                    }
+                                    .buttonStyle(.plain)
+                                    .accessibilityLabel("在 \(platform.rawValue) 聆聽 \(version.title)")
+                                }
+                            }
+                        }
+                    }
 
                     if let releaseID = version.releaseID, let release = library.entry(id: releaseID) {
                         NavigationLink(value: GEMRoute.entry(releaseID)) {

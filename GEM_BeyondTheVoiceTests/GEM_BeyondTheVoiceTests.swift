@@ -74,7 +74,7 @@ final class GEM_BeyondTheVoiceTests: XCTestCase {
             fixtureEntry("event", title: "成長故事")
         ])
         let library = GEMLibrary(catalog: catalog)
-        XCTAssertEqual(library.search(query: "邓紫棋").map(\.id), ["track"])
+        XCTAssertEqual(library.search(query: "鄧紫棋").map(\.id), ["track"])
         XCTAssertEqual(library.search(query: "  ｃａｆｅ  gloria \n").map(\.id), ["track"])
         XCTAssertEqual(Set(library.search(query: "gloria").map(\.id)), Set(["track", "release"]))
         XCTAssertEqual(library.search(query: "gloria", kind: .release).map(\.id), ["release"])
@@ -119,6 +119,21 @@ final class GEM_BeyondTheVoiceTests: XCTestCase {
         XCTAssertNil(GEMURL.https("javascript:alert(1)"))
         XCTAssertNil(GEMURL.https("https:///"))
         XCTAssertNotNil(GEMURL.https("https://www.iamgem.com/"))
+    }
+
+    func testStreamingPlatformGeneratesValidHTTPSURLs() throws {
+        for platform in GEMStreamingPlatform.allCases {
+            let searchURL = try XCTUnwrap(platform.searchURL(for: "泡沫"))
+            XCTAssertEqual(searchURL.scheme, "https")
+            XCTAssertFalse(searchURL.host?.isEmpty ?? true)
+        }
+        let catalog = try fixture([fixtureEntry("track-bubble", kind: "track", title: "泡沫")])
+        let trackEntry = try XCTUnwrap(catalog.entries.first)
+        for platform in GEMStreamingPlatform.allCases {
+            let streamURL = try XCTUnwrap(trackEntry.streamingURL(for: platform))
+            XCTAssertEqual(streamURL.scheme, "https")
+            XCTAssertFalse(streamURL.host?.isEmpty ?? true)
+        }
     }
 
     @MainActor

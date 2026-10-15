@@ -1,452 +1,497 @@
 // !$*UTF8*$!
 {
 	archiveVersion = 1;
-	classes = {};
+	classes = {
+	};
 	objectVersion = 60;
 	objects = {
-		423EE025726D740C077C3FB6 /* GEMAboutApp.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMAboutApp.swift";
-			sourceTree = "<group>";
-		};
-		165E865721F0238A68B4B04A /* GEMAboutApp.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 423EE025726D740C077C3FB6;
-		};
-		897C015A7A147C1F88B1459B /* GEMAboutView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMAboutView.swift";
-			sourceTree = "<group>";
-		};
-		96FE447FB26E35634629F24C /* GEMAboutView.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 897C015A7A147C1F88B1459B;
-		};
-		342E7F52AEC99FE61730A862 /* GEMComponents.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMComponents.swift";
-			sourceTree = "<group>";
-		};
-		DC85C5F706E7EFE6CB5DA889 /* GEMComponents.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 342E7F52AEC99FE61730A862;
-		};
-		B4A8701A6A97CB06DBF686C0 /* GEMDetailView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMDetailView.swift";
-			sourceTree = "<group>";
-		};
-		1439E59DA88BAB554B631ABD /* GEMDetailView.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = B4A8701A6A97CB06DBF686C0;
-		};
-		59085455E17A7EDF5FD6827B /* GEMExploreViews.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMExploreViews.swift";
-			sourceTree = "<group>";
-		};
-		705EC7EEC0206E9D0265FAF1 /* GEMExploreViews.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 59085455E17A7EDF5FD6827B;
-		};
-		0B1E3F5EE80932A58CB9DD07 /* GEMHeroView.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMHeroView.swift";
-			sourceTree = "<group>";
-		};
-		BFE25A701A0C1DB516EC7F57 /* GEMHeroView.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 0B1E3F5EE80932A58CB9DD07;
-		};
-		70340C6E10E8039B2A26434F /* GEMLibrary.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMLibrary.swift";
-			sourceTree = "<group>";
-		};
-		616F748F10FF8682D6F1FD66 /* GEMLibrary.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 70340C6E10E8039B2A26434F;
-		};
-		2C23F2A190CA58A05858CD21 /* GEMModels.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMModels.swift";
-			sourceTree = "<group>";
-		};
-		94B4FC27A2F104E436A09334 /* GEMModels.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 2C23F2A190CA58A05858CD21;
-		};
-		C04F3E3E5234FBEBA483AAF3 /* GEMSections.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMSections.swift";
-			sourceTree = "<group>";
-		};
-		88B84F21FF4F2B1D6EBCEBBB /* GEMSections.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = C04F3E3E5234FBEBA483AAF3;
-		};
-		A3C674946E81311240745A1A /* GEMStageCutShape.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMStageCutShape.swift";
-			sourceTree = "<group>";
-		};
-		DE563191841E729BB374C68F /* GEMStageCutShape.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = A3C674946E81311240745A1A;
-		};
-		B38399D1B8BAF3B80B45F1E9 /* GEMTheme.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMTheme.swift";
-			sourceTree = "<group>";
-		};
-		C2875297DE7B4D76CC170670 /* GEMTheme.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = B38399D1B8BAF3B80B45F1E9;
-		};
-		24F0F89829495C5318A464B7 /* GEMTourComponents.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMTourComponents.swift";
-			sourceTree = "<group>";
-		};
-		84336BB662E52F6C572C9429 /* GEMTourComponents.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 24F0F89829495C5318A464B7;
-		};
-		9E2D65F26E343859E7D30033 /* GEMTourMapSection.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMTourMapSection.swift";
-			sourceTree = "<group>";
-		};
-		CF7718012659EAF1714265FD /* GEMTourMapSection.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 9E2D65F26E343859E7D30033;
-		};
-		75A5A5A22717F40AA5462958 /* GEMTourModels.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEMTourModels.swift";
-			sourceTree = "<group>";
-		};
-		7A56A506CD31E2AFC16E3D48 /* GEMTourModels.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 75A5A5A22717F40AA5462958;
-		};
-		96D2D0F2B4FC34E755285E91 /* SwiftUI */ = {
-			isa = PBXGroup;
-			children = (423EE025726D740C077C3FB6, 897C015A7A147C1F88B1459B, 342E7F52AEC99FE61730A862, B4A8701A6A97CB06DBF686C0, 59085455E17A7EDF5FD6827B, 0B1E3F5EE80932A58CB9DD07, 70340C6E10E8039B2A26434F, 2C23F2A190CA58A05858CD21, C04F3E3E5234FBEBA483AAF3, A3C674946E81311240745A1A, B38399D1B8BAF3B80B45F1E9, 24F0F89829495C5318A464B7, 9E2D65F26E343859E7D30033, 75A5A5A22717F40AA5462958, );
-			path = "SwiftUI";
-			sourceTree = "<group>";
-		};
-		2794784BF07BF31F39636A93 /* GEM_BeyondTheVoiceTests.swift */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = sourcecode.swift;
-			path = "GEM_BeyondTheVoiceTests.swift";
-			sourceTree = "<group>";
-		};
-		E71BB5E83CB3986D26932495 /* GEM_BeyondTheVoiceTests.swift in Sources */ = {
-			isa = PBXBuildFile;
-			fileRef = 2794784BF07BF31F39636A93;
-		};
-		11530723F75ED793014482AA /* GEM_BeyondTheVoiceTests */ = {
-			isa = PBXGroup;
-			children = (2794784BF07BF31F39636A93, );
-			path = "GEM_BeyondTheVoiceTests";
-			sourceTree = "<group>";
-		};
-		A02955B21ABA88B7ADA08A05 /* artwork-map.json */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.json;
-			path = "artwork-map.json";
-			sourceTree = "<group>";
-		};
-		DE0C30030220C3746D1F62F2 /* artwork-map.json in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = A02955B21ABA88B7ADA08A05;
-		};
-		857DD5B660E78253CA0121B8 /* gem-catalog.json */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.json;
-			path = "gem-catalog.json";
-			sourceTree = "<group>";
-		};
-		6BDC7B5709C00A8E6D1F6FF0 /* gem-catalog.json in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 857DD5B660E78253CA0121B8;
-		};
-		4091073138AA13E8D41CFC2B /* media-credits.json */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.json;
-			path = "media-credits.json";
-			sourceTree = "<group>";
-		};
-		B255247F881ABFD6C629846E /* media-credits.json in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 4091073138AA13E8D41CFC2B;
-		};
-		4080C49B0F32F7B61852DB6F /* Content */ = {
-			isa = PBXGroup;
-			children = (A02955B21ABA88B7ADA08A05, 857DD5B660E78253CA0121B8, 4091073138AA13E8D41CFC2B, );
-			path = "Content";
-			sourceTree = "<group>";
-		};
-		921582E422F4819F4C0D419A /* NotoSansTC-Bold.ttf */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			path = "NotoSansTC-Bold.ttf";
-			sourceTree = "<group>";
-		};
-		298C075ED93728569B2139CC /* NotoSansTC-Bold.ttf in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 921582E422F4819F4C0D419A;
-		};
-		25D56D7626B6219725344639 /* NotoSansTC-Regular.ttf */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			path = "NotoSansTC-Regular.ttf";
-			sourceTree = "<group>";
-		};
-		323D251625FDA686A4575584 /* NotoSansTC-Regular.ttf in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 25D56D7626B6219725344639;
-		};
-		05AEA916F1B50276262BEB62 /* Sora-ExtraBold.ttf */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = file;
-			path = "Sora-ExtraBold.ttf";
-			sourceTree = "<group>";
-		};
-		708C1482D5335CBC6716FC37 /* Sora-ExtraBold.ttf in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 05AEA916F1B50276262BEB62;
-		};
-		AFC9CF78250AD3325496ECB6 /* NotoSansTC-OFL.txt */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text;
-			path = "NotoSansTC-OFL.txt";
-			sourceTree = "<group>";
-		};
-		309E7FB08653A2AC30A429E3 /* NotoSansTC-OFL.txt in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = AFC9CF78250AD3325496ECB6;
-		};
-		C8CFA724CC02BE3AEEE12BCE /* Sora-OFL.txt */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text;
-			path = "Sora-OFL.txt";
-			sourceTree = "<group>";
-		};
-		3360B5C5D190F8E7B9F74DFD /* Sora-OFL.txt in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = C8CFA724CC02BE3AEEE12BCE;
-		};
-		C7DED8D3424D7EC137D45DB9 /* font */ = {
-			isa = PBXGroup;
-			children = (921582E422F4819F4C0D419A, 25D56D7626B6219725344639, 05AEA916F1B50276262BEB62, AFC9CF78250AD3325496ECB6, C8CFA724CC02BE3AEEE12BCE, );
-			path = "font";
-			sourceTree = "<group>";
-		};
-		EE96F5CC4F1533F52153BE9D /* Info.plist */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.plist.xml;
-			path = "Info.plist";
-			sourceTree = "<group>";
-		};
-		9B02EEDA2CD8560C7151A75C /* PrivacyInfo.xcprivacy */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = text.xml;
-			path = "PrivacyInfo.xcprivacy";
-			sourceTree = "<group>";
-		};
-		DB25638A4AB39A0CB5EE6F61 /* PrivacyInfo.xcprivacy in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 9B02EEDA2CD8560C7151A75C;
-		};
-		F978F969A6FE37B1CAA2CB3F /* Config */ = {
-			isa = PBXGroup;
-			children = (EE96F5CC4F1533F52153BE9D, 9B02EEDA2CD8560C7151A75C, );
-			path = "Config";
-			sourceTree = "<group>";
-		};
-		28387233078AC3891DD15882 /* Assets.xcassets */ = {
-			isa = PBXFileReference;
-			lastKnownFileType = folder.assetcatalog;
-			path = "Assets.xcassets";
-			sourceTree = "<group>";
-		};
-		8D86835EBA11AD768120C5E4 /* Assets.xcassets in Resources */ = {
-			isa = PBXBuildFile;
-			fileRef = 28387233078AC3891DD15882;
-		};
-		6EDEBCE3A94A8852C819FDBE /* GEM_BeyondTheVoice.app */ = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.application;
-			includeInIndex = 0;
-			path = "GEM_BeyondTheVoice.app";
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		79F64CE9137772A870848A03 /* GEM_BeyondTheVoiceTests.xctest */ = {
-			isa = PBXFileReference;
-			explicitFileType = wrapper.cfbundle;
-			includeInIndex = 0;
-			path = "GEM_BeyondTheVoiceTests.xctest";
-			sourceTree = BUILT_PRODUCTS_DIR;
-		};
-		B6CF424BDBAE06F2326558E4 /* Products */ = {
-			isa = PBXGroup;
-			children = (6EDEBCE3A94A8852C819FDBE, 79F64CE9137772A870848A03, );
-			name = Products;
-			sourceTree = "<group>";
-		};
-		2CE717059C9ABE12EF5CFD87 /* Main Group */ = {
-			isa = PBXGroup;
-			children = (96D2D0F2B4FC34E755285E91, 11530723F75ED793014482AA, 4080C49B0F32F7B61852DB6F, C7DED8D3424D7EC137D45DB9, F978F969A6FE37B1CAA2CB3F, 28387233078AC3891DD15882, B6CF424BDBAE06F2326558E4, );
-			sourceTree = "<group>";
-		};
-		3C08BDC98E93242A58DE67EC /* app Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (165E865721F0238A68B4B04A, 96FE447FB26E35634629F24C, DC85C5F706E7EFE6CB5DA889, 1439E59DA88BAB554B631ABD, 705EC7EEC0206E9D0265FAF1, BFE25A701A0C1DB516EC7F57, 616F748F10FF8682D6F1FD66, 94B4FC27A2F104E436A09334, 88B84F21FF4F2B1D6EBCEBBB, DE563191841E729BB374C68F, C2875297DE7B4D76CC170670, 84336BB662E52F6C572C9429, CF7718012659EAF1714265FD, 7A56A506CD31E2AFC16E3D48, );
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		8BED7B4F9465DFA99DB5D620 /* app Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = ();
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		51F96265823DF8A19C4E20B0 /* app Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (DE0C30030220C3746D1F62F2, 6BDC7B5709C00A8E6D1F6FF0, B255247F881ABFD6C629846E, 298C075ED93728569B2139CC, 323D251625FDA686A4575584, 708C1482D5335CBC6716FC37, 309E7FB08653A2AC30A429E3, 3360B5C5D190F8E7B9F74DFD, DB25638A4AB39A0CB5EE6F61, 8D86835EBA11AD768120C5E4, );
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		2929329F904252951E186A7C /* test Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (E71BB5E83CB3986D26932495, );
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		B4A083DC486E8D40974640C1 /* test Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = ();
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-		05C5DE4A26191116CB441893 /* test Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = ();
-			runOnlyForDeploymentPostprocessing = 0;
-		};
+
+/* Begin PBXBuildFile section */
+		1439E59DA88BAB554B631ABD /* GEMDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B4A8701A6A97CB06DBF686C0 /* GEMDetailView.swift */; };
+		165E865721F0238A68B4B04A /* GEMAboutApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 423EE025726D740C077C3FB6 /* GEMAboutApp.swift */; };
+		298C075ED93728569B2139CC /* NotoSansTC-Bold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 921582E422F4819F4C0D419A /* NotoSansTC-Bold.ttf */; };
+		309E7FB08653A2AC30A429E3 /* NotoSansTC-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = AFC9CF78250AD3325496ECB6 /* NotoSansTC-OFL.txt */; };
+		323D251625FDA686A4575584 /* NotoSansTC-Regular.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 25D56D7626B6219725344639 /* NotoSansTC-Regular.ttf */; };
+		3360B5C5D190F8E7B9F74DFD /* Sora-OFL.txt in Resources */ = {isa = PBXBuildFile; fileRef = C8CFA724CC02BE3AEEE12BCE /* Sora-OFL.txt */; };
+		616F748F10FF8682D6F1FD66 /* GEMLibrary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 70340C6E10E8039B2A26434F /* GEMLibrary.swift */; };
+		6BDC7B5709C00A8E6D1F6FF0 /* gem-catalog.json in Resources */ = {isa = PBXBuildFile; fileRef = 857DD5B660E78253CA0121B8 /* gem-catalog.json */; };
+		705EC7EEC0206E9D0265FAF1 /* GEMExploreViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 59085455E17A7EDF5FD6827B /* GEMExploreViews.swift */; };
+		708C1482D5335CBC6716FC37 /* Sora-ExtraBold.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 05AEA916F1B50276262BEB62 /* Sora-ExtraBold.ttf */; };
+		7A56A506CD31E2AFC16E3D48 /* GEMTourModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75A5A5A22717F40AA5462958 /* GEMTourModels.swift */; };
+		84336BB662E52F6C572C9429 /* GEMTourComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 24F0F89829495C5318A464B7 /* GEMTourComponents.swift */; };
+		88B84F21FF4F2B1D6EBCEBBB /* GEMSections.swift in Sources */ = {isa = PBXBuildFile; fileRef = C04F3E3E5234FBEBA483AAF3 /* GEMSections.swift */; };
+		8D86835EBA11AD768120C5E4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 28387233078AC3891DD15882 /* Assets.xcassets */; };
+		94B4FC27A2F104E436A09334 /* GEMModels.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2C23F2A190CA58A05858CD21 /* GEMModels.swift */; };
+		96FE447FB26E35634629F24C /* GEMAboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 897C015A7A147C1F88B1459B /* GEMAboutView.swift */; };
+		B255247F881ABFD6C629846E /* media-credits.json in Resources */ = {isa = PBXBuildFile; fileRef = 4091073138AA13E8D41CFC2B /* media-credits.json */; };
+		BFE25A701A0C1DB516EC7F57 /* GEMHeroView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0B1E3F5EE80932A58CB9DD07 /* GEMHeroView.swift */; };
+		C2875297DE7B4D76CC170670 /* GEMTheme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B38399D1B8BAF3B80B45F1E9 /* GEMTheme.swift */; };
+		CF7718012659EAF1714265FD /* GEMTourMapSection.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E2D65F26E343859E7D30033 /* GEMTourMapSection.swift */; };
+		DB25638A4AB39A0CB5EE6F61 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 9B02EEDA2CD8560C7151A75C /* PrivacyInfo.xcprivacy */; };
+		DC85C5F706E7EFE6CB5DA889 /* GEMComponents.swift in Sources */ = {isa = PBXBuildFile; fileRef = 342E7F52AEC99FE61730A862 /* GEMComponents.swift */; };
+		DE0C30030220C3746D1F62F2 /* artwork-map.json in Resources */ = {isa = PBXBuildFile; fileRef = A02955B21ABA88B7ADA08A05 /* artwork-map.json */; };
+		DE563191841E729BB374C68F /* GEMStageCutShape.swift in Sources */ = {isa = PBXBuildFile; fileRef = A3C674946E81311240745A1A /* GEMStageCutShape.swift */; };
+		E71BB5E83CB3986D26932495 /* GEM_BeyondTheVoiceTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2794784BF07BF31F39636A93 /* GEM_BeyondTheVoiceTests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
 		BB9DC23AB545BC5D8C3BF122 /* PBXContainerItemProxy */ = {
 			isa = PBXContainerItemProxy;
-			containerPortal = 1781F676DEDF5767F3243DB0;
+			containerPortal = 1781F676DEDF5767F3243DB0 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 730950AD798A77AD508AA9E2;
 			remoteInfo = GEM_BeyondTheVoice;
 		};
-		D9692C7B5160855B7989CAC1 /* PBXTargetDependency */ = {
-			isa = PBXTargetDependency;
-			target = 730950AD798A77AD508AA9E2;
-			targetProxy = BB9DC23AB545BC5D8C3BF122;
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		05AEA916F1B50276262BEB62 /* Sora-ExtraBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Sora-ExtraBold.ttf"; sourceTree = "<group>"; };
+		0B1E3F5EE80932A58CB9DD07 /* GEMHeroView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMHeroView.swift; sourceTree = "<group>"; };
+		24F0F89829495C5318A464B7 /* GEMTourComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMTourComponents.swift; sourceTree = "<group>"; };
+		25D56D7626B6219725344639 /* NotoSansTC-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Regular.ttf"; sourceTree = "<group>"; };
+		2794784BF07BF31F39636A93 /* GEM_BeyondTheVoiceTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEM_BeyondTheVoiceTests.swift; sourceTree = "<group>"; };
+		28387233078AC3891DD15882 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		2C23F2A190CA58A05858CD21 /* GEMModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMModels.swift; sourceTree = "<group>"; };
+		342E7F52AEC99FE61730A862 /* GEMComponents.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMComponents.swift; sourceTree = "<group>"; };
+		4091073138AA13E8D41CFC2B /* media-credits.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "media-credits.json"; sourceTree = "<group>"; };
+		423EE025726D740C077C3FB6 /* GEMAboutApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMAboutApp.swift; sourceTree = "<group>"; };
+		59085455E17A7EDF5FD6827B /* GEMExploreViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMExploreViews.swift; sourceTree = "<group>"; };
+		6EDEBCE3A94A8852C819FDBE /* GEM_BeyondTheVoice.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GEM_BeyondTheVoice.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		70340C6E10E8039B2A26434F /* GEMLibrary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMLibrary.swift; sourceTree = "<group>"; };
+		75A5A5A22717F40AA5462958 /* GEMTourModels.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMTourModels.swift; sourceTree = "<group>"; };
+		79F64CE9137772A870848A03 /* GEM_BeyondTheVoiceTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GEM_BeyondTheVoiceTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		857DD5B660E78253CA0121B8 /* gem-catalog.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "gem-catalog.json"; sourceTree = "<group>"; };
+		897C015A7A147C1F88B1459B /* GEMAboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMAboutView.swift; sourceTree = "<group>"; };
+		921582E422F4819F4C0D419A /* NotoSansTC-Bold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "NotoSansTC-Bold.ttf"; sourceTree = "<group>"; };
+		9B02EEDA2CD8560C7151A75C /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		9E2D65F26E343859E7D30033 /* GEMTourMapSection.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMTourMapSection.swift; sourceTree = "<group>"; };
+		A02955B21ABA88B7ADA08A05 /* artwork-map.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = "artwork-map.json"; sourceTree = "<group>"; };
+		A3C674946E81311240745A1A /* GEMStageCutShape.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMStageCutShape.swift; sourceTree = "<group>"; };
+		AFC9CF78250AD3325496ECB6 /* NotoSansTC-OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "NotoSansTC-OFL.txt"; sourceTree = "<group>"; };
+		B38399D1B8BAF3B80B45F1E9 /* GEMTheme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMTheme.swift; sourceTree = "<group>"; };
+		B4A8701A6A97CB06DBF686C0 /* GEMDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMDetailView.swift; sourceTree = "<group>"; };
+		C04F3E3E5234FBEBA483AAF3 /* GEMSections.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GEMSections.swift; sourceTree = "<group>"; };
+		C8CFA724CC02BE3AEEE12BCE /* Sora-OFL.txt */ = {isa = PBXFileReference; lastKnownFileType = text; path = "Sora-OFL.txt"; sourceTree = "<group>"; };
+		EE96F5CC4F1533F52153BE9D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		8BED7B4F9465DFA99DB5D620 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		B4A083DC486E8D40974640C1 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		11530723F75ED793014482AA /* GEM_BeyondTheVoiceTests */ = {
+			isa = PBXGroup;
+			children = (
+				2794784BF07BF31F39636A93 /* GEM_BeyondTheVoiceTests.swift */,
+			);
+			path = GEM_BeyondTheVoiceTests;
+			sourceTree = "<group>";
+		};
+		2CE717059C9ABE12EF5CFD87 = {
+			isa = PBXGroup;
+			children = (
+				96D2D0F2B4FC34E755285E91 /* SwiftUI */,
+				11530723F75ED793014482AA /* GEM_BeyondTheVoiceTests */,
+				4080C49B0F32F7B61852DB6F /* Content */,
+				C7DED8D3424D7EC137D45DB9 /* font */,
+				F978F969A6FE37B1CAA2CB3F /* Config */,
+				28387233078AC3891DD15882 /* Assets.xcassets */,
+				B6CF424BDBAE06F2326558E4 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		4080C49B0F32F7B61852DB6F /* Content */ = {
+			isa = PBXGroup;
+			children = (
+				A02955B21ABA88B7ADA08A05 /* artwork-map.json */,
+				857DD5B660E78253CA0121B8 /* gem-catalog.json */,
+				4091073138AA13E8D41CFC2B /* media-credits.json */,
+			);
+			path = Content;
+			sourceTree = "<group>";
+		};
+		96D2D0F2B4FC34E755285E91 /* SwiftUI */ = {
+			isa = PBXGroup;
+			children = (
+				423EE025726D740C077C3FB6 /* GEMAboutApp.swift */,
+				897C015A7A147C1F88B1459B /* GEMAboutView.swift */,
+				342E7F52AEC99FE61730A862 /* GEMComponents.swift */,
+				B4A8701A6A97CB06DBF686C0 /* GEMDetailView.swift */,
+				59085455E17A7EDF5FD6827B /* GEMExploreViews.swift */,
+				0B1E3F5EE80932A58CB9DD07 /* GEMHeroView.swift */,
+				70340C6E10E8039B2A26434F /* GEMLibrary.swift */,
+				2C23F2A190CA58A05858CD21 /* GEMModels.swift */,
+				C04F3E3E5234FBEBA483AAF3 /* GEMSections.swift */,
+				A3C674946E81311240745A1A /* GEMStageCutShape.swift */,
+				B38399D1B8BAF3B80B45F1E9 /* GEMTheme.swift */,
+				24F0F89829495C5318A464B7 /* GEMTourComponents.swift */,
+				9E2D65F26E343859E7D30033 /* GEMTourMapSection.swift */,
+				75A5A5A22717F40AA5462958 /* GEMTourModels.swift */,
+			);
+			path = SwiftUI;
+			sourceTree = "<group>";
+		};
+		B6CF424BDBAE06F2326558E4 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				6EDEBCE3A94A8852C819FDBE /* GEM_BeyondTheVoice.app */,
+				79F64CE9137772A870848A03 /* GEM_BeyondTheVoiceTests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		C7DED8D3424D7EC137D45DB9 /* font */ = {
+			isa = PBXGroup;
+			children = (
+				921582E422F4819F4C0D419A /* NotoSansTC-Bold.ttf */,
+				25D56D7626B6219725344639 /* NotoSansTC-Regular.ttf */,
+				05AEA916F1B50276262BEB62 /* Sora-ExtraBold.ttf */,
+				AFC9CF78250AD3325496ECB6 /* NotoSansTC-OFL.txt */,
+				C8CFA724CC02BE3AEEE12BCE /* Sora-OFL.txt */,
+			);
+			path = font;
+			sourceTree = "<group>";
+		};
+		F978F969A6FE37B1CAA2CB3F /* Config */ = {
+			isa = PBXGroup;
+			children = (
+				EE96F5CC4F1533F52153BE9D /* Info.plist */,
+				9B02EEDA2CD8560C7151A75C /* PrivacyInfo.xcprivacy */,
+			);
+			path = Config;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		5F9A88050AA5E0CE93A0BE8B /* GEM_BeyondTheVoiceTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = FC625BD86C57E8381020A21B /* Build configuration list for PBXNativeTarget "GEM_BeyondTheVoiceTests" */;
+			buildPhases = (
+				2929329F904252951E186A7C /* Sources */,
+				B4A083DC486E8D40974640C1 /* Frameworks */,
+				05C5DE4A26191116CB441893 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				D9692C7B5160855B7989CAC1 /* PBXTargetDependency */,
+			);
+			name = GEM_BeyondTheVoiceTests;
+			productName = GEM_BeyondTheVoiceTests;
+			productReference = 79F64CE9137772A870848A03 /* GEM_BeyondTheVoiceTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
 		};
 		730950AD798A77AD508AA9E2 /* GEM_BeyondTheVoice */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 6CB6283E4A9632D9C641A9CD;
-			buildPhases = (3C08BDC98E93242A58DE67EC, 8BED7B4F9465DFA99DB5D620, 51F96265823DF8A19C4E20B0, );
-			buildRules = ();
-			dependencies = ();
+			buildConfigurationList = 6CB6283E4A9632D9C641A9CD /* Build configuration list for PBXNativeTarget "GEM_BeyondTheVoice" */;
+			buildPhases = (
+				3C08BDC98E93242A58DE67EC /* Sources */,
+				8BED7B4F9465DFA99DB5D620 /* Frameworks */,
+				51F96265823DF8A19C4E20B0 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
 			name = GEM_BeyondTheVoice;
 			productName = GEM_BeyondTheVoice;
-			productReference = 6EDEBCE3A94A8852C819FDBE;
+			productReference = 6EDEBCE3A94A8852C819FDBE /* GEM_BeyondTheVoice.app */;
 			productType = "com.apple.product-type.application";
 		};
-		5F9A88050AA5E0CE93A0BE8B /* GEM_BeyondTheVoiceTests */ = {
-			isa = PBXNativeTarget;
-			buildConfigurationList = FC625BD86C57E8381020A21B;
-			buildPhases = (2929329F904252951E186A7C, B4A083DC486E8D40974640C1, 05C5DE4A26191116CB441893, );
-			buildRules = ();
-			dependencies = (D9692C7B5160855B7989CAC1, );
-			name = GEM_BeyondTheVoiceTests;
-			productName = GEM_BeyondTheVoiceTests;
-			productReference = 79F64CE9137772A870848A03;
-			productType = "com.apple.product-type.bundle.unit-test";
-		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
 		1781F676DEDF5767F3243DB0 /* Project object */ = {
 			isa = PBXProject;
-			attributes = { BuildIndependentTargetsInParallel = 1; LastUpgradeCheck = 2700; TargetAttributes = { 730950AD798A77AD508AA9E2 = { CreatedOnToolsVersion = 27.0; }; 5F9A88050AA5E0CE93A0BE8B = { CreatedOnToolsVersion = 27.0; TestTargetID = 730950AD798A77AD508AA9E2; }; }; };
-			buildConfigurationList = A3882FAC8F7BD27450C7C2F2;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastUpgradeCheck = 2700;
+				TargetAttributes = {
+					5F9A88050AA5E0CE93A0BE8B = {
+						CreatedOnToolsVersion = 27.0;
+						TestTargetID = 730950AD798A77AD508AA9E2;
+					};
+					730950AD798A77AD508AA9E2 = {
+						CreatedOnToolsVersion = 27.0;
+					};
+				};
+			};
+			buildConfigurationList = A3882FAC8F7BD27450C7C2F2 /* Build configuration list for PBXProject "GEM_BeyondTheVoice" */;
 			compatibilityVersion = "Xcode 15.0";
 			developmentRegion = "zh-Hant";
 			hasScannedForEncodings = 0;
-			knownRegions = (en, Base, "zh-Hant");
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hant",
+			);
 			mainGroup = 2CE717059C9ABE12EF5CFD87;
-			productRefGroup = B6CF424BDBAE06F2326558E4;
+			productRefGroup = B6CF424BDBAE06F2326558E4 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
-			targets = (730950AD798A77AD508AA9E2, 5F9A88050AA5E0CE93A0BE8B, );
+			targets = (
+				730950AD798A77AD508AA9E2 /* GEM_BeyondTheVoice */,
+				5F9A88050AA5E0CE93A0BE8B /* GEM_BeyondTheVoiceTests */,
+			);
 		};
-		C7140A9370636C27A34E23B6 /* project Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SWIFT_VERSION = 5.0; ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; ENABLE_STRICT_OBJC_MSGSEND = YES; GCC_C_LANGUAGE_STANDARD = gnu17; DEBUG_INFORMATION_FORMAT = dwarf; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG"; ENABLE_TESTABILITY = YES; };
-			name = Debug;
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		05C5DE4A26191116CB441893 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
 		};
-		D83B008E0B12F648B2603AFF /* project Release */ = {
+		51F96265823DF8A19C4E20B0 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				DE0C30030220C3746D1F62F2 /* artwork-map.json in Resources */,
+				6BDC7B5709C00A8E6D1F6FF0 /* gem-catalog.json in Resources */,
+				B255247F881ABFD6C629846E /* media-credits.json in Resources */,
+				298C075ED93728569B2139CC /* NotoSansTC-Bold.ttf in Resources */,
+				323D251625FDA686A4575584 /* NotoSansTC-Regular.ttf in Resources */,
+				708C1482D5335CBC6716FC37 /* Sora-ExtraBold.ttf in Resources */,
+				309E7FB08653A2AC30A429E3 /* NotoSansTC-OFL.txt in Resources */,
+				3360B5C5D190F8E7B9F74DFD /* Sora-OFL.txt in Resources */,
+				DB25638A4AB39A0CB5EE6F61 /* PrivacyInfo.xcprivacy in Resources */,
+				8D86835EBA11AD768120C5E4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		2929329F904252951E186A7C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				E71BB5E83CB3986D26932495 /* GEM_BeyondTheVoiceTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		3C08BDC98E93242A58DE67EC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				165E865721F0238A68B4B04A /* GEMAboutApp.swift in Sources */,
+				96FE447FB26E35634629F24C /* GEMAboutView.swift in Sources */,
+				DC85C5F706E7EFE6CB5DA889 /* GEMComponents.swift in Sources */,
+				1439E59DA88BAB554B631ABD /* GEMDetailView.swift in Sources */,
+				705EC7EEC0206E9D0265FAF1 /* GEMExploreViews.swift in Sources */,
+				BFE25A701A0C1DB516EC7F57 /* GEMHeroView.swift in Sources */,
+				616F748F10FF8682D6F1FD66 /* GEMLibrary.swift in Sources */,
+				94B4FC27A2F104E436A09334 /* GEMModels.swift in Sources */,
+				88B84F21FF4F2B1D6EBCEBBB /* GEMSections.swift in Sources */,
+				DE563191841E729BB374C68F /* GEMStageCutShape.swift in Sources */,
+				C2875297DE7B4D76CC170670 /* GEMTheme.swift in Sources */,
+				84336BB662E52F6C572C9429 /* GEMTourComponents.swift in Sources */,
+				CF7718012659EAF1714265FD /* GEMTourMapSection.swift in Sources */,
+				7A56A506CD31E2AFC16E3D48 /* GEMTourModels.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		D9692C7B5160855B7989CAC1 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 730950AD798A77AD508AA9E2 /* GEM_BeyondTheVoice */;
+			targetProxy = BB9DC23AB545BC5D8C3BF122 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1A3B15124D60534891C663C1 /* Release */ = {
 			isa = XCBuildConfiguration;
-			buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SWIFT_VERSION = 5.0; ALWAYS_SEARCH_USER_PATHS = NO; CLANG_ENABLE_MODULES = YES; CLANG_ENABLE_OBJC_ARC = YES; COPY_PHASE_STRIP = NO; ENABLE_STRICT_OBJC_MSGSEND = YES; GCC_C_LANGUAGE_STANDARD = gnu17; DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; SWIFT_COMPILATION_MODE = wholemodule; };
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEM_BeyondTheVoice.app/GEM_BeyondTheVoice";
+			};
 			name = Release;
 		};
-		A3882FAC8F7BD27450C7C2F2 /* project configuration list */ = {
+		61863034EBE3033FE0A2C731 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_TESTABILITY = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice.tests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEM_BeyondTheVoice.app/GEM_BeyondTheVoice";
+			};
+			name = Debug;
+		};
+		653BDEEE70CC0894F34F0D56 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEVELOPMENT_TEAM = 398C8C2Q8L;
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		C7140A9370636C27A34E23B6 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		D83B008E0B12F648B2603AFF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu17;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		E42D7EB4D2CD5472536797C6 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 2;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEVELOPMENT_TEAM = 398C8C2Q8L;
+				INFOPLIST_FILE = Config/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 27.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 2.0;
+				PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		6CB6283E4A9632D9C641A9CD /* Build configuration list for PBXNativeTarget "GEM_BeyondTheVoice" */ = {
 			isa = XCConfigurationList;
-			buildConfigurations = (C7140A9370636C27A34E23B6, D83B008E0B12F648B2603AFF, );
+			buildConfigurations = (
+				653BDEEE70CC0894F34F0D56 /* Debug */,
+				E42D7EB4D2CD5472536797C6 /* Release */,
+			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		653BDEEE70CC0894F34F0D56 /* app Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 2; MARKETING_VERSION = 2.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES; INFOPLIST_FILE = Config/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks"); DEBUG_INFORMATION_FORMAT = dwarf; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG"; ENABLE_TESTABILITY = YES; };
-			name = Debug;
-		};
-		E42D7EB4D2CD5472536797C6 /* app Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 2; MARKETING_VERSION = 2.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES; INFOPLIST_FILE = Config/Info.plist; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks"); DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; SWIFT_COMPILATION_MODE = wholemodule; };
-			name = Release;
-		};
-		6CB6283E4A9632D9C641A9CD /* app configuration list */ = {
+		A3882FAC8F7BD27450C7C2F2 /* Build configuration list for PBXProject "GEM_BeyondTheVoice" */ = {
 			isa = XCConfigurationList;
-			buildConfigurations = (653BDEEE70CC0894F34F0D56, E42D7EB4D2CD5472536797C6, );
+			buildConfigurations = (
+				C7140A9370636C27A34E23B6 /* Debug */,
+				D83B008E0B12F648B2603AFF /* Release */,
+			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		61863034EBE3033FE0A2C731 /* test Debug */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 2; MARKETING_VERSION = 2.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice.tests; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; GENERATE_INFOPLIST_FILE = YES; BUNDLE_LOADER = "$(TEST_HOST)"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEM_BeyondTheVoice.app/GEM_BeyondTheVoice"; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks"); DEBUG_INFORMATION_FORMAT = dwarf; SWIFT_OPTIMIZATION_LEVEL = "-Onone"; SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG"; ENABLE_TESTABILITY = YES; };
-			name = Debug;
-		};
-		1A3B15124D60534891C663C1 /* test Release */ = {
-			isa = XCBuildConfiguration;
-			buildSettings = { SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 27.0; SWIFT_VERSION = 5.0; CODE_SIGN_STYLE = Automatic; CURRENT_PROJECT_VERSION = 2; MARKETING_VERSION = 2.0; PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice.tests; PRODUCT_NAME = "$(TARGET_NAME)"; TARGETED_DEVICE_FAMILY = "1,2"; SUPPORTED_PLATFORMS = "iphoneos iphonesimulator"; GENERATE_INFOPLIST_FILE = YES; BUNDLE_LOADER = "$(TEST_HOST)"; TEST_HOST = "$(BUILT_PRODUCTS_DIR)/GEM_BeyondTheVoice.app/GEM_BeyondTheVoice"; LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks"); DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym"; SWIFT_COMPILATION_MODE = wholemodule; };
-			name = Release;
-		};
-		FC625BD86C57E8381020A21B /* test configuration list */ = {
+		FC625BD86C57E8381020A21B /* Build configuration list for PBXNativeTarget "GEM_BeyondTheVoiceTests" */ = {
 			isa = XCConfigurationList;
-			buildConfigurations = (61863034EBE3033FE0A2C731, 1A3B15124D60534891C663C1, );
+			buildConfigurations = (
+				61863034EBE3033FE0A2C731 /* Debug */,
+				1A3B15124D60534891C663C1 /* Release */,
+			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+/* End XCConfigurationList section */
 	};
 	rootObject = 1781F676DEDF5767F3243DB0 /* Project object */;
 }

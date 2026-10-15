@@ -198,3 +198,66 @@ extension String {
             .trimmingCharacters(in: .whitespacesAndNewlines)
     }
 }
+
+enum GEMStreamingPlatform: String, CaseIterable, Identifiable {
+    case appleMusic = "Apple Music"
+    case spotify = "Spotify"
+    case youtubeMusic = "YouTube Music"
+
+    var id: String { rawValue }
+
+    var symbol: String {
+        switch self {
+        case .appleMusic: return "music.note"
+        case .spotify: return "play.circle.fill"
+        case .youtubeMusic: return "play.rectangle.fill"
+        }
+    }
+
+    func searchURL(for query: String) -> URL? {
+        let trimmed = query.trimmingCharacters(in: .whitespacesAndNewlines)
+        guard let encoded = trimmed.addingPercentEncoding(withAllowedCharacters: .urlQueryAllowed) else {
+            return nil
+        }
+        let urlString: String
+        switch self {
+        case .appleMusic:
+            urlString = "https://music.apple.com/us/search?term=\(encoded)"
+        case .spotify:
+            urlString = "https://open.spotify.com/search/\(encoded)"
+        case .youtubeMusic:
+            urlString = "https://music.youtube.com/search?q=\(encoded)"
+        }
+        return GEMURL.https(urlString)
+    }
+}
+
+extension GEMEntry {
+    func streamingURL(for platform: GEMStreamingPlatform) -> URL? {
+        for link in links {
+            guard let url = link.destination else { continue }
+            let host = url.host?.lowercased() ?? ""
+            switch platform {
+            case .appleMusic:
+                if host.contains("music.apple.com") { return url }
+            case .spotify:
+                if host.contains("spotify.com") { return url }
+            case .youtubeMusic:
+                if host.contains("youtube.com") { return url }
+            }
+        }
+        return platform.searchURL(for: "G.E.M. 鄧紫棋 \(title)")
+    }
+}
+
+extension GEMTrackListing {
+    func streamingURL(for platform: GEMStreamingPlatform, albumTitle: String? = nil) -> URL? {
+        let query: String
+        if let album = albumTitle, !album.isEmpty {
+            query = "G.E.M. 鄧紫棋 \(title) \(album)"
+        } else {
+            query = "G.E.M. 鄧紫棋 \(title)"
+        }
+        return platform.searchURL(for: query)
+    }
+}
