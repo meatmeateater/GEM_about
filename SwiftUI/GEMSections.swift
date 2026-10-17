@@ -5,7 +5,7 @@ struct GEMIntroSection: View {
     @Environment(\.colorScheme) private var scheme
     var body: some View {
         VStack(alignment: .leading, spacing: 22) {
-            Text("主視覺：2014 武漢演出 · 茂木木 / CC BY-SA 3.0")
+            Text("2025《I AM GLORIA》上海站巡演 ")
                 .font(GEMFont.body(11)).foregroundStyle(GEMPalette.secondary(for: scheme))
             GEMSectionHeading(eyebrow: "01 / THE ARTIST", title: "認識歌聲背後的她。",
                               description: "從香港出發的唱作人，也是不斷改變表達方式的舞台表演者。")
