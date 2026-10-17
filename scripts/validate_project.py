@@ -267,7 +267,9 @@ def resources() -> None:
     for credit in credits:
         for key in ["id", "assetName", "title", "author", "license", "modifications"]:
             check(bool(credit.get(key)), f"Photo credit missing {key}")
-        check(https(credit["sourceURL"]) and https(credit["licenseURL"]), "Invalid photo attribution URL")
+        check(https(credit["sourceURL"]), f"Invalid photo source URL: {credit.get('id')}")
+        if credit.get("licenseURL"):
+            check(https(credit["licenseURL"]), f"Invalid photo license URL: {credit.get('id')}")
     originals = {
         "gem_portrait/影像.jpeg": "b960c0cc8c678d6701bc65e136a19f513a0fcc68",
         "gem_live/Gem_Tang_Singing_with_Piano_2.jpg": "cbcd0b697aa7348a315b6fce6b3b2eb850a29f04",
@@ -276,7 +278,7 @@ def resources() -> None:
         asset_name, file_name = asset_path.split("/", 1)
         image_path = ROOT / "Assets.xcassets" / (asset_name + ".imageset") / file_name
         check(hashlib.sha1(image_path.read_bytes()).hexdigest() == expected_sha1,
-              f"Photo differs from credited Commons original: {asset_name}")
+              f"Photo asset file integrity mismatch: {asset_name}")
     try:
         from PIL import Image
     except ImportError:

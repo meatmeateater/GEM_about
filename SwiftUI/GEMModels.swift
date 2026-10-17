@@ -182,7 +182,7 @@ struct GEMMediaCredit: Codable, Identifiable {
     let author: String
     let sourceURL: String
     let license: String
-    let licenseURL: String
+    let licenseURL: String?
     let modifications: String
 }
 

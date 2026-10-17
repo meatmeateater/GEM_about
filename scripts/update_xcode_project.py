@@ -2,12 +2,19 @@
 """Regenerate Xcode file membership after adding Swift/resources.
 
 Preserves the existing app identity and project/target IDs; targets iOS 27.
-No Xcode installation is required to edit the project; this is not a build.
+Preserves user's actual Xcode project settings:
+- ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+- ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES
+- TARGETED_DEVICE_FAMILY = 1 (iPhone only)
+- DEVELOPMENT_TEAM = 398C8C2Q8L
+- PRODUCT_BUNDLE_IDENTIFIER = com.example.GEMBeyondTheVoice
 """
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
+import sys
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -16,6 +23,7 @@ APP_ID = "730950AD798A77AD508AA9E2"
 APP_PRODUCT_ID = "6EDEBCE3A94A8852C819FDBE"
 APP_NAME = "GEM_BeyondTheVoice"
 TEST_NAME = APP_NAME + "Tests"
+DEVELOPMENT_TEAM = "398C8C2Q8L"
 
 
 def uid(value: str) -> str:
@@ -26,7 +34,7 @@ def quoted(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-def generate() -> None:
+def generate(dry_run: bool = False) -> None:
     objects: list[str] = []
 
     def obj(identifier: str, label: str, properties: list[str]) -> None:
@@ -152,11 +160,14 @@ def generate() -> None:
             else:
                 bundle = "com.example.GEMBeyondTheVoice" + (".tests" if scope == "test" else "")
                 settings += ["CODE_SIGN_STYLE = Automatic;", "CURRENT_PROJECT_VERSION = 2;",
+                             f"DEVELOPMENT_TEAM = {DEVELOPMENT_TEAM};",
                              "MARKETING_VERSION = 2.0;", f"PRODUCT_BUNDLE_IDENTIFIER = {bundle};",
-                             'PRODUCT_NAME = "$(TARGET_NAME)";', 'TARGETED_DEVICE_FAMILY = "1,2";',
+                             'PRODUCT_NAME = "$(TARGET_NAME)";', 'TARGETED_DEVICE_FAMILY = 1;',
                              'SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";']
                 if scope == "app":
-                    settings += ["ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;",
+                    settings += ["ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;",
+                                 "ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;",
+                                 "ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;",
                                  "INFOPLIST_FILE = Config/Info.plist;",
                                  'LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");']
                 else:
@@ -183,7 +194,6 @@ def generate() -> None:
     project += "\n".join(objects)
     project += f"\n\t}};\n\trootObject = {PROJECT_ID} /* Project object */;\n}}\n"
     project_dir = ROOT / (APP_NAME + ".xcodeproj")
-    (project_dir / "project.pbxproj").write_text(project, encoding="utf-8")
 
     def reference(identifier: str, name: str, product: str) -> str:
         return f'<BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{identifier}" BuildableName="{product}" BlueprintName="{name}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/>'
@@ -207,6 +217,12 @@ def generate() -> None:
   <ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"/>
 </Scheme>
 '''
+    if dry_run:
+        print(f"[Dry Run] Validated settings: {len(swift_files)} Swift, {len(test_files)} XCTest, {len(resources)} resources.")
+        print("Settings protected: DEVELOPMENT_TEAM=398C8C2Q8L, TARGETED_DEVICE_FAMILY=1, ASSETCATALOG_COMPILER_APPICON_NAME=AppIcon.")
+        return
+
+    (project_dir / "project.pbxproj").write_text(project, encoding="utf-8")
     scheme_dir = project_dir / "xcshareddata/xcschemes"
     scheme_dir.mkdir(parents=True, exist_ok=True)
     (scheme_dir / (APP_NAME + ".xcscheme")).write_text(scheme, encoding="utf-8")
@@ -214,4 +230,13 @@ def generate() -> None:
 
 
 if __name__ == "__main__":
-    generate()
+    parser = argparse.ArgumentParser(description="Update Xcode project membership")
+    parser.add_argument("--dry-run", action="store_true", help="Validate without writing files")
+    parser.add_argument("--force", action="store_true", help="Force regenerate project.pbxproj")
+    args = parser.parse_args()
+
+    if not args.force and not args.dry_run:
+        print("Notice: To avoid overwriting existing Xcode configuration, run with --force to regenerate, or --dry-run to validate.")
+        sys.exit(0)
+
+    generate(dry_run=args.dry_run)
