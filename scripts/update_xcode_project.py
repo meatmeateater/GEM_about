@@ -1,16 +1,39 @@
 #!/usr/bin/env python3
-"""Regenerate Xcode file membership after adding Swift/resources.
+"""Xcode project membership inspector and safe synchronizer.
 
-Preserves the existing app identity and project/target IDs; targets iOS 27.
-No Xcode installation is required to edit the project; this is not a build.
+Default mode is non-destructive inspection (--dry-run or no flags).
+Validates on-disk project.pbxproj without altering disk files:
+- Inspects and verifies critical protected settings directly from on-disk project:
+  * DEVELOPMENT_TEAM
+  * PRODUCT_BUNDLE_IDENTIFIER
+  * ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon
+  * TARGETED_DEVICE_FAMILY = 1 (iPhone)
+  * INFOPLIST_FILE = Config/Info.plist
+  * CFBundleDisplayName = G.E.M. About (in Info.plist)
+  * IPHONEOS_DEPLOYMENT_TARGET = 27.0
+  * SWIFT_VERSION = 5.0
+- Verifies all Swift source files and resource files are accounted for.
+- Full regeneration is classified as a destructive high-risk operation requiring
+  both --force and --confirm flags, and automatically creates a backup of project.pbxproj.
 """
 from __future__ import annotations
 
+import argparse
+import datetime as dt
 import hashlib
 import json
+import re
+import shutil
+import sys
+import xml.etree.ElementTree as ET
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
+PROJECT_DIR = ROOT / "GEM_BeyondTheVoice.xcodeproj"
+PBXPROJ_PATH = PROJECT_DIR / "project.pbxproj"
+SCHEME_PATH = PROJECT_DIR / "xcshareddata/xcschemes/GEM_BeyondTheVoice.xcscheme"
+INFO_PLIST_PATH = ROOT / "Config/Info.plist"
+
 PROJECT_ID = "1781F676DEDF5767F3243DB0"
 APP_ID = "730950AD798A77AD508AA9E2"
 APP_PRODUCT_ID = "6EDEBCE3A94A8852C819FDBE"
@@ -26,7 +49,157 @@ def quoted(value: str) -> str:
     return json.dumps(value, ensure_ascii=False)
 
 
-def generate() -> None:
+def parse_openstep(text: str) -> dict:
+    """Parse Xcode OpenStep format into Python data structures."""
+    pattern = r'/\*[\s\S]*?\*/|//[^\n]*|"(?:\\.|[^"\\])*"|[{}()=;,]|[^<>\s{}()=;,]+'
+    tokens = [m.group() for m in re.finditer(pattern, text) if not m.group().startswith(("//", "/*"))]
+    index = 0
+
+    def take() -> str:
+        nonlocal index
+        value = tokens[index]
+        index += 1
+        return value
+
+    def expect(expected: str) -> None:
+        found = take()
+        if found != expected:
+            raise ValueError(f"OpenStep expected {expected}, found {found}")
+
+    def value():
+        token = take()
+        if token == "{":
+            result = {}
+            while tokens[index] != "}":
+                key = value()
+                expect("=")
+                result[key] = value()
+                expect(";")
+            expect("}")
+            return result
+        if token == "(":
+            result = []
+            while tokens[index] != ")":
+                result.append(value())
+                if tokens[index] == ",":
+                    take()
+            expect(")")
+            return result
+        if token.startswith('"'):
+            return json.loads(token)
+        return token
+
+    result = value()
+    return result
+
+
+def extract_app_build_settings(objects: dict, root: dict) -> dict[str, str]:
+    """Extract App target build settings from parsed OpenStep objects."""
+    extracted: dict[str, str] = {}
+    for target_id in root.get("targets", []):
+        target = objects.get(target_id, {})
+        if target.get("productType") == "com.apple.product-type.application":
+            config_list_id = target.get("buildConfigurationList")
+            config_list = objects.get(config_list_id, {})
+            for config_id in config_list.get("buildConfigurations", []):
+                config = objects.get(config_id, {})
+                settings = config.get("buildSettings", {})
+                for key, val in settings.items():
+                    if key not in extracted and isinstance(val, str):
+                        extracted[key] = val
+    return extracted
+
+
+def inspect_project() -> tuple[bool, list[str], dict[str, str]]:
+    """Inspect and validate on-disk Xcode project without modifying disk."""
+    if not PBXPROJ_PATH.exists():
+        return False, [f"Missing project file: {PBXPROJ_PATH}"], {}
+
+    pbx_text = PBXPROJ_PATH.read_text(encoding="utf-8")
+    try:
+        data = parse_openstep(pbx_text)
+    except Exception as err:
+        return False, [f"Failed to parse project.pbxproj: {err}"], {}
+
+    objects = data.get("objects", {})
+    root_id = data.get("rootObject", "")
+    root = objects.get(root_id, {})
+    settings = extract_app_build_settings(objects, root)
+    issues: list[str] = []
+
+    # 1. Protected build settings verification
+    checks = [
+        ("ASSETCATALOG_COMPILER_APPICON_NAME", "AppIcon", settings.get("ASSETCATALOG_COMPILER_APPICON_NAME")),
+        ("TARGETED_DEVICE_FAMILY", "1", str(settings.get("TARGETED_DEVICE_FAMILY"))),
+        ("INFOPLIST_FILE", "Config/Info.plist", settings.get("INFOPLIST_FILE")),
+        ("IPHONEOS_DEPLOYMENT_TARGET", "27.0", settings.get("IPHONEOS_DEPLOYMENT_TARGET")),
+        ("SWIFT_VERSION", "5.0", settings.get("SWIFT_VERSION")),
+        ("PRODUCT_BUNDLE_IDENTIFIER", "com.example.GEMBeyondTheVoice", settings.get("PRODUCT_BUNDLE_IDENTIFIER")),
+    ]
+    for key, expected, actual in checks:
+        if actual != expected:
+            issues.append(f"Setting mismatch for {key}: expected '{expected}', found '{actual}'")
+
+    dev_team = settings.get("DEVELOPMENT_TEAM", "")
+    if not dev_team:
+        issues.append("DEVELOPMENT_TEAM is empty or unconfigured")
+
+    # 2. CFBundleDisplayName in Info.plist
+    if INFO_PLIST_PATH.exists():
+        info_text = INFO_PLIST_PATH.read_text(encoding="utf-8")
+        if "<key>CFBundleDisplayName</key>" not in info_text or "<string>G.E.M. About</string>" not in info_text:
+            issues.append("CFBundleDisplayName in Info.plist is not 'G.E.M. About'")
+    else:
+        issues.append("Config/Info.plist is missing")
+
+    # 3. File membership check
+    swift_files = sorted(ROOT.glob("SwiftUI/*.swift"))
+    test_files = sorted(ROOT.glob("GEM_BeyondTheVoiceTests/*.swift"))
+    resource_files = (
+        sorted(ROOT.glob("Content/*.json"))
+        + sorted(ROOT.glob("font/*.ttf"))
+        + sorted(ROOT.glob("font/*-OFL.txt"))
+        + [ROOT / "Config/PrivacyInfo.xcprivacy"]
+    )
+
+    for sf in swift_files:
+        if sf.name not in pbx_text:
+            issues.append(f"Swift source not referenced in project: {sf.name}")
+    for tf in test_files:
+        if tf.name not in pbx_text:
+            issues.append(f"Test source not referenced in project: {tf.name}")
+    for rf in resource_files:
+        if rf.name not in pbx_text:
+            issues.append(f"Resource file not referenced in project: {rf.name}")
+    if "Assets.xcassets" not in pbx_text:
+        issues.append("Assets.xcassets not referenced in project")
+
+    # 4. Shared Scheme check
+    if SCHEME_PATH.exists():
+        try:
+            tree = ET.parse(SCHEME_PATH)
+            root_elem = tree.getroot()
+            test_refs = root_elem.findall("./TestAction/Testables/TestableReference")
+            if not test_refs or any(ref.get("skipped") == "YES" for ref in test_refs):
+                issues.append("Shared Scheme does not enable XCTest")
+        except Exception as err:
+            issues.append(f"Cannot parse shared scheme: {err}")
+    else:
+        issues.append(f"Shared scheme missing: {SCHEME_PATH}")
+
+    return len(issues) == 0, issues, settings
+
+
+def build_project_content(settings: dict[str, str]) -> tuple[str, str]:
+    """Generate in-memory representation of project.pbxproj and .xcscheme using extracted settings."""
+    team = settings.get("DEVELOPMENT_TEAM", "398C8C2Q8L")
+    bundle_id = settings.get("PRODUCT_BUNDLE_IDENTIFIER", "com.example.GEMBeyondTheVoice")
+    device_family = settings.get("TARGETED_DEVICE_FAMILY", "1")
+    app_icon = settings.get("ASSETCATALOG_COMPILER_APPICON_NAME", "AppIcon")
+    deploy_target = settings.get("IPHONEOS_DEPLOYMENT_TARGET", "27.0")
+    swift_ver = settings.get("SWIFT_VERSION", "5.0")
+    info_plist = settings.get("INFOPLIST_FILE", "Config/Info.plist")
+
     objects: list[str] = []
 
     def obj(identifier: str, label: str, properties: list[str]) -> None:
@@ -141,36 +314,40 @@ def generate() -> None:
         'projectDirPath = "";', 'projectRoot = "";', array("targets", [APP_ID, uid("test-target")]),
     ])
 
-    common = ["SDKROOT = iphoneos;", "IPHONEOS_DEPLOYMENT_TARGET = 27.0;", "SWIFT_VERSION = 5.0;"]
+    common = [f"SDKROOT = iphoneos;", f"IPHONEOS_DEPLOYMENT_TARGET = {deploy_target};", f"SWIFT_VERSION = {swift_ver};"]
     for scope in ["project", "app", "test"]:
         for configuration in ["Debug", "Release"]:
-            settings = list(common)
+            settings_list = list(common)
             if scope == "project":
-                settings += ["ALWAYS_SEARCH_USER_PATHS = NO;", "CLANG_ENABLE_MODULES = YES;",
-                             "CLANG_ENABLE_OBJC_ARC = YES;", "COPY_PHASE_STRIP = NO;",
-                             "ENABLE_STRICT_OBJC_MSGSEND = YES;", "GCC_C_LANGUAGE_STANDARD = gnu17;"]
+                settings_list += ["ALWAYS_SEARCH_USER_PATHS = NO;", "CLANG_ENABLE_MODULES = YES;",
+                                  "CLANG_ENABLE_OBJC_ARC = YES;", "COPY_PHASE_STRIP = NO;",
+                                  "ENABLE_STRICT_OBJC_MSGSEND = YES;", "GCC_C_LANGUAGE_STANDARD = gnu17;"]
             else:
-                bundle = "com.example.GEMBeyondTheVoice" + (".tests" if scope == "test" else "")
-                settings += ["CODE_SIGN_STYLE = Automatic;", "CURRENT_PROJECT_VERSION = 2;",
-                             "MARKETING_VERSION = 2.0;", f"PRODUCT_BUNDLE_IDENTIFIER = {bundle};",
-                             'PRODUCT_NAME = "$(TARGET_NAME)";', 'TARGETED_DEVICE_FAMILY = "1,2";',
-                             'SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";']
+                bundle = bundle_id + (".tests" if scope == "test" else "")
+                family = device_family if scope == "app" else '"1,2"'
+                settings_list += ["CODE_SIGN_STYLE = Automatic;", "CURRENT_PROJECT_VERSION = 2;",
+                                  f"DEVELOPMENT_TEAM = {team};",
+                                  "MARKETING_VERSION = 2.0;", f"PRODUCT_BUNDLE_IDENTIFIER = {bundle};",
+                                  'PRODUCT_NAME = "$(TARGET_NAME)";', f'TARGETED_DEVICE_FAMILY = {family};',
+                                  'SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";']
                 if scope == "app":
-                    settings += ["ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;",
-                                 "INFOPLIST_FILE = Config/Info.plist;",
-                                 'LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");']
+                    settings_list += [f"ASSETCATALOG_COMPILER_APPICON_NAME = {app_icon};",
+                                      "ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;",
+                                      "ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;",
+                                      f"INFOPLIST_FILE = {info_plist};",
+                                      'LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks");']
                 else:
-                    settings += ["GENERATE_INFOPLIST_FILE = YES;", 'BUNDLE_LOADER = "$(TEST_HOST)";',
-                                 f'TEST_HOST = "$(BUILT_PRODUCTS_DIR)/{APP_NAME}.app/{APP_NAME}";',
-                                 'LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks");']
+                    settings_list += ["GENERATE_INFOPLIST_FILE = YES;", 'BUNDLE_LOADER = "$(TEST_HOST)";',
+                                      f'TEST_HOST = "$(BUILT_PRODUCTS_DIR)/{APP_NAME}.app/{APP_NAME}";',
+                                      'LD_RUNPATH_SEARCH_PATHS = ("$(inherited)", "@executable_path/Frameworks", "@loader_path/Frameworks");']
             if configuration == "Debug":
-                settings += ["DEBUG_INFORMATION_FORMAT = dwarf;", 'SWIFT_OPTIMIZATION_LEVEL = "-Onone";',
-                             'SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";',
-                             "ENABLE_TESTABILITY = YES;"]
+                settings_list += ["DEBUG_INFORMATION_FORMAT = dwarf;", 'SWIFT_OPTIMIZATION_LEVEL = "-Onone";',
+                                  'SWIFT_ACTIVE_COMPILATION_CONDITIONS = "$(inherited) DEBUG";',
+                                  "ENABLE_TESTABILITY = YES;"]
             else:
-                settings += ['DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";', "SWIFT_COMPILATION_MODE = wholemodule;"]
+                settings_list += ['DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";', "SWIFT_COMPILATION_MODE = wholemodule;"]
             obj(uid(scope + ":" + configuration), scope + " " + configuration, [
-                "isa = XCBuildConfiguration;", "buildSettings = { " + " ".join(settings) + " };",
+                "isa = XCBuildConfiguration;", "buildSettings = { " + " ".join(settings_list) + " };",
                 f"name = {configuration};",
             ])
         obj(uid(scope + ":config-list"), scope + " configuration list", [
@@ -179,18 +356,16 @@ def generate() -> None:
             "defaultConfigurationIsVisible = 0;", "defaultConfigurationName = Release;",
         ])
 
-    project = "// !$*UTF8*$!\n{\n\tarchiveVersion = 1;\n\tclasses = {};\n\tobjectVersion = 60;\n\tobjects = {\n"
-    project += "\n".join(objects)
-    project += f"\n\t}};\n\trootObject = {PROJECT_ID} /* Project object */;\n}}\n"
-    project_dir = ROOT / (APP_NAME + ".xcodeproj")
-    (project_dir / "project.pbxproj").write_text(project, encoding="utf-8")
+    project_str = "//!$*UTF8*$!\n{\n\tarchiveVersion = 1;\n\tclasses = {};\n\tobjectVersion = 60;\n\tobjects = {\n"
+    project_str += "\n".join(objects)
+    project_str += f"\n\t}};\n\trootObject = {PROJECT_ID} /* Project object */;\n}}\n"
 
     def reference(identifier: str, name: str, product: str) -> str:
         return f'<BuildableReference BuildableIdentifier="primary" BlueprintIdentifier="{identifier}" BuildableName="{product}" BlueprintName="{name}" ReferencedContainer="container:{APP_NAME}.xcodeproj"/>'
 
     app_reference = reference(APP_ID, APP_NAME, APP_NAME + ".app")
     test_reference = reference(uid("test-target"), TEST_NAME, TEST_NAME + ".xctest")
-    scheme = f'''<?xml version="1.0" encoding="UTF-8"?>
+    scheme_str = f'''<?xml version="1.0" encoding="UTF-8"?>
 <Scheme LastUpgradeVersion="2700" version="1.3">
   <BuildAction parallelizeBuildables="YES" buildImplicitDependencies="YES">
     <BuildActionEntries>
@@ -207,11 +382,100 @@ def generate() -> None:
   <ArchiveAction buildConfiguration="Release" revealArchiveInOrganizer="YES"/>
 </Scheme>
 '''
-    scheme_dir = project_dir / "xcshareddata/xcschemes"
-    scheme_dir.mkdir(parents=True, exist_ok=True)
-    (scheme_dir / (APP_NAME + ".xcscheme")).write_text(scheme, encoding="utf-8")
-    print(f"Updated Xcode membership: {len(swift_files)} app Swift, {len(test_files)} XCTest, {len(resources)} resources.")
+    return project_str, scheme_str
+
+
+def main() -> int:
+    parser = argparse.ArgumentParser(description="Inspect and safely manage Xcode project membership.")
+    parser.add_argument("--dry-run", action="store_true", help="Perform inspection without writing to disk (default).")
+    parser.add_argument("--check", action="store_true", help="Alias for --dry-run inspection.")
+    parser.add_argument("--force", action="store_true", help="Request project regeneration (high-risk; requires --confirm).")
+    parser.add_argument("--confirm", action="store_true", help="Explicit confirmation for destructive regeneration.")
+    args = parser.parse_args()
+
+    # Destructive overwrite branch
+    if args.force:
+        if not args.confirm:
+            print("[REFUSED] High-Risk Operation Aborted:")
+            print("  Regenerating project.pbxproj will overwrite the existing file and may erase manual Xcode customizations.")
+            print("  If you intentionally wish to regenerate from source files, you must pass BOTH --force AND --confirm.")
+            print("  Recommended: Run without flags or with --dry-run for non-destructive inspection.")
+            return 1
+
+        if not PBXPROJ_PATH.exists():
+            print(f"[ERROR] Existing project file not found: {PBXPROJ_PATH}")
+            return 1
+
+        pbx_text = PBXPROJ_PATH.read_text(encoding="utf-8")
+        data = parse_openstep(pbx_text)
+        objects = data.get("objects", {})
+        root = objects.get(data.get("rootObject", ""), {})
+        settings = extract_app_build_settings(objects, root)
+
+        # Create timestamped backup
+        timestamp = dt.datetime.now().strftime("%Y%m%d_%H%M%S")
+        backup_path = PROJECT_DIR / f"project.pbxproj.backup.{timestamp}"
+        latest_backup_path = PROJECT_DIR / "project.pbxproj.backup"
+        shutil.copy2(PBXPROJ_PATH, backup_path)
+        shutil.copy2(PBXPROJ_PATH, latest_backup_path)
+        print(f"[BACKUP] Created backup: {backup_path.relative_to(ROOT)}")
+
+        # Build and write project
+        project_str, scheme_str = build_project_content(settings)
+        PBXPROJ_PATH.write_text(project_str, encoding="utf-8")
+        scheme_dir = SCHEME_PATH.parent
+        scheme_dir.mkdir(parents=True, exist_ok=True)
+        SCHEME_PATH.write_text(scheme_str, encoding="utf-8")
+        print("[SUCCESS] Project regenerated successfully using dynamic preserved settings:")
+        for k in sorted(settings):
+            print(f"  - {k} = {settings[k]}")
+        return 0
+
+    # Non-destructive Inspection Mode (default and --dry-run)
+    print("=" * 60)
+    print("Xcode Project Safe Inspector (Dry-Run / Non-Destructive)")
+    print("=" * 60)
+
+    ok, issues, settings = inspect_project()
+
+    swift_count = len(list(ROOT.glob("SwiftUI/*.swift")))
+    test_count = len(list(ROOT.glob("GEM_BeyondTheVoiceTests/*.swift")))
+    resource_count = (
+        len(list(ROOT.glob("Content/*.json")))
+        + len(list(ROOT.glob("font/*.ttf")))
+        + len(list(ROOT.glob("font/*-OFL.txt")))
+        + (1 if (ROOT / "Assets.xcassets").exists() else 0)
+        + (1 if (ROOT / "Config/PrivacyInfo.xcprivacy").exists() else 0)
+    )
+
+    print(f"Project Scope:")
+    print(f"  • SwiftUI Sources : {swift_count} files on disk")
+    print(f"  • XCTest Sources  : {test_count} files on disk")
+    print(f"  • App Resources   : {resource_count} resources on disk")
+    print("\nProtected Build Settings on Disk (App Target):")
+    for key in [
+        "DEVELOPMENT_TEAM",
+        "PRODUCT_BUNDLE_IDENTIFIER",
+        "ASSETCATALOG_COMPILER_APPICON_NAME",
+        "TARGETED_DEVICE_FAMILY",
+        "INFOPLIST_FILE",
+        "IPHONEOS_DEPLOYMENT_TARGET",
+        "SWIFT_VERSION",
+    ]:
+        val = settings.get(key, "(not set)")
+        print(f"  • {key:35s} = {val}")
+
+    if ok:
+        print("\n[OK] All protected build settings, targets, and file memberships are in sync and verified.")
+        print("[INFO] No disk files were modified (Safe Inspection Mode).")
+        return 0
+    else:
+        print("\n[WARN] Issues detected during project inspection:")
+        for issue in issues:
+            print(f"  ⚠ {issue}")
+        print("\n[INFO] No disk files were modified (Safe Inspection Mode).")
+        return 1
 
 
 if __name__ == "__main__":
-    generate()
+    sys.exit(main())

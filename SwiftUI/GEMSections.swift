@@ -5,7 +5,7 @@ struct GEMIntroSection: View {
     @Environment(\.colorScheme) private var scheme
     var body: some View {
         VStack(alignment: .leading, spacing: 22) {
-            Text("2025《I AM GLORIA》上海站巡演 ")
+            Text("主視覺：2025《I AM GLORIA》巡演寫真 · 來源與授權待確認")
                 .font(GEMFont.body(11)).foregroundStyle(GEMPalette.secondary(for: scheme))
             GEMSectionHeading(eyebrow: "01 / THE ARTIST", title: "認識歌聲背後的她。",
                               description: "從香港出發的唱作人，也是不斷改變表達方式的舞台表演者。")
@@ -212,10 +212,14 @@ struct GEMSourcesView: View {
                     ForEach(library.mediaCredits) { credit in
                         VStack(alignment: .leading, spacing: 8) {
                             Text(credit.title).font(GEMFont.headline(17))
-                            Text("攝影：\(credit.author) · \(credit.license)").font(GEMFont.body(14))
+                            Text("攝影 / 來源：\(credit.author) · \(credit.license)").font(GEMFont.body(14))
                             Text(credit.modifications).font(GEMFont.body(13)).foregroundStyle(GEMPalette.secondary(for: scheme))
-                            GEMExternalLink(link: GEMLink(label: "原始照片與作者", url: credit.sourceURL))
-                            GEMExternalLink(link: GEMLink(label: "\(credit.license) 授權條款", url: credit.licenseURL))
+                            if !credit.sourceURL.isEmpty {
+                                GEMExternalLink(link: GEMLink(label: "原始來源頁面", url: credit.sourceURL))
+                            }
+                            if let licenseURL = credit.licenseURL, !licenseURL.isEmpty {
+                                GEMExternalLink(link: GEMLink(label: "\(credit.license) 授權條款", url: licenseURL))
+                            }
                         }.padding(18).background(GEMPalette.card(for: scheme), in: RoundedRectangle(cornerRadius: 18))
                     }
                     Text("發行作品圖像由相應官方網站或音樂平台載入，權利屬各權利人。封面未載入時以作品名稱與年份呈現，仍可閱讀內容與開啟官方頁面。")
