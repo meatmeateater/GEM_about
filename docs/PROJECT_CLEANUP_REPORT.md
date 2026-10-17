@@ -1,6 +1,6 @@
 # G.E.M. — Beyond the Voice｜專案全面整理、修復與品質驗收結案報告
 
-本專案已在專屬工作分支 `chore/gem-project-cleanup` 上完成全面整理、修復、授權釐清與自動化測試驗證。所有變更均嚴格遵守安全約束，未進行遠端推送（No Push），未修改 `main` 分支歷史，完全保留原生 Xcode 專案設定與 11 項課堂核心作業要求。
+本專案已在專屬工作分支 `chore/gem-project-cleanup` 上完成全面整理、修復、授權釐清與自動化測試驗證。所有變更均嚴格遵守安全約束；在前次清理與整理執行期間，Agent 恪守承諾未由本地逕行 push，目前整理分支（`chore/gem-project-cleanup`）已同步於遠端 GitHub，而 `main` 分支保持原始 commit 歷程且尚未合併，完全保留原生 Xcode 專案設定與 11 項課堂核心作業要求。
 
 ---
 
@@ -8,7 +8,7 @@
 
 * **專案名稱**：`G.E.M. — Beyond the Voice`
 * **作業分支**：`chore/gem-project-cleanup`（基於 Commit `1301dee` 建立）
-* **最新提交**：`58eb7b0` (`chore: comprehensive project cleanup, verification and documentation alignment`)
+* **最新提交**：`ee6d1f6` (`docs: export project cleanup and acceptance report`)
 * **驗收結果重點**：
   1. **靜態完整性檢查**：`scripts/validate_project.py` 執行 **1,840 項檢查全數通過（0 Failures）**。
   2. **Xcode Build**：Xcode 27.0 (Build 27A266a) + iOS 27.0 SDK 編譯 **`** BUILD SUCCEEDED **`**。
@@ -112,16 +112,16 @@ GEM_BeyondTheVoice/
 | # | 課堂作業要求項目 | 實作應用與專案技術亮點 | 核心對應程式碼位置 | 驗證方式 |
 |:---:|---|---|---|:---:|
 | **1** | **基礎容器與視覺元件**<br>`VStack`, `HStack`, `ZStack`, `Text`, `Image`, `ScrollView` | 首頁人物誌、時間軸、探索頁與詳情頁全面採用深層組合佈局；ZStack 用於照片多邊形裁切與玻璃光暈效果堆疊。 | `GEMAboutView.swift`<br>`GEMHeroView.swift`<br>`GEMSections.swift` | Xcode Build 通過、UI 結構檢驗 |
-| **2** | **Asset Catalog & SF Symbols** | 本機照片納入 `Assets.xcassets`；系統圖示全面採用 SF Symbols（如 `heart.fill`, `play.circle.fill`, `map.fill`, `sparkles` 等）。 | `Assets.xcassets/`<br>`GEMComponents.swift` | XCTest: `testRealPhotoAssets...` 通過 |
+| **2** | **Asset Catalog & SF Symbols** | 本機照片納入 `Assets.xcassets`；系統圖示全面採用 SF Symbols（如 `heart`, `magnifyingglass`, `mappin.and.ellipse`, `headphones`, `arrow.up.right` 等）。 | `Assets.xcassets/`<br>`GEMComponents.swift` | XCTest: `testRealPhotoAssets...` 通過 |
 | **3** | **多種 SwiftUI Modifier 組合** | 靈活搭配 `.font()`, `.foregroundStyle()`, `.background()`, `.clipShape()`, `.padding()`, `.shadow()`, `.glassEffect()`, `.transition()`, `.animation()`。 | `GEMComponents.swift`<br>`GEMSections.swift` | 程式碼語法檢查、靜態驗證通過 |
 | **4** | **垂直捲動 ScrollView** | 首頁人物誌採用流暢垂直捲動，搭配幾何座標動態感知即時更新頂部導覽列狀態。 | `GEMAboutView.swift`<br>`GEMDetailView.swift` | 靜態結構檢驗、模擬器運行 |
 | **5** | **多檔案模組化定義 View** | 程式碼拆分為 14 個專責 Swift 檔案，落實關注點分離（SoC），架構清晰易維護。 | `SwiftUI/`（14 個模組） | 靜態腳本驗證 PBXSources 完整性通過 |
 | **6** | **Property 客製化自訂 View** | 封裝多款具備自訂 Property 的通用元件（如 `GEMEntryRow`, `GEMArtwork`, `GEMFavoriteButton`, `GEMFilterChip`, `GEMEmptyState`）。 | `GEMComponents.swift` | 介面參數自訂性與重用性核對 |
-| **7** | **深淺色模式支援 (Light / Dark)** | 打造語意化 `GEMPalette`，在「午夜深紫」與「晨曦珍珠白」間自適應對比與半透明層級。 | `GEMTheme.swift` | 語意色彩系統與調色盤審查 |
+| **7** | **深淺色模式支援 (Light / Dark)** | 打造語意化 `GEMPalette`，在「午夜深紫漸層」與「晨曦珍珠白漸層」間自適應對比與半透明層級。 | `GEMTheme.swift` | 語意色彩系統與調色盤審查 |
 | **8** | **Text + Markdown 超連結** | 資料來源與事實引用均支援 Markdown 超連結，點擊即可開啟 Safari 查證外部原始文獻。 | `GEMSections.swift`<br>`GEMDetailView.swift` | XCTest: `testExternalLinksRequireHTTPSHost` 通過 |
 | **9** | **客製字型 (Custom Fonts)** | 引入開源字型 `Sora-ExtraBold` 與 `NotoSansTC`，於 `Info.plist` 註冊並通過 XCTest 驗證。 | `Config/Info.plist`<br>`GEMTheme.swift` | XCTest: `testRealPhotoAssetsAndRegisteredFontsAreAvailable` 通過 |
-| **10** | **Keynote 形狀 + Shape 裁切** | 以 Keynote 幾何控制點規劃五邊形舞台切角，在 `GEMStageCutShape` 以 `Path` 重建，並以 `.clipShape()` 裁切照片。 | `GEMStageCutShape.swift`<br>`KEYNOTE_SHAPE_GUIDE.md` | 程式碼 Shape 幾何比對吻合 |
-| **11** | **MapKit 地圖應用** | 使用 MapKit 呈現《I AM GLORIA》巡迴城市，包含自訂標記、相機平滑平移與 Apple Maps 導航。 | `GEMTourMapSection.swift`<br>`GEMTourComponents.swift` | XCTest: `testTourOverviewEnclosesAllCuratedStops` 通過 |
+| **10** | **Keynote 形狀 + Shape 裁切** | 以 Keynote 幾何規格規劃五邊形舞台切角，在 `GEMStageCutShape` 以 `Path` 重建，並以 `.clipShape()` 裁切照片；Keynote 實體原檔與操作存證待 Mac 端完成。 | `GEMStageCutShape.swift`<br>`Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md` | 程式碼 Shape 幾何比對吻合 |
+| **11** | **MapKit 地圖應用** | 使用 MapKit 呈現《I AM GLORIA》巡迴城市（台北、新加坡、吉隆坡、深圳），包含自訂標記、相機平滑平移與 Apple Maps 導航。 | `GEMTourMapSection.swift`<br>`GEMTourComponents.swift` | XCTest: `testTourOverviewEnclosesAllCuratedStops` 通過 |
 
 ---
 
@@ -168,10 +168,11 @@ Test Suite 'GEM_BeyondTheVoiceTests' passed at 2026-10-17 17:31:07.612.
 
 1. **目前分支**：`chore/gem-project-cleanup`
 2. **工作區狀態**：乾淨無殘留（`working tree clean`）。
-3. **安全規範遵守**：
-   * 未執行 `git push`（保證遠端無任何非預期更動）。
-   * 未執行 `git reset --hard` 或 `git clean -fd`（未清除使用者未暫存的任何獨立工作）。
-   * 未改動 `main` 分支的 Commit 歷程。
+3. **安全規範遵守與遠端分支現狀**：
+   * **Agent 執行防護**：在本次與前次整理過程中，Agent 嚴格遵守規範，未曾逕自執行 `git push` 或將變更推送至遠端。
+   * **遠端整理分支**：目前 `chore/gem-project-cleanup` 已存在於 GitHub 遠端（`origin/chore/gem-project-cleanup`）。
+   * **遠端 main 分支**：`origin/main` 仍停留在原始基準 Commit `1301dee`，尚未合併整理分支，等待使用者最終審查後手動合併。
+   * **無破壞性操作**：未執行 `git reset --hard` 或 `git clean -fd`（未清除使用者未暫存的任何獨立工作），未修改 `main` 分支歷史。
 
 ---
 
@@ -179,9 +180,9 @@ Test Suite 'GEM_BeyondTheVoiceTests' passed at 2026-10-17 17:31:07.612.
 
 依照誠實透明原則，下列事項受限於實體軟體與版權，保留給您在 Mac 本機後續處理：
 
-1. **截取展示螢幕截圖**：
+1. **擷取展示螢幕截圖**：
    - 開啟 Xcode，選取 iPhone 17 (iOS 27) 模擬器運行。
-   - 截取 8 張高解析度畫面（首頁、時間軸、作品庫、串流選單、版本對照、巡演地圖、收藏頁、深淺色對比）。
+   - 擷取 8 張高解析度畫面（首頁、時間軸、作品庫、串流選單、版本對照、巡演地圖、收藏頁、深淺色對比）。
    - 存入 `docs/screenshots/`，命名對照 `README.md` 表格。
 2. **Keynote 實體檔案繪製存證**：
    - 在 macOS 開啟 Keynote 軟體，依 `Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md` 指引使用筆形工具繪製 5 點切角幾何圖形。

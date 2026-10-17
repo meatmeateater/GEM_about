@@ -3,7 +3,7 @@
 ## 幾何形狀定義與 SwiftUI 對應
 
 在課堂作業要求中，需使用 Keynote 繪製自訂幾何圖形，並於 App 中作為遮罩（Mask / ClipShape）使用。
-專案中的 [`SwiftUI/GEMStageCutShape.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMStageCutShape.swift) 已使用 SwiftUI `Path` 重現本幾何形狀，用於主視覺（Hero）與舞台現場照片的非對稱現代舞台切角裁切：
+專案中的 [`SwiftUI/GEMStageCutShape.swift`](../SwiftUI/GEMStageCutShape.swift) 已使用 SwiftUI `Path` 重現本幾何形狀，用於主視覺（Hero）與舞台現場照片的非對稱現代舞台切角裁切：
 
 ```text
 (0%, 0%) P1 --------------------------------------- P2 (100%, 0%)

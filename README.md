@@ -1,5 +1,5 @@
 # G.E.M. — Beyond the Voice
-### 原創音樂人人物誌 · 作品資料庫 · 巡演地圖 iOS 應用程式
+### 原創音樂人物誌 · 作品資料庫 · 巡演地圖 iOS 應用程式
 
 [![iOS Version](https://img.shields.io/badge/iOS-27.0%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
 [![Xcode Version](https://img.shields.io/badge/Xcode-27.0%2B-blue.svg?style=flat-square&logo=xcode)](https://developer.apple.com/xcode/)
@@ -18,10 +18,10 @@
 
 - **GitHub 專案庫**：[meatmeateater/GEM_about](https://github.com/meatmeateater/GEM_about)
 - **技術文件清單**：
-  - [Mac / iOS 驗收審核清單](file:///Users/k/Documents/GEM_about/docs/MAC_ACCEPTANCE.md)
-  - [素材來源、修圖說明與授權聲明](file:///Users/k/Documents/GEM_about/docs/MEDIA_CREDITS.md)
-  - [53 筆事實核對來源總表](file:///Users/k/Documents/GEM_about/docs/CONTENT_SOURCES.md)
-  - [Keynote 自訂裁切形狀製作指引](file:///Users/k/Documents/GEM_about/Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md)
+  - [Mac / iOS 驗收審核清單](docs/MAC_ACCEPTANCE.md)
+  - [素材來源、修圖說明與授權聲明](docs/MEDIA_CREDITS.md)
+  - [53 筆事實核對來源總表](docs/CONTENT_SOURCES.md)
+  - [Keynote 自訂裁切形狀製作指引](Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md)
 
 ---
 
@@ -36,7 +36,7 @@
 4. **深度作品檔案庫與錄音版本對照**：
    收錄 10 張發行作品與 14 首經典曲目。特別設計「同曲不同時期」版本對照區塊（例如〈泡沫〉早期錄音與全新重唱版），分開呈現客觀事實與編輯導讀。
 5. **《I AM GLORIA》巡演互動地圖**：
-   基於 MapKit 呈現重點巡迴城市與場館公佈檔案，具備單一相機動態對焦、城市切換、場館資訊卡浮現與一鍵開啟 Apple Maps 導航功能。
+   基於 MapKit 呈現重點巡迴城市與場館公佈檔案（台北、新加坡、吉隆坡、深圳），具備單一相機動態對焦、城市切換、場館資訊卡浮現與一鍵開啟 Apple Maps 導航功能。
 6. **本機持久化收藏系統 (Favorites & Persistence)**：
    任意歷史事件、專輯或單曲皆可一鍵收藏。資料透過 `UserDefaults` 持久化儲存，跨頁面狀態即時雙向同步，總覽頁支援原生左滑取消收藏。
 7. **全功能離線與無障礙體驗**：
@@ -50,17 +50,17 @@
 
 | # | 作業要求項目 | 本專案實作亮點與應用情境 | 核心對應程式碼檔案 |
 |:---:|---|---|---|
-| **1** | **基礎容器與視覺元件**<br>`VStack`, `HStack`, `ZStack`, `Text`, `Image`, `ScrollView` | 首頁人物誌、時間軸、探索頁與詳情頁全面採用深層組合佈局；ZStack 用於照片多邊形裁切與玻璃光暈效果堆疊。 | [`GEMAboutView.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMAboutView.swift)<br>[`GEMHeroView.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMHeroView.swift)<br>[`GEMSections.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMSections.swift) |
-| **2** | **Asset Catalog & SF Symbols** | 本機照片納入 `Assets.xcassets`；系統圖示全面採用 SF Symbols（如 `heart.fill`, `play.circle.fill`, `map.fill`, `sparkles` 等）。 | [`Assets.xcassets/`](file:///Users/k/Documents/GEM_about/Assets.xcassets)<br>[`GEMComponents.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMComponents.swift) |
-| **3** | **多種 SwiftUI Modifier 組合** | 靈活搭配 `.font()`, `.foregroundStyle()`, `.background()`, `.clipShape()`, `.padding()`, `.shadow()`, `.glassEffect()`, `.transition()`, `.animation()`。 | [`GEMComponents.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMComponents.swift)<br>[`GEMSections.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMSections.swift) |
-| **4** | **垂直捲動 ScrollView** | 首頁人物誌採用流暢垂直捲動，搭配幾何座標動態感知即時更新頂部導覽列狀態。 | [`GEMAboutView.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMAboutView.swift)<br>[`GEMDetailView.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMDetailView.swift) |
-| **5** | **多檔案模組化定義 View** | 程式碼拆分為 14 個專責 Swift 檔案，落實關注點分離（SoC），架構清晰易維護。 | [`SwiftUI/`](file:///Users/k/Documents/GEM_about/SwiftUI/)（14 個模組） |
-| **6** | **Property 客製化自訂 View** | 封裝多款具備自訂 Property 的通用元件（如 `GEMEntryRow`, `GEMArtwork`, `GEMFavoriteButton`, `GEMFilterChip`, `GEMEmptyState`）。 | [`GEMComponents.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMComponents.swift) |
-| **7** | **深淺色模式支援 (Light / Dark)** | 打造語意化 `GEMPalette`，在「午夜深紫」與「晨曦珍珠白」間自適應對比與半透明層級。 | [`GEMTheme.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMTheme.swift) |
-| **8** | **Text + Markdown 超連結** | 資料來源與事實引用均支援 Markdown 超連結，點擊即可開啟 Safari 查證外部原始文獻。 | [`GEMSections.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMSections.swift)<br>[`GEMDetailView.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMDetailView.swift) |
-| **9** | **客製字型 (Custom Fonts)** | 引入開源字型 `Sora-ExtraBold` 與 `NotoSansTC`，於 `Info.plist` 註冊並通過 XCTest 驗證。 | [`Config/Info.plist`](file:///Users/k/Documents/GEM_about/Config/Info.plist)<br>[`GEMTheme.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMTheme.swift) |
-| **10** | **Keynote 形狀 + Shape 裁切** | 以 Keynote 幾何控制點規劃五邊形舞台切角，在 `GEMStageCutShape` 以 `Path` 重建，並以 `.clipShape()` 裁切照片。 | [`GEMStageCutShape.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMStageCutShape.swift)<br>[`KEYNOTE_SHAPE_GUIDE.md`](file:///Users/k/Documents/GEM_about/Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md) |
-| **11** | **MapKit 地圖應用** | 使用 MapKit 呈現《I AM GLORIA》巡迴城市，包含自訂標記、相機平滑平移與 Apple Maps 導航。 | [`GEMTourMapSection.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMTourMapSection.swift)<br>[`GEMTourComponents.swift`](file:///Users/k/Documents/GEM_about/SwiftUI/GEMTourComponents.swift) |
+| **1** | **基礎容器與視覺元件**<br>`VStack`, `HStack`, `ZStack`, `Text`, `Image`, `ScrollView` | 首頁人物誌、時間軸、探索頁與詳情頁全面採用深層組合佈局；ZStack 用於照片多邊形裁切與玻璃光暈效果堆疊。 | [`GEMAboutView.swift`](SwiftUI/GEMAboutView.swift)<br>[`GEMHeroView.swift`](SwiftUI/GEMHeroView.swift)<br>[`GEMSections.swift`](SwiftUI/GEMSections.swift) |
+| **2** | **Asset Catalog & SF Symbols** | 本機照片納入 `Assets.xcassets`；系統圖示全面採用 SF Symbols（如 `heart`, `magnifyingglass`, `mappin.and.ellipse`, `headphones`, `arrow.up.right` 等）。 | [`Assets.xcassets/`](Assets.xcassets)<br>[`GEMComponents.swift`](SwiftUI/GEMComponents.swift) |
+| **3** | **多種 SwiftUI Modifier 組合** | 靈活搭配 `.font()`, `.foregroundStyle()`, `.background()`, `.clipShape()`, `.padding()`, `.shadow()`, `.glassEffect()`, `.transition()`, `.animation()`。 | [`GEMComponents.swift`](SwiftUI/GEMComponents.swift)<br>[`GEMSections.swift`](SwiftUI/GEMSections.swift) |
+| **4** | **垂直捲動 ScrollView** | 首頁人物誌採用流暢垂直捲動，搭配幾何座標動態感知即時更新頂部導覽列狀態。 | [`GEMAboutView.swift`](SwiftUI/GEMAboutView.swift)<br>[`GEMDetailView.swift`](SwiftUI/GEMDetailView.swift) |
+| **5** | **多檔案模組化定義 View** | 程式碼拆分為 14 個專責 Swift 檔案，落實關注點分離（SoC），架構清晰易維護。 | [`SwiftUI/`](SwiftUI/)（14 個模組） |
+| **6** | **Property 客製化自訂 View** | 封裝多款具備自訂 Property 的通用元件（如 `GEMEntryRow`, `GEMArtwork`, `GEMFavoriteButton`, `GEMFilterChip`, `GEMEmptyState`）。 | [`GEMComponents.swift`](SwiftUI/GEMComponents.swift) |
+| **7** | **深淺色模式支援 (Light / Dark)** | 打造語意化 `GEMPalette`，在「午夜深紫漸層」與「晨曦珍珠白漸層」間自適應對比與半透明層級。 | [`GEMTheme.swift`](SwiftUI/GEMTheme.swift) |
+| **8** | **Text + Markdown 超連結** | 資料來源與事實引用均支援 Markdown 超連結，點擊即可開啟 Safari 查證外部原始文獻。 | [`GEMSections.swift`](SwiftUI/GEMSections.swift)<br>[`GEMDetailView.swift`](SwiftUI/GEMDetailView.swift) |
+| **9** | **客製字型 (Custom Fonts)** | 引入開源字型 `Sora-ExtraBold` 與 `NotoSansTC`，於 `Info.plist` 註冊並通過 XCTest 驗證。 | [`Config/Info.plist`](Config/Info.plist)<br>[`GEMTheme.swift`](SwiftUI/GEMTheme.swift) |
+| **10** | **Keynote 形狀 + Shape 裁切** | 以 Keynote 幾何規格規劃五邊形舞台切角，在 `GEMStageCutShape` 以 `Path` 重建，並以 `.clipShape()` 裁切照片；Keynote 實體檔案與繪製存證需在 Mac 完成。 | [`GEMStageCutShape.swift`](SwiftUI/GEMStageCutShape.swift)<br>[`KEYNOTE_SHAPE_GUIDE.md`](Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md) |
+| **11** | **MapKit 地圖應用** | 使用 MapKit 呈現《I AM GLORIA》巡迴城市（台北、新加坡、吉隆坡、深圳），包含自訂標記、相機平滑平移與 Apple Maps 導航。 | [`GEMTourMapSection.swift`](SwiftUI/GEMTourMapSection.swift)<br>[`GEMTourComponents.swift`](SwiftUI/GEMTourComponents.swift) |
 
 ---
 
@@ -76,7 +76,7 @@
 | **03. 作品檔案庫** | 10 張正規專輯橫向滑動卡片，具備封面載入備援與收藏按鈕 | `docs/screenshots/03_releases.png` |
 | **04. 串流平台直達** | 單曲與專輯詳情頁，Apple Music / Spotify / YouTube Music 快速選單 | `docs/screenshots/04_streaming.png` |
 | **05. 錄音版本對照** | 〈泡沫〉早期創作版與全新重唱版之編曲、錄音年份與發行對照 | `docs/screenshots/05_versions.png` |
-| **06. 巡演互動地圖** | MapKit 標記深圳、廣州、北京等重點場館，相機流暢移動與導航 | `docs/screenshots/06_tour_map.png` |
+| **06. 巡演互動地圖** | MapKit 標記台北、新加坡、吉隆坡、深圳等巡迴場館，相機流暢移動與導航 | `docs/screenshots/06_tour_map.png` |
 | **07. 本機收藏清單** | 跨條目獨立收藏管理，支援 iOS 原生左滑刪除與重新啟動驗證 | `docs/screenshots/07_favorites.png` |
 | **08. 深淺色主題對比** | 深色（午夜紫暗金）與淺色（晨曦亮紫珍珠白）對比呈現 | `docs/screenshots/08_dark_light.png` |
 
@@ -84,15 +84,29 @@
 
 ## 設計系統 (Design System)
 
+專案嚴格依據 [`SwiftUI/GEMTheme.swift`](SwiftUI/GEMTheme.swift) 中的 `GEMPalette` 與 `GEMFont` 實作：
+
 ### 1. 色彩體系 (Color Palette)
-- **Primary / Accent**：香檳金 `GEMPalette.gold`（`#D8B26E` / `#E5C583`）
-- **Background Dark**：午夜深紫 `GEMPalette.deepPurpleDark`（`#1A0C2E`）
-- **Background Light**：晨曦珍珠白 `GEMPalette.pearlLight`（`#F9F6FA`）
-- **Surface**：Liquid Glass 材質搭配語意化次要背景色。
+- **香檳金焦點色 (`GEMPalette.gold`)**：`#FCD18C`（RGB 0.99, 0.82, 0.55），用於徽章、重點數字、醒目標籤與強調線條。
+- **動態自適應紫色 (`GEMPalette.purple`)**：
+  - 深色模式：`#C49CFF`（柔和薰衣草紫，RGB 0.77, 0.61, 1.0）
+  - 淺色模式：`#632EA6`（深邃高對比紫，RGB 0.39, 0.18, 0.65）
+- **電音紫強調色 (`GEMPalette.violet`)**：`#7040D4`（RGB 0.44, 0.25, 0.83）。
+- **動態背景漸層 (`GEMPalette.background(dark:)`)**：
+  - 深色漸層（3 階）：`#0F0B1B` → `#1D1132` → `#0E0B1B`（午夜暗紫深邃背景）
+  - 淺色漸層（3 階）：`#FBF8FE` → `#F3EBFA` → `#FDF9FB`（柔和晨曦珍珠白背景）
+- **卡片與內容容器 (`GEMPalette.card(for:)`)**：
+  - 深色模式：`#291D3C`（次級午夜紫面板）
+  - 淺色模式：`.white`（純淨白色卡片）
+- **文字階層 (`GEMPalette.foreground(for:)` / `secondary(for:)`)**：
+  - 主文字：深色 `.white`，淺色 `#291A38`
+  - 次要文字：深色 `#BFB3D1`，淺色 `#6B5C7A`
+- **表面材質 (Surface)**：iOS 原生 Liquid Glass 模糊材質搭配半透明膠囊造型。
 
 ### 2. 字型系統 (Typography)
-- **英文與數字標題**：`Sora-ExtraBold`（展現現代音樂力量感與律動感）
-- **中文內文與標籤**：`NotoSansTC-Regular`、`NotoSansTC-Bold`（確保繁體中文排版閱讀舒適性）
+- **英文與數字標題**：`Sora-ExtraBold`（透過 `GEMFont.display` 套用，展現現代音樂力量感與律動感）
+- **中文粗體標題**：`NotoSansTC-Bold`（透過 `GEMFont.headline` 套用）
+- **中文內文與標籤**：`NotoSansTC-Regular`（透過 `GEMFont.body` 套用，確保繁體中文排版閱讀舒適性）
 
 ### 3. 自訂幾何裁切 (Stage Cut Geometry)
 - 五點多邊形座標公式：`(0, 0) → (1.0, 0) → (1.0, 0.83) → (0.38, 1.0) → (0, 0.90)`，營造不對稱的現代前衛舞台光芒切角。
@@ -136,11 +150,12 @@ GEM_BeyondTheVoice/
 ├── docs/                           # 深度文件與驗收報告
 │   ├── MAC_ACCEPTANCE.md           # Mac / iOS 驗收審核清單（100% 依循標準）
 │   ├── MEDIA_CREDITS.md            # 素材來源、修圖說明與授權聲明
-│   └── CONTENT_SOURCES.md          # 53 項事實核對來源總表
+│   ├── CONTENT_SOURCES.md          # 53 項事實核對來源總表
+│   └── PROJECT_CLEANUP_REPORT.md   # 第一輪專案清理與驗收結案報告
 └── scripts/                        # 工程維護與驗證自動化腳本
     ├── apply_artwork.py            # 線上封面中繼資料對應
     ├── package_release.py          # 發行封裝打包工具
-    ├── update_xcode_project.py     # Xcode 專案檔案引用安全同步工具
+    ├── update_xcode_project.py     # Xcode 專案檔案引用與設定安全檢查工具
     └── validate_project.py         # 離線靜態完整性檢查腳本
 ```
 
@@ -203,13 +218,16 @@ GEM_BeyondTheVoice/
 # 1. 執行專案離線靜態驗證
 python3 scripts/validate_project.py
 
-# 2. 建置 Xcode 專案 (Build)
+# 2. 檢查 Xcode 專案檔案完整性（預設安全檢查模式，不修改磁碟）
+python3 scripts/update_xcode_project.py
+
+# 3. 建置 Xcode 專案 (Build)
 xcodebuild build \
   -project GEM_BeyondTheVoice.xcodeproj \
   -scheme GEM_BeyondTheVoice \
   -destination 'platform=iOS Simulator,name=iPhone 17'
 
-# 3. 執行 XCTest 單元測試套件 (Test)
+# 4. 執行 XCTest 單元測試套件 (Test)
 xcodebuild test \
   -project GEM_BeyondTheVoice.xcodeproj \
   -scheme GEM_BeyondTheVoice \
