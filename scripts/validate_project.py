@@ -269,7 +269,7 @@ def resources() -> None:
             check(bool(credit.get(key)), f"Photo credit missing {key}")
         check(https(credit["sourceURL"]) and https(credit["licenseURL"]), "Invalid photo attribution URL")
     originals = {
-        "gem_portrait/Gem_Tang_Singing.jpg": "68d661e40043d4984361ebeeb4ab4d988c0aeaf1",
+        "gem_portrait/影像.jpeg": "b960c0cc8c678d6701bc65e136a19f513a0fcc68",
         "gem_live/Gem_Tang_Singing_with_Piano_2.jpg": "cbcd0b697aa7348a315b6fce6b3b2eb850a29f04",
     }
     for asset_path, expected_sha1 in originals.items():

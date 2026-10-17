@@ -4,6 +4,8 @@ import UIKit
 struct GEMHeroView: View {
     @State private var appeared = false
     @Environment(\.accessibilityReduceMotion) private var reduceMotion
+    @Environment(\.colorScheme) private var scheme
+
     var body: some View {
         VStack(alignment: .leading, spacing: 15) {
             Spacer(minLength: 240)
@@ -25,28 +27,39 @@ struct GEMHeroView: View {
             Text("BEYOND THE VOICE  /  FAN ARCHIVE")
                 .font(GEMFont.display(10)).tracking(1.5).foregroundStyle(.white.opacity(0.60)).padding(.top, 10)
         }
-        .padding(.horizontal, 28).padding(.top, 26).padding(.bottom, 78)
+        .padding(.horizontal, 28).padding(.top, 26).padding(.bottom, 80)
         .frame(maxWidth: .infinity, alignment: .leading)
         .background {
-            GeometryReader { geometry in
-                ZStack(alignment: .top) {
-                    Color(red: 0.12, green: 0.06, blue: 0.22)
-                    if UIImage(named: "gem_portrait") != nil {
-                        Image("gem_portrait").resizable().scaledToFill()
-                            .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
-                            .clipped()
+            ZStack {
+                // Background cut shape projecting ambient shadow exclusively along the bottom diagonal stage cut
+                GEMStageBottomShadowShape()
+                    .fill(Color(red: 0.10, green: 0.04, blue: 0.19))
+                    .shadow(
+                        color: scheme == .dark
+                            ? Color.black.opacity(0.70)
+                            : Color(red: 0.25, green: 0.12, blue: 0.38).opacity(0.24),
+                        radius: scheme == .dark ? 18 : 22,
+                        x: 0,
+                        y: 12
+                    )
+
+                GeometryReader { geometry in
+                    ZStack(alignment: .top) {
+                        Color(red: 0.12, green: 0.06, blue: 0.22)
+                        if UIImage(named: "gem_portrait") != nil {
+                            Image("gem_portrait").resizable().scaledToFill()
+                                .frame(width: geometry.size.width, height: geometry.size.height, alignment: .top)
+                                .clipped()
+                        }
+                        LinearGradient(stops: [.init(color: .black.opacity(0.03), location: 0),
+                                               .init(color: Color(red: 0.10, green: 0.04, blue: 0.19).opacity(0.42), location: 0.38),
+                                               .init(color: Color(red: 0.10, green: 0.04, blue: 0.19), location: 0.88)],
+                                       startPoint: .top, endPoint: .bottom)
                     }
-                    LinearGradient(stops: [.init(color: .black.opacity(0.03), location: 0),
-                                           .init(color: Color(red: 0.10, green: 0.04, blue: 0.19).opacity(0.42), location: 0.38),
-                                           .init(color: Color(red: 0.10, green: 0.04, blue: 0.19), location: 0.88)],
-                                   startPoint: .top, endPoint: .bottom)
                 }
+                .clipShape(GEMStageCutShape())
             }
-            .clipShape(GEMStageCutShape())
         }
-        // Clip the photograph, not the interactive content: large text must
-        // remain readable beyond the sloping edge of the artwork.
-        .background(Color(red: 0.10, green: 0.04, blue: 0.19))
         .opacity(appeared ? 1 : 0)
         .offset(y: appeared || reduceMotion ? 0 : 10)
         .onAppear {

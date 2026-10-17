@@ -20,3 +20,21 @@ struct GEMStageCutShape: Shape {
         return path
     }
 }
+
+/// An upward-extended version of GEMStageCutShape that ensures ambient shadows
+/// project exclusively along the bottom diagonal stage cut edges.
+struct GEMStageBottomShadowShape: Shape {
+    func path(in rect: CGRect) -> Path {
+        let w = rect.width
+        let h = rect.height
+
+        var path = Path()
+        path.move(to: CGPoint(x: 0, y: -200))
+        path.addLine(to: CGPoint(x: w, y: -200))
+        path.addLine(to: CGPoint(x: w, y: h * 0.83))
+        path.addLine(to: CGPoint(x: w * 0.38, y: h))
+        path.addLine(to: CGPoint(x: 0, y: h * 0.90))
+        path.closeSubpath()
+        return path
+    }
+}
