@@ -1,4 +1,4 @@
-# G.E.M. — Beyond the Voice
+# G.E.M. About
 ### 原創音樂人物誌 · 作品資料庫 · 巡演地圖 iOS 應用程式
 
 [![iOS Version](https://img.shields.io/badge/iOS-27.0%2B-blue.svg?style=flat-square&logo=apple)](https://developer.apple.com/ios/)
@@ -12,7 +12,7 @@
 
 ## 專案簡介 (Overview)
 
-**G.E.M. — Beyond the Voice** 是一款專為華語樂壇代表性創作天后 **G.E.M. 鄧紫棋（Gloria Tang）** 打造的深度音樂人物誌與探索 App。
+**G.E.M. About** 是一款專為華語樂壇代表性創作天后 **G.E.M. 鄧紫棋（Gloria Tang）** 打造的深度音樂人物誌與探索 App。
 
 不同於常見的單頁式靜態展示，本專案建構了完整的「**事件 → 作品 → 歌曲 → 舞台／版本 → 收藏**」深層關聯鏈路。介面設計融合 iOS 現代 **Liquid Glass（流體玻璃質感）** 與典雅午夜紫、香檳金調色盤，搭配自訂多邊形幾何切角與微動畫，兼顧 **VoiceOver 無障礙旁白**、**動態字級支援** 與 **減少動態效果（Reduce Motion）**。
 
@@ -41,44 +41,6 @@
    任意歷史事件、專輯或單曲皆可一鍵收藏。資料透過 `UserDefaults` 持久化儲存，跨頁面狀態即時雙向同步，總覽頁支援原生左滑取消收藏。
 7. **全功能離線與無障礙體驗**：
    打包完整結構化 JSON 與本機寫真，無網路狀態下文字、照片與搜尋完全可用；全面實作 Accessibility Label、Hint，並適應系統 Reduce Motion 設定。
-
----
-
-## 課堂作業要求落實對照表 (Course Requirements)
-
-本專案全面落實並深化了課堂作業規定的 11 項核心技術要求：
-
-| # | 作業要求項目 | 本專案實作亮點與應用情境 | 核心對應程式碼檔案 |
-|:---:|---|---|---|
-| **1** | **基礎容器與視覺元件**<br>`VStack`, `HStack`, `ZStack`, `Text`, `Image`, `ScrollView` | 首頁人物誌、時間軸、探索頁與詳情頁全面採用深層組合佈局；ZStack 用於照片多邊形裁切與玻璃光暈效果堆疊。 | [`GEMAboutView.swift`](SwiftUI/GEMAboutView.swift)<br>[`GEMHeroView.swift`](SwiftUI/GEMHeroView.swift)<br>[`GEMSections.swift`](SwiftUI/GEMSections.swift) |
-| **2** | **Asset Catalog & SF Symbols** | 本機照片納入 `Assets.xcassets`；系統圖示全面採用 SF Symbols（如 `heart`, `magnifyingglass`, `mappin.and.ellipse`, `headphones`, `arrow.up.right` 等）。 | [`Assets.xcassets/`](Assets.xcassets)<br>[`GEMComponents.swift`](SwiftUI/GEMComponents.swift) |
-| **3** | **多種 SwiftUI Modifier 組合** | 靈活搭配 `.font()`, `.foregroundStyle()`, `.background()`, `.clipShape()`, `.padding()`, `.shadow()`, `.glassEffect()`, `.transition()`, `.animation()`。 | [`GEMComponents.swift`](SwiftUI/GEMComponents.swift)<br>[`GEMSections.swift`](SwiftUI/GEMSections.swift) |
-| **4** | **垂直捲動 ScrollView** | 首頁人物誌採用流暢垂直捲動，搭配幾何座標動態感知即時更新頂部導覽列狀態。 | [`GEMAboutView.swift`](SwiftUI/GEMAboutView.swift)<br>[`GEMDetailView.swift`](SwiftUI/GEMDetailView.swift) |
-| **5** | **多檔案模組化定義 View** | 程式碼拆分為 14 個專責 Swift 檔案，落實關注點分離（SoC），架構清晰易維護。 | [`SwiftUI/`](SwiftUI/)（14 個模組） |
-| **6** | **Property 客製化自訂 View** | 封裝多款具備自訂 Property 的通用元件（如 `GEMEntryRow`, `GEMArtwork`, `GEMFavoriteButton`, `GEMFilterChip`, `GEMEmptyState`）。 | [`GEMComponents.swift`](SwiftUI/GEMComponents.swift) |
-| **7** | **深淺色模式支援 (Light / Dark)** | 打造語意化 `GEMPalette`，在「午夜深紫漸層」與「晨曦珍珠白漸層」間自適應對比與半透明層級。 | [`GEMTheme.swift`](SwiftUI/GEMTheme.swift) |
-| **8** | **Text + Markdown 超連結** | 資料來源與事實引用均支援 Markdown 超連結，點擊即可開啟 Safari 查證外部原始文獻。 | [`GEMSections.swift`](SwiftUI/GEMSections.swift)<br>[`GEMDetailView.swift`](SwiftUI/GEMDetailView.swift) |
-| **9** | **客製字型 (Custom Fonts)** | 引入開源字型 `Sora-ExtraBold` 與 `NotoSansTC`，於 `Info.plist` 註冊並通過 XCTest 驗證。 | [`Config/Info.plist`](Config/Info.plist)<br>[`GEMTheme.swift`](SwiftUI/GEMTheme.swift) |
-| **10** | **Keynote 形狀 + Shape 裁切** | 以 Keynote 幾何規格規劃五邊形舞台切角，在 `GEMStageCutShape` 以 `Path` 重建，並以 `.clipShape()` 裁切照片；Keynote 實體檔案與繪製存證需在 Mac 完成。 | [`GEMStageCutShape.swift`](SwiftUI/GEMStageCutShape.swift)<br>[`KEYNOTE_SHAPE_GUIDE.md`](Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md) |
-| **11** | **MapKit 地圖應用** | 使用 MapKit 呈現《I AM GLORIA》巡迴城市（台北、新加坡、吉隆坡、深圳），包含自訂標記、相機平滑平移與 Apple Maps 導航。 | [`GEMTourMapSection.swift`](SwiftUI/GEMTourMapSection.swift)<br>[`GEMTourComponents.swift`](SwiftUI/GEMTourComponents.swift) |
-
----
-
-## 畫面展示與版位規劃 (Showcase)
-
-> [!TIP]
-> 截圖檔案推薦以 **iPhone 17 (iOS 27)** 模擬器執行 `Cmd + S` 擷取，儲存於 `docs/screenshots/` 目錄並依序命名。
-
-| 展示項目 | 畫面特色說明 | 建議預留截圖放置點 |
-|---|---|:---:|
-| **01. 首頁 Hero 與導覽** | 午夜紫漸層底色、非對稱幾何切角寫真與 Liquid Glass 頂部導覽列 | `docs/screenshots/01_home.png` |
-| **02. 生涯成長時間軸** | 複合年代標籤（2010s / 2020s）與音樂、舞台、個人維度交叉篩選 | `docs/screenshots/02_timeline.png` |
-| **03. 作品檔案庫** | 10 張正規專輯橫向滑動卡片，具備封面載入備援與收藏按鈕 | `docs/screenshots/03_releases.png` |
-| **04. 串流平台直達** | 單曲與專輯詳情頁，Apple Music / Spotify / YouTube Music 快速選單 | `docs/screenshots/04_streaming.png` |
-| **05. 錄音版本對照** | 〈泡沫〉早期創作版與全新重唱版之編曲、錄音年份與發行對照 | `docs/screenshots/05_versions.png` |
-| **06. 巡演互動地圖** | MapKit 標記台北、新加坡、吉隆坡、深圳等巡迴場館，相機流暢移動與導航 | `docs/screenshots/06_tour_map.png` |
-| **07. 本機收藏清單** | 跨條目獨立收藏管理，支援 iOS 原生左滑刪除與重新啟動驗證 | `docs/screenshots/07_favorites.png` |
-| **08. 深淺色主題對比** | 深色（午夜紫暗金）與淺色（晨曦亮紫珍珠白）對比呈現 | `docs/screenshots/08_dark_light.png` |
 
 ---
 
@@ -161,32 +123,6 @@ GEM_BeyondTheVoice/
 
 ---
 
-## 測試與品質保證 (Testing & QA)
-
-專案內建完整的單元測試套件與離線靜態檢查機制，確保程式碼與資料的極致穩定性。
-
-### 1. 單元測試 (XCTest)
-在 macOS / Xcode 27.0 / iOS 27.0 Simulator 環境下執行通過：
-- **`testBundledCatalogLoadsAndAllReferencesResolve`**：確認內建 JSON 載入無誤，所有引用關聯皆可解析。
-- **`testCatalogRejectsDuplicateAndDanglingIDs`**：確認目錄防錯機制能有效拒絕重複與失效 ID。
-- **`testDatePrecisionDoesNotInventMonthOrDay`**：驗證日期精度嚴謹度，僅有年份時絕不虛構月日。
-- **`testExternalLinksRequireHTTPSHost`**：嚴格檢驗所有外部超連結皆具備安全 HTTPS 協定與 Host。
-- **`testFavoritePersistsAcrossStoreRecreationAndRemoval`**：測試收藏在 Store 重建與重開時的持久化狀態。
-- **`testRealPhotoAssetsAndRegisteredFontsAreAvailable`**：驗證 Asset 目錄寫真與自訂字型註冊可正常解析。
-- **`testSearchNormalizesChineseLatinAndWhitespaceAndFiltersKind`**：驗證繁簡轉換、全半形、大小寫與多詞搜尋精準度。
-- **`testStreamingPlatformGeneratesValidHTTPSURLs`**：驗證各串流平台安全轉址生成邏輯。
-- **`testTimelineKeepsSameYearEventsAndCombinesFilters`**：驗證同年多事件在多維度篩選下的排序與並存。
-- **`testTourOverviewEnclosesAllCuratedStops`**：驗證巡演地圖相機邊界能精準包覆所有巡演站點。
-
-### 2. 靜態完整性驗證 (Static Validation)
-執行 `python3 scripts/validate_project.py`，通過 **1,840 項檢查（0 Failures）**，嚴格覆蓋：
-- 53 筆事實文獻出處格式檢查。
-- 專案檔案引用與 PBXBuildPhase 成員同步檢查。
-- 字型 PostScript 內部名稱一致性與 OFL 授權條款檢查。
-- 圖片 SHA-1 雜湊檔案完整性檢查。
-
----
-
 ## 圖片與素材授權說明 (Media & Credits)
 
 本專案對所有使用的素材來源與版權狀態秉持誠實、公開、透明原則：
@@ -233,18 +169,6 @@ xcodebuild test \
   -scheme GEM_BeyondTheVoice \
   -destination 'platform=iOS Simulator,name=iPhone 17'
 ```
-
----
-
-## 待辦事項與後續規劃 (Roadmap & Next Steps)
-
-- [x] 完成 iOS 27 / Xcode 27 專案設定鎖定與清理。
-- [x] 完成 10 項 XCTest 單元測試全部通過（0 Failures）。
-- [x] 完成檔案完整性與授權證明分開記錄（1,840 項靜態驗證通過）。
-- [x] 清除未引用的冗餘圖片與過時文件。
-- [ ] **Mac 介面截圖**：於 Mac 端以 iPhone 17 模擬器截取 8 張高畫質介面圖並放入 `docs/screenshots/`。
-- [ ] **Keynote 原檔匯出**：於 Mac Keynote 繪製五邊形舞台切角並匯出 `GEM_Stage_Shape.key` 至 `Keynote_Guide/`。
-- [ ] **版權確認**：聯繫確認 2025 巡演照片之公開授權狀態或更換為公有領域圖像。
 
 ---
 
