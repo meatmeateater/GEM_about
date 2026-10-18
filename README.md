@@ -105,13 +105,10 @@ GEM_BeyondTheVoice/
 │   └── PrivacyInfo.xcprivacy       # 現代化隱私清單 Manifest（CA92.1）
 ├── GEM_BeyondTheVoiceTests/        # 完整 XCTest 單元測試套件
 │   └── GEM_BeyondTheVoiceTests.swift # 10 項嚴謹單元測試（包含資料、字型、地圖與持久化）
-├── Keynote_Guide/                  # Keynote 自訂裁切形狀指南
-│   └── KEYNOTE_SHAPE_GUIDE.md      # Keynote 幾何座標與繪製實作指引
-├── docs/                           # 深度文件與驗收報告
-│   ├── MAC_ACCEPTANCE.md           # Mac / iOS 驗收審核清單（100% 依循標準）
+├── docs/                           # 相關文件
 │   ├── MEDIA_CREDITS.md            # 素材來源、修圖說明與授權聲明
-│   ├── CONTENT_SOURCES.md          # 53 項事實核對來源總表
-│   └── PROJECT_CLEANUP_REPORT.md   # 第一輪專案清理與驗收結案報告
+│   └── CONTENT_SOURCES.md          # 53 項事實核對來源總表
+│   
 └── scripts/                        # 工程維護與驗證自動化腳本
     ├── apply_artwork.py            # 線上封面中繼資料對應
     ├── package_release.py          # 發行封裝打包工具
