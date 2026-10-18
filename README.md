@@ -22,7 +22,10 @@
   - [53 筆事實核對來源總表](docs/CONTENT_SOURCES.md)
 
 ---
+<img width="1170" height="2532" alt="image" src="https://github.com/user-attachments/assets/961df95e-4bc0-4a77-80ed-c84cae233d92" />
 
+
+---
 ## 核心功能亮點 (Key Features)
 
 1. **Liquid Glass 動態導覽指示**：
