@@ -18,10 +18,8 @@
 
 - **GitHub 專案庫**：[meatmeateater/GEM_about](https://github.com/meatmeateater/GEM_about)
 - **技術文件清單**：
-  - [Mac / iOS 驗收審核清單](docs/MAC_ACCEPTANCE.md)
   - [素材來源、修圖說明與授權聲明](docs/MEDIA_CREDITS.md)
   - [53 筆事實核對來源總表](docs/CONTENT_SOURCES.md)
-  - [Keynote 自訂裁切形狀製作指引](Keynote_Guide/KEYNOTE_SHAPE_GUIDE.md)
 
 ---
 
